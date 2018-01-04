@@ -8,8 +8,8 @@ $color3:#383838;
 $color4:#f26e26;
 $color5:#4c4c4c;
 $color6:#ba2a2a;
+$color7:#333;
 
-$color7:#80bbde;
 $color8:#292929;
 
 
@@ -194,18 +194,48 @@ input::-moz-focus-inner{
 	&-orange{
 		background-color: $color4;
 	}
-
+	&-more{
+		background-color: $color3;
+		$h: 40px;
+		height: $h;
+		font-family: "SegoeUIBoldItalic";
+		border-radius: $h;
+		line-height: 38px;
+		min-width: 128px;
+		padding-left: 22px;
+		padding-right: 22px;
+		text-transform: none;
+	}
 }
 
 .title{
 	font-size: 60px;
 	font-family: "SegoeUIBoldItalic";
+	font-weight: normal;
 }
 
 
-.ohide{
-	// opacity: 0;
+.flexcenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+
+
+@mixin effect-bgslidefromright($x: 100%){
+	opacity: 1;
+	transform: translateX($x);
+	transition: .6s transform ease-out, .3s opacity ease-out;
+}
+
+
+.bgtrigger{
+	&:before{
+		opacity: 0 !important;
+	}
+}
+
 
 /* =header
 ---------------------------*/
@@ -281,6 +311,7 @@ input::-moz-focus-inner{
 			position: relative;
 			padding-left: 138px;
 			min-height: 92px;
+			z-index: 99;
 			&:before{
 				@extend .before;
 				background-repeat: no-repeat;
@@ -372,6 +403,10 @@ input::-moz-focus-inner{
 				right: 13px;
 				top: 8px;
 				cursor: pointer;
+				transition: transform .2s;
+				&:hover{
+					transform: rotate(90deg);
+				}
 			}
 		}
 	}

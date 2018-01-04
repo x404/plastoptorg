@@ -71,6 +71,28 @@ $(document).ready(function(){
 			};
 		init();
 	});	
+
+
+
+	$('.bganimated').each(function () {
+		var block = $(this),
+			blockh = block.height() + parseInt(block.css("padding-top")) ;
+			console.log(blockh);
+
+		$(window).scroll(function() {
+			var top = block.offset().top;
+			console.log(top);
+			top = top - $(window).height() + blockh/2+ 250;
+			var scroll_top = $(this).scrollTop();
+			if ((scroll_top > top)) {
+				if (block.hasClass("bganimated")) {
+					block.removeClass("bganimated");
+				}
+			}
+		});
+	});
+
+
 });
 
 // =заглушка для IE
@@ -98,3 +120,16 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+
+
+$(function() {
+    var $el = $('.parallax-background');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'background-position':'50% '+(.15*scroll)+'px'
+        });
+    });
+});

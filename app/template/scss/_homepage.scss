@@ -46,10 +46,22 @@
 /* =intro
 ---------------------------*/
 .intro{
+	margin-top: -250px;
+	padding-top: 750px;
 	margin-bottom: 100px;
+	position: relative;
+	overflow: hidden;
+	&:before{
+		@extend .before;
+		background: url(../images/divider_1.png) no-repeat right top;
+		right: 0;
+		top: 0;
+		width: 1339px;
+		height: 1115px;
+	}
 	.btn{
-		$h: 40px;
 		display: inline-block;
+		$h: 40px;
 		height: $h;
 		font-family: "SegoeUIBoldItalic";
 		border-radius: $h;
@@ -82,6 +94,59 @@
 			}
 		}
 	}
+
+	&.effect-bgslidefromright{
+		&:before{
+			@include effect-bgslidefromright(0);
+		}
+		&.bganimated{
+			&:before{
+				@include effect-bgslidefromright();				
+			}
+		}
+	}
 }
 /* =/intro
+---------------------------*/
+
+
+
+/* =products
+---------------------------*/
+.products{
+	.title{
+		margin-bottom: 85px;
+		padding-right: 20px;
+	}
+	.flexbox{
+		flex-wrap: wrap;
+	}
+	&__col{
+		width: 33.3%;
+	}
+	&__cell{
+		width: 368px;
+	}
+
+	&__head{
+		background-repeat: no-repeat;
+	}
+	&__title{
+		@extend .bold;
+		@extend .flexcenter;
+		color: $color2;
+		font-size: 27px;
+		font-weight: normal;
+		height: 378px;
+		text-transform: uppercase;
+		width: calc(100% - 40px);
+		text-align: center;
+	}
+	&__text{
+		margin-top: 20px;
+		margin-bottom: 22px;
+		@extend .italic;
+	}
+}
+/* =/products
 ---------------------------*/
