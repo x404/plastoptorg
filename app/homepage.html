@@ -33,26 +33,113 @@
 <div class="homepage">
 	<!-- =header -->
 	<header class="header">
-		<div class="flexbox">
+		<div class="header__top flexbox">
 			<div class="logo">
 				<a href="/" class="logo__link">
 					<img src="/template/images/logo.png" alt="" />				
 				</a>
 			</div>
 			
-			<nav id="navbar">
-				<ul>
-					<li class="active"><span>главная</span></li>
-					<li><a href="#">компания</a></li>
-					<li><a href="#">продукция</a></li>
-					<li><a href="#">прайс</a></li>
-					<li><a href="#">важно</a></li>
-					<li><a href="#">контакты</a></li>
-				</ul>
-			</nav>
+			<div class="nav-contacts">
+				<nav id="navbar">
+					<ul>
+						<li class="active"><span>главная</span></li>
+						<li><a href="#">компания</a></li>
+						<li><a href="#">продукция</a></li>
+						<li><a href="#">прайс</a></li>
+						<li><a href="#">важно</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+				</nav>
+				
+				<div class="contacts text-center">
+					<p>
+						109202 Москва, ул. Басовская, 16с1
+					</p>
+					<p>
+						+7 (499) 391-31-80
+					</p>
+					<p>office@plastoptorg.ru</p>
+					<button type="button" class="btn btn-red">Заказать звонок</button>
+				</div>
+			</div>
 		</div>
+		<!-- =cats -->
+		<section class="cats">
+			<div class="container">
+				<ul>
+					<li class="c01">
+						<p class="cat__title">Сотовый <br>поликарбонат</p>
+						<div class="popup" style="opacity: 0">
+							<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+							<div class="carousel">
+								<div class="owl-carousel" id="foo1">
+									<div><img src="/tmp/p01.png" alt=""></div>
+									<div><img src="/tmp/p02.png" alt=""></div>
+									<div><img src="/tmp/p03.png" alt=""></div>
+									<div><img src="/tmp/p04.png" alt=""></div>
+									<div><img src="/tmp/p05.png" alt=""></div>
+									<div><img src="/tmp/p06.png" alt=""></div>
+									<div><img src="/tmp/p07.png" alt=""></div>
+									<div><img src="/tmp/p04.png" alt=""></div>
+								</div>
+							</div>
+							<input  type="image" src="/template/images/popup-close.png" class="popup__close" />
+						</div>
+					</li>
+					<li class="c02"><p class="cat__title">монолитный <br>поликарбонат</p></li>
+					<li class="c03"><p class="cat__title">комплектующие <br>для поликарбоната</p></li>
+				</ul>
+			</div>
+		</section>
+		<!-- =/cats -->
 	</header>
 	<!-- =/header -->
+
+	<!-- =advantages-->
+	<div class="container">
+		<div class="advantages">
+			<p>ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ</p>
+			<div class="svg">
+				<svg width="27">
+					<polygon points="2,2 24,2 13,24" fill="#fff" stroke="red" stroke-width="3" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<!-- =/advantages-->
+
+
+	<!-- =intro -->
+	<article class="intro">
+		<div class="container">
+			<h1 class="title">
+				ПЛАСТОПТОРГ
+			</h1>
+
+			<ul class="nav nav-tabs intro__nav" role="tablist">
+				<li role="presentation" class="active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab" class="btn btn-grey">о нас</a></li>
+				<li role="presentation"><a href="#advantages" aria-controls="advantages" role="tab" data-toggle="tab" class="btn btn-orange">преимущества</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade show active" id="about">
+					<p>Компания «Пластопторг» на рынке с 2010 года и на протяжении всего этого времени мы стремимся улучшить качество товаров, увеличить ассортимент, а также сделать процесс сотрудничества с клиентами более удобным. Главным направлением деятельности считается реализация качественного поликарбоната.</p>
+					<br>
+					<p>Мы являемся авторизированным представителем завода «ЮГ-ОЙЛ-ПЛАСТ» - лидера Российского рынка полимеров.  Он считается самым крупным заводом по изготовлению сотового и монолитного поликарбоната в России, а по миру занимает 4ю позицию. Продукция поступает централизованно на наши складские помещения в Москве и далее расходится по диллерам, оптовым базам и частникам по всей России.</p>
+
+					<div class="text-right">
+						<a href="#" class="btn btn-grey btn-more">подробнее</a>						
+					</div>
+
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="advantages">
+					<p>Мы являемся авторизированным представителем завода «ЮГ-ОЙЛ-ПЛАСТ» - лидера Российского рынка полимеров.  Он считается самым крупным заводом по изготовлению сотового и монолитного поликарбоната в России, а по миру занимает 4ю позицию. Продукция поступает централизованно на наши складские помещения в Москве и далее расходится по диллерам, оптовым базам и частникам по всей России.</p><br>
+					<p>Компания «Пластопторг» на рынке с 2010 года и на протяжении всего этого времени мы стремимся улучшить качество товаров, увеличить ассортимент, а также сделать процесс сотрудничества с клиентами более удобным. Главным направлением деятельности считается реализация качественного поликарбоната.</p>
+				</div>
+			</div>
+	</article>
+	<!-- =/intro -->
 	
 
 </div>

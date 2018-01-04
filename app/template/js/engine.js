@@ -1,20 +1,13 @@
 $(document).ready(function(){
+	'use strict';
 
 	// карусель
 	$('#foo1').owlCarousel({
 		loop:false,
 		nav:true,
 		dots: false,
-		items:3,
-		startPosition : 2,
-		stagePadding : 250,
+		items:7,
 		navText: ["", ""],
-		onInitialized: function (event) {
-			refreshFirstLastVisible(event);
-		},
-		onChanged: function (event) {
-			refreshFirstLastVisible(event);
-		},
 		responsive:{
 			0:{
 				items:1,
@@ -31,11 +24,28 @@ $(document).ready(function(){
 				items:2
 			},
 			1550:{
-				items:3
+				items:7
 			}
 		}
 	});
 
+
+	$('.cats .popup__close').click(function(e){
+		e.preventDefault();
+		$('.cats .popup').fadeOut()
+	});
+
+
+
+	// popup
+	// $('.cats .popup').hide();
+	var popup = document.querySelector('.cats .popup').style;
+		popup.opacity = 1;
+		popup.display = 'none';
+	$('.c01 .cat__title').click(function(e){
+		e.preventDefault();
+		$('.cats .popup').fadeToggle();
+	});
 
 	// mobile-menu
 	$('#navbar').each(function(){

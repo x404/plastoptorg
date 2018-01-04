@@ -1,10 +1,11 @@
 .homepage{
 	background: url(../images/bg.jpg) no-repeat center top / contain;
-	min-height: 1132px;
+	// min-height: 1132px;
 
 	.header{
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: -110px;
 		width: 86%;
 		.logo{
 			padding-top: 104px;
@@ -22,3 +23,65 @@
 		}
 	}
 }
+
+
+/* =advantages
+---------------------------*/
+.advantages{
+	font-family: "SegoeUIBoldItalic";
+	font-size: 24px;
+	padding-left: 30px;
+	text-align: center;
+	width: 515px;
+	.svg{
+		margin-top: 25px;
+	}
+}
+
+/* =/advantages
+---------------------------*/
+
+
+
+/* =intro
+---------------------------*/
+.intro{
+	margin-bottom: 100px;
+	.btn{
+		$h: 40px;
+		display: inline-block;
+		height: $h;
+		font-family: "SegoeUIBoldItalic";
+		border-radius: $h;
+		line-height: 38px;
+		margin-right: 14px;
+		min-width: 128px;
+		padding-left: 22px;
+		padding-right: 22px;
+		text-transform: none;
+	}
+
+	&__nav{
+		margin-top: 20px;
+		li{
+			display: inline-block;
+		}
+	}
+
+	.tab-content{
+		color: $color5;
+		margin-top: 35px;
+		width: 635px;
+	}
+	.tab-pane{
+		margin-top: 10px;
+		.btn{
+			margin-top: 35px;
+			&-more{
+				margin-right: 35px;
+			}
+		}
+	}
+}
+/* =/intro
+---------------------------*/
