@@ -9,8 +9,8 @@ $color4:#f26e26;
 $color5:#4c4c4c;
 $color6:#ba2a2a;
 $color7:#333;
+$color8:#e98546;
 
-$color8:#292929;
 
 
 * {
@@ -108,6 +108,10 @@ input::-moz-focus-inner{
 	font-family: "SegoeUIItalic";
 }
 
+.bi{
+	font-family: "SegoeUIBoldItalic";
+}
+
 
 .outerwrapper{
 	-webkit-flex: 1;
@@ -191,20 +195,20 @@ input::-moz-focus-inner{
 	&-grey{
 		background-color: $color3;
 	}
-	&-orange{
-		background-color: $color4;
-	}
 	&-more{
-		background-color: $color3;
 		$h: 40px;
-		height: $h;
-		font-family: "SegoeUIBoldItalic";
+		background-color: $color3;
 		border-radius: $h;
+		font-family: "SegoeUIBoldItalic";
+		height: $h;
 		line-height: 38px;
 		min-width: 128px;
 		padding-left: 22px;
 		padding-right: 22px;
 		text-transform: none;
+	}
+	&-orange{
+		background-color: $color4;
 	}
 }
 
@@ -226,7 +230,7 @@ input::-moz-focus-inner{
 @mixin effect-bgslidefromright($x: 100%){
 	opacity: 1;
 	transform: translateX($x);
-	transition: .6s transform ease-out, .3s opacity ease-out;
+	transition: 1s transform ease-out, .5s opacity ease-out;
 }
 
 

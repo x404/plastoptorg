@@ -73,6 +73,10 @@
 		text-transform: none;
 	}
 
+	&__body{
+		position: relative;
+	}
+
 	&__nav{
 		margin-top: 20px;
 		li{
@@ -149,4 +153,20 @@
 	}
 }
 /* =/products
+---------------------------*/
+
+
+/* =brands
+---------------------------*/
+.brands{
+	margin-top: 530px;
+	.text{
+		margin: 50px 0;
+	}
+	.flexbox{
+		margin-bottom: 100px;
+	}
+	
+}
+/* =/brands
 ---------------------------*/

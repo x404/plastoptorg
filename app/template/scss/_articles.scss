@@ -1,0 +1,55 @@
+.articles{
+	margin-top: 800px;
+	.flexbox{
+		flex-wrap: wrap;
+		margin-bottom: 45px;
+		justify-content: space-between;
+	}
+
+	header{
+		margin-bottom: 40px;
+	}
+
+	&__cell{
+		width: 31.5%;
+		margin-top: 34px;
+	}
+
+	&__link{
+		@extend .bi;
+		/*width: 92%;*/
+		@extend .flexcenter;
+		background-color: #ccc;
+		color: $color2;
+		font-size: 18px;
+		height: 125px;
+		padding-left: 15px;
+		padding-right: 15px;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		span{
+			position: relative;
+		}
+		&:before{
+			@extend .before;
+			@include transition-param(); 
+			background: $color8;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			top: 0;
+			width: 100%;
+		};
+		&:hover{
+			&:before{
+				opacity: .85
+			}
+		};
+	}
+
+	.btn{
+		font-size: 17px;
+	}
+}
