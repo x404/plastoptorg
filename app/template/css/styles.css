@@ -130,10 +130,10 @@ input::-moz-focus-inner {
 .bold, .products__title {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .products__text {
+.italic, .header .cats .popup p, .products__text, .reviews__item {
   font-family: "SegoeUIItalic"; }
 
-.bi, .articles__link {
+.bi, .reviews .btn, .articles__link {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -522,6 +522,23 @@ footer {
 
 /* =/brands
 ---------------------------*/
+/* =reviews
+---------------------------*/
+.reviews {
+  margin-top: 530px; }
+  .reviews .flexbox {
+    align-items: center; }
+  .reviews .btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: none;
+    margin-left: 45px;
+    margin-top: 7px; }
+  .reviews .flexbox {
+    margin-bottom: 60px; }
+
+/* =/reviews
+---------------------------*/
 .articles {
   margin-top: 800px; }
   .articles .flexbox {
@@ -578,6 +595,24 @@ footer {
     display: flex;
     justify-content: center;
     width: 229px; }
+
+.reviews__item {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAMAAAD0U0w/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEX////x8fGenZ9ZV1vV1dYwLjN1c3fx8fFZV1uCgYTV1db///+sq63j4+OenZ9nZWnHx8h1c3cwLjM9O0BLSU7///8I0MjiAAAAEnRSTlMAAAAAAAAAVPTIckacY6vmftekOjI4AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IBCBUTOtKC6M0AAACASURBVBjTbc/bDoMwDANQAysUwm1h//+ta6BQN8JPJ5JltcCVIY6TvBiQqKpxFu90jWo5Fud0reel1mSnLNe1iXMeT9mdy8Qmte2tRymySzFKbSquzg2Qizqgdvs86XwEGR0mLRvsT3g2dtoztwFfmmf3AXn+Z/PsLkDu2BfJwB/jGxKCFd+F5AAAAABJRU5ErkJggg==") no-repeat left 2px;
+  font-size: 16px;
+  margin: 35px 0;
+  padding-left: 40px; }
+
+.reviews__text {
+  color: #4c4c4c;
+  line-height: 1.5;
+  margin-top: 10px; }
+
+.reviews .lightbox {
+  color: red;
+  text-decoration: none;
+  border-bottom: 1px dashed; }
+  .reviews .lightbox:hover {
+    border-bottom: none; }
 
 .fade {
   opacity: 0;

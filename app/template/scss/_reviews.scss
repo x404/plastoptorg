@@ -1,0 +1,23 @@
+.reviews{
+	&__item{
+		@extend .italic;
+		background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAMAAAD0U0w/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEX////x8fGenZ9ZV1vV1dYwLjN1c3fx8fFZV1uCgYTV1db///+sq63j4+OenZ9nZWnHx8h1c3cwLjM9O0BLSU7///8I0MjiAAAAEnRSTlMAAAAAAAAAVPTIckacY6vmftekOjI4AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IBCBUTOtKC6M0AAACASURBVBjTbc/bDoMwDANQAysUwm1h//+ta6BQN8JPJ5JltcCVIY6TvBiQqKpxFu90jWo5Fud0reel1mSnLNe1iXMeT9mdy8Qmte2tRymySzFKbSquzg2Qizqgdvs86XwEGR0mLRvsT3g2dtoztwFfmmf3AXn+Z/PsLkDu2BfJwB/jGxKCFd+F5AAAAABJRU5ErkJggg==") no-repeat left 2px;
+		font-size: 16px;
+		margin: 35px 0;
+		padding-left: 40px;
+	}
+	&__text{
+		color: $color5;
+		line-height: 1.5;
+		margin-top: 10px;
+	}
+	.lightbox{
+		color: $color9;
+		// text-decoration-style: dashed;
+		text-decoration: none;
+		border-bottom: 1px dashed;
+		&:hover{
+			border-bottom: none;
+		}
+	}
+}
