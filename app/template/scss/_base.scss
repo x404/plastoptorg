@@ -189,6 +189,10 @@ input::-moz-focus-inner{
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
+	display: inline-block;
+	$h : 40px;
+	border-radius: $h;
+	height: $h;
 	&-red{
 		background-color: red;
 	}

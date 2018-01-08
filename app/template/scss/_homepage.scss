@@ -118,6 +118,7 @@
 /* =products
 ---------------------------*/
 .products{
+	margin-top: 580px;
 	.title{
 		margin-bottom: 85px;
 		padding-right: 20px;
@@ -161,6 +162,7 @@
 .brands{
 	margin-top: 530px;
 	.text{
+		color: $color5;
 		margin: 50px 0;
 	}
 	.flexbox{
