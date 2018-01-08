@@ -195,3 +195,44 @@
 }
 /* =/reviews
 ---------------------------*/
+
+
+
+/* =address
+---------------------------*/
+.address{
+	margin-top: 680px;
+	.flexbox{
+		margin-top: 40px;
+		justify-content: center;
+	}
+	.btn{
+		@extend .bi;
+		margin: 0 8px;
+		padding: 0 17px;
+	}
+	&__panel{
+		background: rgba(26, 26, 26, .53);
+		color: $color2;
+		$w: 275px;
+		width: $w;
+		padding: 15px 22px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: -510px;
+		h5{
+			@extend .bold;
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+}
+.map-wrapper{
+	position: relative;
+	height: 465px;
+	margin-top: 40px;
+}
+/* =/address
+---------------------------*/

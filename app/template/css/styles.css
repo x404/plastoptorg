@@ -127,13 +127,13 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .products__title {
+.bold, .products__title, .address__panel h5 {
   font-family: "SegoeUIBold"; }
 
 .italic, .header .cats .popup p, .products__text, .reviews__item {
   font-family: "SegoeUIItalic"; }
 
-.bi, .reviews .btn, .articles__link {
+.bi, .reviews .btn, .address .btn, .articles__link {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -203,7 +203,6 @@ input::-moz-focus-inner {
   cursor: pointer;
   font-size: 18px;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   border-radius: 40px;
@@ -224,6 +223,8 @@ input::-moz-focus-inner {
     text-transform: none; }
   .btn-orange {
     background-color: #f26e26; }
+  .btn-active {
+    background-color: red; }
 
 .title {
   font-size: 60px;
@@ -538,6 +539,37 @@ footer {
     margin-bottom: 60px; }
 
 /* =/reviews
+---------------------------*/
+/* =address
+---------------------------*/
+.address {
+  margin-top: 680px; }
+  .address .flexbox {
+    margin-top: 40px;
+    justify-content: center; }
+  .address .btn {
+    margin: 0 8px;
+    padding: 0 17px; }
+  .address__panel {
+    background: rgba(26, 26, 26, 0.53);
+    color: #fff;
+    width: 275px;
+    padding: 15px 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -510px; }
+    .address__panel h5 {
+      font-size: 14px;
+      font-weight: normal; }
+
+.map-wrapper {
+  position: relative;
+  height: 465px;
+  margin-top: 40px; }
+
+/* =/address
 ---------------------------*/
 .articles {
   margin-top: 800px; }

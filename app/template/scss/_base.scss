@@ -188,7 +188,7 @@ input::-moz-focus-inner{
 	cursor: pointer;
 	font-size: 18px;
 	text-align: center;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	text-decoration: none;
 	display: inline-block;
 	$h : 40px;
@@ -214,6 +214,9 @@ input::-moz-focus-inner{
 	}
 	&-orange{
 		background-color: $color4;
+	}
+	&-active{
+		background-color: red;
 	}
 }
 
