@@ -128,10 +128,10 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .footer__contacts h5, .footer__social_inner p, .products__title, .address__panel h5, .feedback .title {
+.bold, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .products__text, .reviews__item, .feedback__form .row input.form-control, .policy {
+.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy {
   font-family: "SegoeUIItalic"; }
 
 .bi, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
@@ -522,6 +522,39 @@ footer {
 
 /* =/share
 ---------------------------*/
+.subscribe {
+  background: #66bb6a;
+  left: 50%;
+  margin-left: -50px;
+  padding: 40px 70px 50px;
+  position: absolute;
+  top: 110px;
+  width: 670px; }
+  .subscribe p {
+    color: #fff; }
+  .subscribe form {
+    margin-top: 10px; }
+  .subscribe .flexbox {
+    align-items: flex-end; }
+  .subscribe input.form-control {
+    background: #f5f5f5;
+    border: none;
+    flex-grow: 1;
+    font-size: 14px;
+    height: 40px;
+    margin-right: 15px;
+    padding: 0 10px; }
+  .subscribe input[type="submit"] {
+    background: #43a047;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    width: 160px;
+    transition: filter .3s; }
+    .subscribe input[type="submit"]:hover {
+      filter: saturate(1.4); }
+
 .homepage {
   background: url(../images/bg.jpg) no-repeat center top/contain; }
   .homepage .header {
