@@ -315,11 +315,11 @@ input::-moz-focus-inner {
     .header .contacts p {
       padding-top: 10px; }
     .header .contacts .btn {
-      margin-top: 3.4rem;
-      padding: 8px 22px 10px;
       border-radius: 40px;
+      font-weight: normal;
       height: 40px;
-      font-weight: normal; }
+      margin-top: 3.4rem;
+      padding: 8px 22px 10px; }
   .header .cats {
     color: #fff;
     padding-bottom: 185px;
@@ -912,7 +912,10 @@ footer {
       -webkit-justify-content: space-between;
       -moz-justify-content: space-between;
       justify-content: space-between;
-      margin-bottom: 24px; }
+      margin-top: 24px;
+      position: relative; }
+      .feedback__form .row:first-child {
+        margin-top: 0; }
       .feedback__form .row input.form-control,
       .feedback__form .row textarea {
         color: #fff;
@@ -980,6 +983,29 @@ footer {
           transition: line-height 0.5s ease; }
       .feedback__form .row .error {
         border: 1px solid red !important; }
+    .feedback__form .file-upload {
+      background: url(../images/upload.png) no-repeat left top;
+      bottom: 0;
+      height: 53px;
+      position: absolute;
+      right: 0;
+      width: 92px;
+      z-index: 10; }
+      .feedback__form .file-upload input[type="file"] {
+        display: none; }
+      .feedback__form .file-upload label {
+        display: block;
+        cursor: pointer;
+        height: 32px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 70px; }
+    .feedback__form .file-name {
+      text-align: right;
+      font-size: 12px;
+      padding-top: 2px;
+      padding-left: 15px; }
     .feedback__form .policy {
       margin-top: 20px; }
 

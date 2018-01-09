@@ -357,13 +357,13 @@ input::-moz-focus-inner{
 		}
 
 		.btn{
+			$h : 40px;
+			@extend .bold;
+			border-radius: $h;
+			font-weight: normal;
+			height: $h;
 			margin-top: 3.4rem;
 			padding: 8px 22px 10px;
-			$h : 40px;
-			border-radius: $h;
-			height: $h;
-			@extend .bold;
-			font-weight: normal;
 		}
 	}
 

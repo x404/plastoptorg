@@ -348,7 +348,14 @@
 					</div>
 					<div class="row">
 						<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+						<div class="file-upload">
+							<label>
+								<input type="file" name="file" id="uploaded-file" onchange="getFileName();" />
+								<span></span>
+							</label>
+						</div>
 					</div>
+					<div id="file-name" class="file-name"></div>
 					<button type="button" class="submit">Отправить</button>
 					<div class="policy">
 						<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access">
