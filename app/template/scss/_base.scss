@@ -812,3 +812,12 @@ footer{
 		}
 	}
 }
+
+
+label.error{
+	display: none !important;
+}
+
+.form-control.error{
+	border-color: red !important;
+}

@@ -18,8 +18,5 @@
   "devDependencies": {
     "jquery": "^3.2.1",
     "jquery-validation": "^1.17.0"
-  },
-  "dependencies": {
-    "fancyBox": "fancyapps/fancyBox#3.0"
   }
 }

@@ -104,6 +104,41 @@ $(document).ready(function(){
 		$(this).addClass('btn-active');
 	});
 
+
+	// var thank = '<div class="thank text-center"><p>Спасибо за заказ продукта на нашем сайте. В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
+	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
+	// var thankreview = '<div class="thank text-center"><p>Спасибо за оставленный отзыв.</p></div>';
+	// var thankqorder = '<div class="thank text-center"><p>Спасибо за заказ продукта на нашем сайте. В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
+	var errorTxt = 'Возникла ошибка при отправке заявки!';
+
+
+
+	// validation quick form
+	$('#callback-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$('#callback-form fieldset').hide();
+			$('#callback-form').append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$('#callback-form').html(thankcallback);
+					startClock('callback-form');
+				},
+				  error: function(){
+				    alert('error!');
+					$('#callback-form fieldset').show();
+					('.sending').removeClass('sending');
+				  }
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	}); 
+
 });
 
 // =заглушка для IE
@@ -200,4 +235,58 @@ function getFileName(){
 	var file = document.getElementById('uploaded-file').value;
 	file = file.replace(/\\/g, "/").split ('/').pop();
 	document.getElementById('file-name').innerHTML = 'Имя файла: ' + file;
+}
+
+
+
+
+
+var timer,
+	sec = 3;
+
+
+function showTime(sendform){
+	sec = sec-1;
+	if (sec <=0) {
+		stopClock();
+
+		switch (sendform){
+			case 'qorder-form':
+				$('.qorder__box .thank').fadeOut('normal',function(){
+					$('.qorder__box .thank').remove();
+					$('.qorder__box .form-control, .qorder__box textarea').val('');
+				});
+				break;
+			case 'feedback-form':
+				$('.feedback .thank').fadeOut('normal',function(){
+					$('.feedback .thank').remove();
+					$('.feedback .form-control, .feedback textarea').val('');
+					$('.feedback__form fieldset').show();
+				});
+				break;
+			case 'cart-form':
+				$('.cart .thank').fadeOut('normal',function(){
+					$('.cart .thank').remove();
+					// $('.cart .form-control, .cart textarea').val('');
+					// $('.cart__form fieldset').show();
+				});
+				break;	
+			default:
+				modal = $("#" + sendform).closest('.modal');
+				modal.fadeOut('normal',function(){
+					modal.modal('hide');
+				});
+				break;
+		}
+	}
+}
+function stopClock(){
+	window.clearInterval(timer);
+	timer = null;
+	sec = 3;
+}
+
+function startClock(sendform){
+	if (!timer)
+		timer = window.setInterval("showTime('" + sendform + "')",1000);
 }

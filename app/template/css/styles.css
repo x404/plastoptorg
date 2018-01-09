@@ -650,6 +650,12 @@ footer {
   #qorder .feedback__form .file-upload {
     background: url(../images/upload.png) no-repeat left -53px; }
 
+label.error {
+  display: none !important; }
+
+.form-control.error {
+  border-color: red !important; }
+
 .homepage {
   background: url(../images/bg.jpg) no-repeat center top/contain; }
   .homepage .header {
@@ -1122,6 +1128,12 @@ footer {
   font-size: 36px;
   color: #ff3333; }
 
+.sending {
+  text-align: center;
+  font-size: 17px;
+  height: 207px;
+  padding-top: 80px; }
+
 .modal-open {
   overflow: hidden; }
 
@@ -1216,9 +1228,8 @@ footer {
 form .thank {
   color: #383838;
   background-color: #fff;
-  border: 1px solid #f26e26;
-  margin-bottom: 3rem;
-  padding: 2rem 0; }
+  font-size: 18px;
+  padding: 90px 0 100px; }
 
 #callback .modal-dialog {
   margin-left: 0;
