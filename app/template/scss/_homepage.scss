@@ -22,6 +22,34 @@
 			}
 		}
 	}
+
+	.articles{
+		padding-top: 900px;
+		&:before{
+			background: url(../images/divider_3.png) no-repeat right top;
+		}
+	}
+
+	.brands{
+		margin-top: -40px;
+		&:before{
+			background: url(../images/divider_4.png) no-repeat right top;
+		}
+	}
+
+	.reviews{
+		margin-top: -130px;
+		padding-top: 800px;
+		&:before{
+			background: url(../images/divider_5.png) no-repeat right top;
+		}
+	}
+
+	.address{
+		&:before{
+			background: url(../images/divider_6.png) no-repeat right top;
+		}
+	}	
 }
 
 
@@ -42,22 +70,16 @@
 ---------------------------*/
 
 
-
 /* =intro
 ---------------------------*/
 .intro{
 	margin-top: -250px;
 	padding-top: 750px;
-	margin-bottom: 100px;
+	// margin-bottom: 100px;
 	position: relative;
 	overflow: hidden;
 	&:before{
-		@extend .before;
 		background: url(../images/divider_1.png) no-repeat right top;
-		right: 0;
-		top: 0;
-		width: 1339px;
-		height: 1115px;
 	}
 	.btn{
 		display: inline-block;
@@ -98,27 +120,18 @@
 			}
 		}
 	}
-
-	&.effect-bgslidefromright{
-		&:before{
-			@include effect-bgslidefromright(0);
-		}
-		&.bganimated{
-			&:before{
-				@include effect-bgslidefromright();				
-			}
-		}
-	}
 }
 /* =/intro
 ---------------------------*/
 
 
-
 /* =products
 ---------------------------*/
 .products{
-	margin-top: 580px;
+	padding-top: 580px;
+	&:before{
+		background: url(../images/divider_2.png) no-repeat left top;
+	}
 	.title{
 		margin-bottom: 85px;
 		padding-right: 20px;
@@ -160,7 +173,7 @@
 /* =brands
 ---------------------------*/
 .brands{
-	margin-top: 530px;
+	padding-top: 530px;
 	.text{
 		color: $color5;
 		margin: 50px 0;
@@ -176,7 +189,7 @@
 /* =reviews
 ---------------------------*/
 .reviews{
-	margin-top: 530px;
+	padding-top: 530px;
 	.flexbox{
 		align-items: center;
 	}
@@ -191,7 +204,6 @@
 	.flexbox{
 		margin-bottom: 60px;
 	}
-	
 }
 /* =/reviews
 ---------------------------*/
@@ -201,7 +213,7 @@
 /* =address
 ---------------------------*/
 .address{
-	margin-top: 680px;
+	padding-top: 680px;
 	.flexbox{
 		margin-top: 40px;
 		justify-content: center;

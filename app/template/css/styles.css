@@ -175,7 +175,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, .intro:before, .articles__link:before {
+.before, .effect:before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, .articles__link:before {
   content: "";
   display: block;
   position: absolute; }
@@ -243,6 +243,43 @@ input::-moz-focus-inner {
 
 .bgtrigger:before {
   opacity: 0 !important; }
+
+.effect {
+  overflow: hidden;
+  position: relative; }
+  .effect:before {
+    top: 0; }
+  .effect.effect-bgslidefromright:before {
+    height: 1115px;
+    width: 1339px;
+    right: 0; }
+  .effect.effect-bgslidefromleft:before {
+    left: 0;
+    height: 785px;
+    width: 1345px; }
+  .effect .container {
+    position: relative;
+    z-index: 10; }
+
+.effect-bgslidefromright:before {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s transform ease-out, .5s opacity ease-out; }
+
+.effect-bgslidefromright.bganimated:before {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: 1s transform ease-out, .5s opacity ease-out; }
+
+.effect-bgslidefromleft:before {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s transform ease-out, .5s opacity ease-out; }
+
+.effect-bgslidefromleft.bganimated:before {
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: 1s transform ease-out, .5s opacity ease-out; }
 
 /* =header
 ---------------------------*/
@@ -573,6 +610,21 @@ footer {
         margin-right: auto; }
       .homepage .header .logo img {
         display: block; }
+  .homepage .articles {
+    padding-top: 900px; }
+    .homepage .articles:before {
+      background: url(../images/divider_3.png) no-repeat right top; }
+  .homepage .brands {
+    margin-top: -40px; }
+    .homepage .brands:before {
+      background: url(../images/divider_4.png) no-repeat right top; }
+  .homepage .reviews {
+    margin-top: -130px;
+    padding-top: 800px; }
+    .homepage .reviews:before {
+      background: url(../images/divider_5.png) no-repeat right top; }
+  .homepage .address:before {
+    background: url(../images/divider_6.png) no-repeat right top; }
 
 /* =advantages
 ---------------------------*/
@@ -592,15 +644,10 @@ footer {
 .intro {
   margin-top: -250px;
   padding-top: 750px;
-  margin-bottom: 100px;
   position: relative;
   overflow: hidden; }
   .intro:before {
-    background: url(../images/divider_1.png) no-repeat right top;
-    right: 0;
-    top: 0;
-    width: 1339px;
-    height: 1115px; }
+    background: url(../images/divider_1.png) no-repeat right top; }
   .intro .btn {
     display: inline-block;
     height: 40px;
@@ -628,21 +675,15 @@ footer {
       margin-top: 35px; }
       .intro .tab-pane .btn-more {
         margin-right: 35px; }
-  .intro.effect-bgslidefromright:before {
-    opacity: 1;
-    transform: translateX(0);
-    transition: 1s transform ease-out, .5s opacity ease-out; }
-  .intro.effect-bgslidefromright.bganimated:before {
-    opacity: 1;
-    transform: translateX(100%);
-    transition: 1s transform ease-out, .5s opacity ease-out; }
 
 /* =/intro
 ---------------------------*/
 /* =products
 ---------------------------*/
 .products {
-  margin-top: 580px; }
+  padding-top: 580px; }
+  .products:before {
+    background: url(../images/divider_2.png) no-repeat left top; }
   .products .title {
     margin-bottom: 85px;
     padding-right: 20px; }
@@ -671,7 +712,7 @@ footer {
 /* =brands
 ---------------------------*/
 .brands {
-  margin-top: 530px; }
+  padding-top: 530px; }
   .brands .text {
     color: #4c4c4c;
     margin: 50px 0; }
@@ -683,7 +724,7 @@ footer {
 /* =reviews
 ---------------------------*/
 .reviews {
-  margin-top: 530px; }
+  padding-top: 530px; }
   .reviews .flexbox {
     align-items: center; }
   .reviews .btn {
@@ -700,7 +741,7 @@ footer {
 /* =address
 ---------------------------*/
 .address {
-  margin-top: 680px; }
+  padding-top: 680px; }
   .address .flexbox {
     margin-top: 40px;
     justify-content: center; }
@@ -728,47 +769,49 @@ footer {
 
 /* =/address
 ---------------------------*/
-.articles {
-  margin-top: 800px; }
-  .articles .flexbox {
-    flex-wrap: wrap;
-    margin-bottom: 45px;
-    justify-content: space-between; }
-  .articles header {
-    margin-bottom: 40px; }
-  .articles__cell {
-    width: 31.5%;
-    margin-top: 34px; }
-  .articles__link {
-    /*width: 92%;*/
-    max-width: 366px;
-    background-repeat: no-repeat;
-    background-color: #ccc;
-    color: #fff;
-    font-size: 18px;
-    height: 125px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .articles__link span {
-      position: relative; }
-    .articles__link:before {
-      -webkit-transition: opacity 0.2s ease-out;
-      transition: opacity 0.2s ease-out;
-      background: #e98546;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      top: 0;
-      width: 100%; }
-    .articles__link:hover:before {
-      opacity: .85; }
-  .articles .btn {
-    font-size: 17px;
-    margin-right: 30px; }
+.articles .flexbox {
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+  justify-content: space-between; }
+
+.articles header {
+  margin-bottom: 40px; }
+
+.articles__cell {
+  width: 31.5%;
+  margin-top: 34px; }
+
+.articles__link {
+  /*width: 92%;*/
+  max-width: 366px;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 18px;
+  height: 125px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .articles__link span {
+    position: relative; }
+  .articles__link:before {
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+    background: #e98546;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    width: 100%; }
+  .articles__link:hover:before {
+    opacity: .85; }
+
+.articles .btn {
+  font-size: 17px;
+  margin-right: 30px; }
 
 .brands .flexbox {
   flex-wrap: wrap; }

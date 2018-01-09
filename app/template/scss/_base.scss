@@ -196,7 +196,6 @@ input::-moz-focus-inner{
 	cursor: pointer;
 	font-size: 18px;
 	text-align: center;
-	// text-transform: uppercase;
 	text-decoration: none;
 	display: inline-block;
 	$h : 40px;
@@ -249,6 +248,11 @@ input::-moz-focus-inner{
 	transition: 1s transform ease-out, .5s opacity ease-out;
 }
 
+@mixin effect-bgslidefromleft($x: 0){
+	opacity: 1;
+	transform: translateX($x);
+	transition: 1s transform ease-out, .5s opacity ease-out;
+}
 
 .bgtrigger{
 	&:before{
@@ -256,6 +260,57 @@ input::-moz-focus-inner{
 	}
 }
 
+.effect{
+	overflow: hidden;
+	position: relative;
+	&:before{
+		@extend .before;
+		top: 0;
+	}
+	&.effect-bgslidefromright{
+		&:before{
+			height: 1115px;		
+			width: 1339px;
+			right: 0;
+		}
+	}
+	&.effect-bgslidefromleft{
+		&:before{
+			left: 0;
+			height: 785px;
+			width: 1345px;
+		}
+	}
+	.container{
+		position: relative;
+		z-index: 10;
+	}
+}
+
+
+
+.effect-bgslidefromright{
+	&:before{
+		@include effect-bgslidefromright(0);
+	}
+	&.bganimated{
+		&:before{
+			@include effect-bgslidefromright();
+		}
+	}
+}
+
+
+.effect-bgslidefromleft{
+	&:before{
+		@include effect-bgslidefromleft(0);
+	}
+	&.bganimated{
+		&:before{
+			@include effect-bgslidefromleft(-100%);
+		}
+	}
+}
 
 /* =header
 ---------------------------*/
