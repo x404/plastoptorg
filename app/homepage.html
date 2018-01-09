@@ -60,7 +60,7 @@
 						+7 (499) 391-31-80
 					</p>
 					<p>office@plastoptorg.ru</p>
-					<button type="button" class="btn btn-red">Заказать звонок</button>
+					<button type="button" class="btn btn-red" data-toggle="modal" data-target="#callback">ЗАКАЗАТЬ ЗВОНОК</button>
 				</div>
 			</div>
 		</div>
@@ -433,8 +433,7 @@
 				<fieldset>
 					<div class="flexbox">
 						<input type="email" class="form-control" value="" name="email" placeholder="ваш e-mail" />
-						<input type="submit" value="подписаться" />
-						
+						<input type="submit" c value="подписаться" />
 					</div>
 				</fieldset>
 			</form>
@@ -442,6 +441,32 @@
 	</div>
 </footer>
 <!-- =/footer -->
+
+<a href="#" role="button" id="inline-order">ON-LINE <br>ЗАКАЗ</a>
+
+
+<!-- =modal callback -->
+<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="container">
+			<p class="title">ФОРМА ЗАКАЗА ЗВОНКА</p>
+			<button type="button" data-dismiss="modal" class="close-modal"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
+			<form action="#" method="post" class="form-policy" id="callback-form">
+				<fieldset>
+					<input type="text" name="text" class="form-control required" value="" placeholder="ваше имя" tabindex="0" autofocus>
+					<input type="tel" name="tel" class="form-control required" value="" placeholder="телефон" tabindex="2" />
+
+					<button type="button" class="submit" tabindex="2">позвонить мне</button>
+					<div class="policy">
+						<input type="checkbox" id="cbcheckbox" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="cbcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/modal callback -->
 
 
 <div id="outdated"></div>

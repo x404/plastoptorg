@@ -84,36 +84,37 @@
 			}
 
 		}
-		.submit{
-			@extend .bi;
-			@include gradient-vertical(#c3133a, #7b0619);
-			transition: all .3s;
-			border-radius: 32px;
-			border: none;
-			color: $color2;
-			cursor: pointer;
-			display: block;
-			font-size: 17px;
-			height: 32px;
-			margin: 0 auto;
-			padding-bottom: 4px;
-			text-align: center;
-			text-decoration: none;
-			text-transform: lowercase;
-			width: 20rem;
-			&:hover{
-				opacity: .9
-			}
-			&:disabled{
-				filter: saturate(.6) grayscale(.1) brightness(0.9);
-				cursor: default;
-				&:hover{
-					opacity: 1;
-				}
-			}
-		}
 		.policy{
 			margin-top: 20px;
+		}
+	}
+}
+
+.submit{
+	@extend .bi;
+	@include gradient-vertical(#c3133a, #7b0619);
+	transition: all .3s;
+	border-radius: 32px;
+	border: none;
+	color: $color2;
+	cursor: pointer;
+	display: block;
+	font-size: 17px;
+	height: 32px;
+	margin: 0 auto;
+	padding-bottom: 4px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: lowercase;
+	width: 20rem;
+	&:hover{
+		opacity: .9
+	}
+	&:disabled{
+		filter: saturate(.6) grayscale(.1) brightness(0.9);
+		cursor: default;
+		&:hover{
+			opacity: 1;
 		}
 	}
 }
@@ -146,7 +147,7 @@
 	color: $color1;
 	display: block;
 	position: relative; /* будем позиционировать псевдочекбокс относительно label */
-	padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+	padding: 3px 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
 }
 /* Оформление первой части чекбокса в выключенном состоянии (фон). */
 .user-access:not(checked) + label:before {

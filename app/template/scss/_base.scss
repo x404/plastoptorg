@@ -166,9 +166,9 @@ input::-moz-focus-inner{
 
 
 .form-control {
-   border: 1px solid $color3;
-   border-radius: 0;
-   margin-top: 0.6rem;
+	border: 1px solid $color3;
+	border-radius: 0;
+	margin-top: 16px;
 	font-size: 16px;
 	&:focus,
 	&:active{
@@ -358,10 +358,12 @@ input::-moz-focus-inner{
 
 		.btn{
 			margin-top: 3.4rem;
-			padding: 10px 22px;
+			padding: 8px 22px 10px;
 			$h : 40px;
 			border-radius: $h;
 			height: $h;
+			@extend .bold;
+			font-weight: normal;
 		}
 	}
 
@@ -732,5 +734,30 @@ footer{
 				filter: saturate(1.4)
 			}
 		}
+	}
+}
+
+
+
+#inline-order{
+	@extend .bi;
+	align-items: flex-end;
+	background: url(../images/online.png) no-repeat left top;
+	border: none;
+	color: $color2;
+	display: flex;
+	font-size: 18px;
+	height: 198px;
+	justify-content: center;
+	left: 3px;
+	padding-bottom: 32px;
+	position: fixed;
+	text-align: center;
+	text-decoration: none;
+	top: 20%;
+	width: 114px;
+	transition: filter .3s;
+	&:hover{
+		filter: drop-shadow(0 0 3px #000)
 	}
 }
