@@ -130,6 +130,10 @@ h1{font-size:6rem}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
 
+h5{
+	font-weight: normal;
+}
+
 
 *:focus{outline:none}
 
@@ -482,9 +486,129 @@ input::-moz-focus-inner{
 /* =footer
 ---------------------------*/
 footer{
-	background: url(../images/footer-bg.jpg) no-repeat center top /cover;
+	background: url(../images/footer-bg.jpg) no-repeat center bottom /cover;
 	position: relative;
 	padding-top: 185px;
+	height: 580px;
+}
+
+.footer{
+	&-container{
+		margin-left: auto;
+		margin-right: auto;
+		width: 1400px;
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+	}
+
+	// .flexbox{
+	// 	flex-flow: column;
+	// }
+
+	&__top{
+		display: flex;
+		flex-grow: 1;
+		padding-top: 40px;
+		margin-bottom: 60px;
+		align-items: flex-end;
+	}
+
+	&__bottom{
+		@extend .italic;
+		align-items: flex-end;
+		display: flex;
+		font-size: 14px;
+		justify-content: space-between;
+		padding-bottom: 20px;
+	}
+
+	&__contacts{
+		background-color: $color2;
+		color: $color5;
+		height: 185px;
+		padding: 12px 16px;
+		width: 365px;
+		h5{
+			color: $color1;
+			font-size: 14px;
+			@extend .bold;
+		}
+		p{
+			padding-top: 7px;
+		}
+		.column{
+			padding-top: 22px;
+			flex-basis: 50%;
+		}
+	}
+
+	&__logo{
+		align-items: center;
+		background: rgba(255,255,255,.8);
+		display: flex;
+		height: 60px;
+		padding-left: 27px;
+		padding-right: 50px;
+		position: relative;
+		text-align: center;
+		&:after{
+			@extend .before;
+			background: url(../images/logo-small.png);
+			height: 121px;
+			right: -70px;
+			top: -30px;
+			width: 107px;
+			z-index: 2;
+		}
+	}
+
+
+	&__social{
+		@include gradient-horizontal(#fff, rgba(255, 255,255, 0));
+		flex-grow: 1;
+		height: 60px;
+		&_inner{
+			@include gradient-horizontal(#fff, rgba(255, 255,255, 0));
+			margin-top: 3px;
+			position: relative;
+			z-index: 0;
+			$l: 95px;
+			p{
+				@extend .bold;
+				font-size: 16px;
+				left: $l;
+				position: absolute;
+				top: -30px;
+				z-index: 0;
+			}
+			.icons{
+				align-items: center;
+				height: 54px;
+				margin-left: $l;
+				a{
+					margin-right: 4px;
+				}
+				img{
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+	.copyright{
+		color: $color5;
+	}
+	.kreotif{
+		color: $color2;
+		padding-right: 100px;
+		a{
+			color: currentColor;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
 }
 /* =footer
 ---------------------------*/
