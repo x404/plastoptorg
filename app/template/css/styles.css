@@ -321,7 +321,8 @@ input::-moz-focus-inner {
       height: 40px; }
   .header .cats {
     color: #fff;
-    padding-bottom: 185px; }
+    padding-bottom: 185px;
+    margin-bottom: 50px; }
     .header .cats .container {
       width: 1310px; }
     .header .cats .cat__title {
@@ -743,21 +744,22 @@ footer {
 .address {
   padding-top: 680px; }
   .address .flexbox {
-    margin-top: 40px;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 40px; }
   .address .btn {
     margin: 0 8px;
     padding: 0 17px; }
   .address__panel {
     background: rgba(26, 26, 26, 0.53);
     color: #fff;
-    width: 275px;
+    left: 50%;
+    margin-left: -510px;
     padding: 15px 22px;
     position: absolute;
-    left: 50%;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: -510px; }
+    width: 275px;
+    z-index: 1; }
     .address__panel h5 {
       font-size: 14px;
       font-weight: normal; }
@@ -766,6 +768,9 @@ footer {
   position: relative;
   height: 465px;
   margin-top: 40px; }
+
+#map {
+  height: 465px; }
 
 /* =/address
 ---------------------------*/
@@ -867,7 +872,7 @@ footer {
     font-size: 14px;
     line-height: 3; }
   .feedback__content {
-    padding: 1rem 0 .8rem; }
+    padding: 35px 0 10px; }
   .feedback__form {
     padding-left: 1rem;
     padding-right: 1rem;

@@ -215,8 +215,8 @@
 .address{
 	padding-top: 680px;
 	.flexbox{
-		margin-top: 40px;
 		justify-content: center;
+		margin-top: 40px;
 	}
 	.btn{
 		@extend .bi;
@@ -224,16 +224,17 @@
 		padding: 0 17px;
 	}
 	&__panel{
+		$w: 275px;
 		background: rgba(26, 26, 26, .53);
 		color: $color2;
-		$w: 275px;
-		width: $w;
+		left: 50%;
+		margin-left: -510px;
 		padding: 15px 22px;
 		position: absolute;
-		left: 50%;
 		top: 50%;
 		transform: translateY(-50%);
-		margin-left: -510px;
+		width: $w;
+		z-index: 1;
 		h5{
 			@extend .bold;
 			font-size: 14px;
@@ -245,6 +246,10 @@
 	position: relative;
 	height: 465px;
 	margin-top: 40px;
+}
+
+#map{
+	height: 465px;
 }
 /* =/address
 ---------------------------*/

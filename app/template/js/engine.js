@@ -77,11 +77,11 @@ $(document).ready(function(){
 	$('.bganimated').each(function () {
 		var block = $(this),
 			blockh = block.height() + parseInt(block.css("padding-top")) ;
-			console.log(blockh);
+			// console.log(blockh);
 
 		$(window).scroll(function() {
 			var top = block.offset().top;
-			console.log(top);
+			// console.log(top);
 			top = top - $(window).height() + blockh/2+ 250;
 			var scroll_top = $(this).scrollTop();
 			if ((scroll_top > top)) {
@@ -92,6 +92,17 @@ $(document).ready(function(){
 		});
 	});
 
+
+
+	$('body').on('click','[data-coord]', function(e) {
+		e.preventDefault();
+		var $this = $(this).data('coord').split(','),
+			lat = $this[0],
+			lon = $this[1];
+		map.setCenter([lat, lon], 16);
+		$('.btn-active').removeClass('btn-active');
+		$(this).addClass('btn-active');
+	});
 
 });
 
@@ -148,3 +159,39 @@ $(function() {
         });
     });
 });
+
+
+
+
+var map;
+var myCollection;
+ymaps.ready(function () {
+    map = new ymaps.Map('map', {
+        center: [55.738287, 37.747568],
+        zoom: 16
+    });
+
+	myCollection = new ymaps.GeoObjectCollection(null, {
+        preset: 'islands#redDotIcon'
+	});
+	myCollection.add(new ymaps.Placemark(
+		[55.738287, 37.747568],
+		{
+			hintContent: 'Восточный офис',
+			balloonContent: ''
+		}
+	));
+
+	myCollection.add(new ymaps.Placemark(
+		[55.843884, 38.200813],
+		{
+			hintContent: 'Северный склад',
+			balloonContent: ''
+		}
+	));
+	map.geoObjects.add(myCollection);
+})
+
+function go_to(lat,lon){
+	map.setCenter([lat, lon], 16);
+}
