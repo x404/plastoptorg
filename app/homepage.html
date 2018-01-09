@@ -45,7 +45,15 @@
 					<ul>
 						<li class="active"><span>главная</span></li>
 						<li><a href="#">компания</a></li>
-						<li><a href="#">продукция</a></li>
+						<li>
+							<a href="#">продукция</a>
+							<ul>
+								<li><a href="#" title="">сотовый поликарбонат</a></li>
+								<li><a href="#" title="">монолитный поликарбонат</a></li>
+								<li><a href="#" title="">комплектующие</a></li>
+								<li><a href="#" title="">бренды</a></li>
+							</ul>
+						</li>
 						<li><a href="#">прайс</a></li>
 						<li><a href="#">важно</a></li>
 						<li><a href="#">контакты</a></li>
@@ -164,10 +172,10 @@
 				<div class="products__col">
 					<div class="products__cell">
 						<div class="products__head" style="background-image: url(/tmp/product1.png);">
-							<h2 class="products__title">сотовый поликарбонат</h2>
+							<h2 class="products__title">монолитный поликарбонат</h2>
 						</div>
 						<div class="products__text">
-							Среди многочисленных типов продукции, выпускаемых компанией «Пластопторг», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая механические и физические характеристики.
+							Наша компания предлагает монолитный поликарбонат, купить который можно с доставкой по указанному адресу. Обеспечивается индивидуальный подход к каждому обратившемуся клиенту. Если возникают какие-либо вопросы по сотрудничеству, задать их можно квалифицированному специалисту.
 						</div>
 						<a href="#" type="button" class="btn btn-more">подробнее</a>
 					</div>
@@ -175,10 +183,10 @@
 				<div class="products__col">
 					<div class="products__cell">
 						<div class="products__head" style="background-image: url(/tmp/product1.png);">
-							<h2 class="products__title">сотовый поликарбонат</h2>
+							<h2 class="products__title">комплектующие для поликарбоната</h2>
 						</div>
 						<div class="products__text">
-							Среди многочисленных типов продукции, выпускаемых компанией «Пластопторг», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая механические и физические характеристики.
+							Наша компания занимается продажей разнообразных изделий из поликарбоната. Отличительной особенностью доступных товаров является высокое качество. Производство осуществляет завод «Юг-Ойл-Пласт» считающийся лучшим изготовителем поликарбоната в России.
 						</div>
 						<a href="#" type="button" class="btn btn-more">подробнее</a>
 					</div>
@@ -274,7 +282,7 @@
 				<div class="reviews__text">Ребята молодцы! Заказывал недавно у них теплицу для своей супруги. Предложили мне сразу варианты разной ценовой категории, подсказали какую лучше брать под наши потребности. Менеджер вежливый и хорошо разбирается в этой сфере. Заказал сразу и монтаж - также молодцы, видно, что уже не 1 год занимаются установкой. В общем мы чувствуем себя довольными. Рекомендую Пластопторг!</div>
 			</article>
 			<article class="reviews__item">
-				<div class="reviews__title">Саша : <time datetime="2014-04-21T11:00:00">04.12.2017</time> - <a href="#" class="lightbox">Видеоотзыв</a></div>
+				<div class="reviews__title">Саша : <time datetime="2014-04-21T11:00:00">04.12.2017</time> - <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&autoplay=1&rel=0" data-fancybox class="lightbox">Видеоотзыв</a></div>
 				<div class="reviews__text">Стал постоянным заказчиком данной копании (по мере надобноти конечно). Заказывая у них материал я себе уже сделал теплицу и забор вокруг дома. Также планирую делать навес в скором времени. Все до сих пор в отличном состоянии, брака ни разу небыло. Высокий уровень компетентности, порядочность и приемлемая цена — качества, которые сегодня, в совокупности, очень редко встретишь. Рекомендую компанию Пластопторг, как отвечающую всем этим качествам компанию.</div>
 			</article>
 			<article class="reviews__item">
@@ -351,7 +359,6 @@
 						<div class="file-upload">
 							<label>
 								<input type="file" name="file" id="uploaded-file" onchange="getFileName();" />
-								<span></span>
 							</label>
 						</div>
 					</div>
@@ -449,7 +456,7 @@
 </footer>
 <!-- =/footer -->
 
-<a href="#" role="button" id="inline-order">ON-LINE <br>ЗАКАЗ</a>
+<a href="#" role="button" id="inline-order" data-toggle="modal" data-target="#qorder">ON-LINE <br>ЗАКАЗ</a>
 
 
 <!-- =modal callback -->
@@ -476,6 +483,42 @@
 <!-- =/modal callback -->
 
 
+
+<!-- =modal qorder -->
+<div class="modal fade" id="qorder" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<p class="title">ФОРМА ON-LINE ЗАКАЗА</p>
+		<button type="button" data-dismiss="modal" class="close-modal"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
+		<form class=" form-policy">
+		<div class="feedback__form">
+			<div class="container">
+				<div class="row">
+					<input name="name" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
+					<input name="email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+					<input name="tel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+				</div>
+				<div class="row">
+					<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+					<div class="file-upload">
+						<label>
+							<input type="file" name="file" id="uploaded-file" onchange="getFileName();" />
+						</label>
+					</div>
+				</div>
+				<div id="file-name" class="file-name"></div>
+				<button type="button" class="submit">заказать</button>
+				<div class="policy">
+					<input type="checkbox" id="opcheckbox" value="" name="checkbox" checked="checked" class="user-access">
+					<label for="opcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- =/modal qorder -->
+
+
+
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
@@ -483,6 +526,9 @@
 
 <script src="/template/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
 

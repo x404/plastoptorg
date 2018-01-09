@@ -15,6 +15,8 @@ $color10:#807474;
 $color11:#ff3333;
 $color12:#a6a6a6;
 $color13:#808080;
+$color14:#2b5a9b;
+$color15:#f2f2f2;
 
 
 
@@ -135,8 +137,6 @@ h5{
 }
 
 
-*:focus{outline:none}
-
 input::-moz-focus-inner{
 	border: 0;
 	padding: 0;
@@ -201,6 +201,7 @@ input::-moz-focus-inner{
 	$h : 40px;
 	border-radius: $h;
 	height: $h;
+	transition: background-color .3s;
 	&-red{
 		background-color: red;
 	}
@@ -218,6 +219,9 @@ input::-moz-focus-inner{
 		padding-left: 22px;
 		padding-right: 22px;
 		text-transform: none;
+		&:hover{
+			background-color: $color14;
+		}
 	}
 	&-orange{
 		background-color: $color4;
@@ -331,6 +335,34 @@ input::-moz-focus-inner{
 			display: flex;
 			li{
 				margin-left: 25px;
+				position: relative;
+				ul{
+					background-color: #224b89;
+					padding-bottom: 10px;
+					padding-top: 5px;
+					padding-left: 10px;
+					left: -10px;
+					display: block;
+					position: absolute;
+					top: 21px;
+					width: 250px;
+					z-index: -1;
+					opacity: 0;
+					transition: opacity .3s;
+					li{
+						margin-left: 0;
+						padding: 4px 0;
+					}
+				}
+				&:hover{
+					& > a{
+						border-bottom: 2px dashed;						
+					}
+					ul{
+						opacity: 1;
+						z-index: 2;
+					}
+				}
 			}
 			.active{
 				span{
@@ -759,5 +791,24 @@ footer{
 	transition: filter .3s;
 	&:hover{
 		filter: drop-shadow(0 0 3px #000)
+	}
+}
+
+
+#qorder{
+	.modal-dialog{
+		padding-bottom: 0;
+	}
+	.submit{
+		margin-top: 24px;
+	}
+	.feedback__form{
+		background-color: $color15;
+		max-width: 100%;
+		padding-top: 15px;
+		padding-bottom: 25px;
+		.file-upload{
+			background: url(../images/upload.png) no-repeat left -53px;
+		}
 	}
 }

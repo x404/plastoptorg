@@ -158,9 +158,6 @@ h3 {
 h5 {
   font-weight: normal; }
 
-*:focus {
-  outline: none; }
-
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -211,7 +208,8 @@ input::-moz-focus-inner {
   text-decoration: none;
   display: inline-block;
   border-radius: 40px;
-  height: 40px; }
+  height: 40px;
+  transition: background-color .3s; }
   .btn-red {
     background-color: red; }
   .btn-grey {
@@ -226,6 +224,8 @@ input::-moz-focus-inner {
     padding-left: 22px;
     padding-right: 22px;
     text-transform: none; }
+    .btn-more:hover {
+      background-color: #2b5a9b; }
   .btn-orange {
     background-color: #f26e26; }
   .btn-active {
@@ -298,7 +298,29 @@ input::-moz-focus-inner {
     .header nav ul {
       display: flex; }
       .header nav ul li {
-        margin-left: 25px; }
+        margin-left: 25px;
+        position: relative; }
+        .header nav ul li ul {
+          background-color: #224b89;
+          padding-bottom: 10px;
+          padding-top: 5px;
+          padding-left: 10px;
+          left: -10px;
+          display: block;
+          position: absolute;
+          top: 21px;
+          width: 250px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity .3s; }
+          .header nav ul li ul li {
+            margin-left: 0;
+            padding: 4px 0; }
+        .header nav ul li:hover > a {
+          border-bottom: 2px dashed; }
+        .header nav ul li:hover ul {
+          opacity: 1;
+          z-index: 2; }
       .header nav ul .active span {
         border-bottom: 2px dashed; }
     .header nav a {
@@ -614,6 +636,20 @@ footer {
   #inline-order:hover {
     filter: drop-shadow(0 0 3px #000); }
 
+#qorder .modal-dialog {
+  padding-bottom: 0; }
+
+#qorder .submit {
+  margin-top: 24px; }
+
+#qorder .feedback__form {
+  background-color: #f2f2f2;
+  max-width: 100%;
+  padding-top: 15px;
+  padding-bottom: 25px; }
+  #qorder .feedback__form .file-upload {
+    background: url(../images/upload.png) no-repeat left -53px; }
+
 .homepage {
   background: url(../images/bg.jpg) no-repeat center top/contain; }
   .homepage .header {
@@ -723,7 +759,7 @@ footer {
     font-weight: normal;
     height: 378px;
     text-transform: uppercase;
-    width: calc(100% - 40px);
+    width: calc(100% - 42px);
     text-align: center; }
   .products__text {
     margin-top: 20px;
@@ -983,6 +1019,8 @@ footer {
           transition: line-height 0.5s ease; }
       .feedback__form .row .error {
         border: 1px solid red !important; }
+    .feedback__form .submit {
+      margin-top: 20px; }
     .feedback__form .file-upload {
       background: url(../images/upload.png) no-repeat left top;
       bottom: 0;
@@ -1112,6 +1150,7 @@ footer {
   position: relative;
   width: auto;
   top: 0;
+  margin-top: 20px;
   padding-top: 40px;
   padding-bottom: 40px; }
   .modal-dialog .container {
