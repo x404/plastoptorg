@@ -324,23 +324,84 @@
 	</section>
 	<!-- =/address -->
 
+
+	<!-- =feedback -->
+	<div class="feedback">
+		<div class="container">
+			<div class="feedback__content text-center">
+				<p class="title">ХОТИТЕ ПРОКОНСУЛЬТИРОВАТЬСЯ ИЛИ У ВАС ПОЯВИЛИСЬ ВОПРОСЫ ?</p>
+				<div class="vcard">
+					<div class="name"><span class="category">Магазин</span> <span class="fn org">Пластопторг</span></div>
+					<div class="adr">
+						 <span class="locality">Москва</span>, <span class="street-address">ул. Басовская, 16с1</span>
+					</div>
+					<div><a href="tel:+74993913180" class="tel">+7 (499) 391-31-80</a> | <a href="mailto:info@plastoptorg.ru" class="email" title="">info@plastoptorg.ru</a></div>
+					<p>Напишите ваше сообщение. Мы обязательно ответим как можно скорее.</p>
+				</div>
+			</div>
+			<form action="#" method="post" id="feedback-form" class="feedback__form form-policy">
+				<fieldset>
+					<div class="row">
+						<input name="name" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
+						<input name="email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+						<input name="tel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+					</div>
+					<div class="row">
+						<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+					</div>
+					<button type="button" class="submit">Отправить</button>
+					<div class="policy">
+						<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="checkbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- =/feedback -->
+
+
+	<!-- =share -->
+	<div class="share text-center">
+		<div class="container">
+			<p>Поделитесь с друзьями нашим проектом!</p>
+			<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,lj,viber,whatsapp,skype,telegram"></div>
+		</div>
+	</div>
+	<!-- =/share -->
+	
 </div>
 
 
-<div class="main">
-		Пароль отправляется серверу в «открытом» виде — он шифруется известным алгоритмом на известном ключе. При использовании простого логина, пароль пользователя может быть перехвачен и дешифрирован.
-</div>
-
-<footer>
-	<div class="wrapper">
-		А тут у меня — ноги приделаны.
+<!-- =footer -->
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer__top">
+			<div class="footer__contacts"></div>
+			<div class="footer__plast"></div>
+			<div class="footer__social"></div>
+		</div>
+		<div class="footer__bottom">
+			<div class="copyright">
+				© 2017. Все права защищены <br />
+				Данный сайт носит исключительно информационный характер<br />
+				и ни при каких обстоятельствах не является публичной офертой,<br />
+				определяемой положениями Статьи 437 "Гражданского кодекса РФ"
+			</div>
+			<div class="kreotif text-right">
+				создание сайта <a href="https://kreotif.com" target="_blank" title="">Digital Agency Kreotif</a> <br>
+				информация о сайте
+			</div>
+		</div>
 	</div>
 </footer>
+<!-- =/footer -->
 
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
 
 <script src="/template/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css">

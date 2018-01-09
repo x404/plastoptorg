@@ -1,0 +1,178 @@
+.feedback{
+	background-color: rgba(255, 255, 255, .8);
+	font-size: 15px;
+
+	.title{
+		@extend .bold;
+		color: $color10;
+		font-size: 24px;
+	}
+	.vcard{
+		.name{
+			display: none;
+		}
+		.adr{
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		.tel{
+			text-decoration: none;
+			margin-right: .5rem;
+		}
+		.email{
+			margin-left: .5rem;
+			@extend .tdn;
+			color: $color11;
+		}
+		p{
+			font-size: 14px;
+			line-height: 3;
+		}
+	}
+
+	&__content{
+		padding: 1rem 0 .8rem;
+	}
+	&__form{
+		padding-left: 1rem;
+		padding-right: 1rem;
+		position: relative;
+		max-width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
+		.row{
+			@include flexbox;
+			@include justify-content(space-between);
+			margin-bottom: 24px;
+			input.form-control,
+			textarea{
+				color: $color2;
+				@extend .bi;
+				background-color: $color12;
+				border: 1px solid $color12;
+				font-size: 17px;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+				transition: all .3s;
+				&:disabled{
+					cursor: default;
+					opacity: .7;
+					@include placeholder(#ccc);
+				}
+			}
+
+
+			input.form-control{
+				@extend .italic;
+				@include placeholder($color2);
+				border-radius: 32px;
+				height: 32px;
+				padding-bottom: 4px;
+				width: 352px;
+			}
+
+			textarea{
+				border-radius: 18px;
+				flex: 1;
+				overflow: hidden;
+				height: 7rem;
+				@include placeholder($color2);
+			}
+
+			.error{
+				border: 1px solid red !important
+			}
+
+		}
+		.submit{
+			@extend .bi;
+			@include gradient-vertical(#c3133a, #7b0619);
+			transition: all .3s;
+			border-radius: 32px;
+			border: none;
+			color: $color2;
+			cursor: pointer;
+			display: block;
+			font-size: 17px;
+			height: 32px;
+			margin: 0 auto;
+			padding-bottom: 4px;
+			text-align: center;
+			text-decoration: none;
+			text-transform: lowercase;
+			width: 20rem;
+			&:hover{
+				opacity: .9
+			}
+			&:disabled{
+				filter: saturate(.6) grayscale(.1) brightness(0.9);
+				cursor: default;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+		.policy{
+			margin-top: 20px;
+		}
+	}
+}
+
+
+.policy{
+	@extend .italic;
+	color: $color3;
+	a{
+		@extend .tdn;
+		color: $color4;
+	}
+}
+
+
+
+.user-access + label {
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.user-access:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.user-access:not(checked) + label {
+	a{
+		color: $color11;		
+	}
+	color: $color1;
+	display: block;
+	position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 46px;
+	height: 30px;
+	border: 1px solid $color12;
+	border-radius: 30px;
+	text-align: center;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+	// border-color: $color4;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+	content: '*';
+	position: absolute;
+	top: -6px;
+	left: 14px;
+	width: 22px;
+	height: 22px;
+	font-size: 36px;
+	color: $color11;
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   margin-right: auto;
   margin-left: auto; }
@@ -127,13 +128,14 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .products__title, .address__panel h5 {
+.bold, .products__title, .address__panel h5, .feedback .title {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .products__text, .reviews__item {
+.italic, .header .cats .popup p, .share, .products__text, .reviews__item, .feedback__form .row input.form-control, .policy {
   font-family: "SegoeUIItalic"; }
 
-.bi, .reviews .btn, .address .btn, .articles__link {
+.bi, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
+.feedback__form .row textarea, .feedback__form .submit {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -160,9 +162,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.tdn {
+.tdn, .feedback .vcard .email, .policy a {
   text-decoration: none; }
-  .tdn:hover {
+  .tdn:hover, .feedback .vcard .email:hover, .policy a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -395,9 +397,30 @@ input::-moz-focus-inner {
 /* =footer
 ---------------------------*/
 footer {
-  height: 40px;
-  background: #FFCC00; }
+  background: url(../images/footer-bg.jpg) no-repeat center top/cover;
+  position: relative;
+  padding-top: 185px; }
 
+/* =footer
+---------------------------*/
+/* =share
+---------------------------*/
+.share {
+  color: #808080;
+  font-size: 18px;
+  margin-top: 25px; }
+  .share .container {
+    padding-top: 20px;
+    border: 1px solid transparent;
+    border-width: 1px 0 0;
+    -webkit-border-image: -webkit-linear-gradient(right, #fdfefe 0%, #8fd0bb 50%, #fdfefe 100%);
+    border-image: linear-gradient(to right, #fdfefe 0%, #8fd0bb 50%, #fdfefe 100%);
+    border-image-slice: 1; }
+  .share p {
+    padding-bottom: 18px; }
+
+/* =/share
+---------------------------*/
 .homepage {
   background: url(../images/bg.jpg) no-repeat center top/contain; }
   .homepage .header {
@@ -645,6 +668,191 @@ footer {
   border-bottom: 1px dashed; }
   .reviews .lightbox:hover {
     border-bottom: none; }
+
+.feedback {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 15px; }
+  .feedback .title {
+    color: #807474;
+    font-size: 24px; }
+  .feedback .vcard .name {
+    display: none; }
+  .feedback .vcard .adr {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .feedback .vcard .tel {
+    text-decoration: none;
+    margin-right: .5rem; }
+  .feedback .vcard .email {
+    margin-left: .5rem;
+    color: #ff3333; }
+  .feedback .vcard p {
+    font-size: 14px;
+    line-height: 3; }
+  .feedback__content {
+    padding: 1rem 0 .8rem; }
+  .feedback__form {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto; }
+    .feedback__form .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      margin-bottom: 24px; }
+      .feedback__form .row input.form-control,
+      .feedback__form .row textarea {
+        color: #fff;
+        background-color: #a6a6a6;
+        border: 1px solid #a6a6a6;
+        font-size: 17px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        transition: all .3s; }
+        .feedback__form .row input.form-control:disabled,
+        .feedback__form .row textarea:disabled {
+          cursor: default;
+          opacity: .7; }
+          .feedback__form .row input.form-control:disabled::-webkit-input-placeholder,
+          .feedback__form .row textarea:disabled::-webkit-input-placeholder {
+            color: #ccc; }
+          .feedback__form .row input.form-control:disabled::-moz-placeholder,
+          .feedback__form .row textarea:disabled::-moz-placeholder {
+            color: #ccc; }
+          .feedback__form .row input.form-control:disabled:-ms-input-placeholder,
+          .feedback__form .row textarea:disabled:-ms-input-placeholder {
+            color: #ccc; }
+          .feedback__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
+          .feedback__form .row textarea:disabled:focus::-webkit-input-placeholder {
+            transition: line-height 0.5s ease; }
+          .feedback__form .row input.form-control:disabled:focus::-moz-placeholder,
+          .feedback__form .row textarea:disabled:focus::-moz-placeholder {
+            transition: line-height 0.5s ease; }
+          .feedback__form .row input.form-control:disabled:focus:-ms-input-placeholder,
+          .feedback__form .row textarea:disabled:focus:-ms-input-placeholder {
+            transition: line-height 0.5s ease; }
+      .feedback__form .row input.form-control {
+        border-radius: 32px;
+        height: 32px;
+        padding-bottom: 4px;
+        width: 352px; }
+        .feedback__form .row input.form-control::-webkit-input-placeholder {
+          color: #fff; }
+        .feedback__form .row input.form-control::-moz-placeholder {
+          color: #fff; }
+        .feedback__form .row input.form-control:-ms-input-placeholder {
+          color: #fff; }
+        .feedback__form .row input.form-control:focus::-webkit-input-placeholder {
+          transition: line-height 0.5s ease; }
+        .feedback__form .row input.form-control:focus::-moz-placeholder {
+          transition: line-height 0.5s ease; }
+        .feedback__form .row input.form-control:focus:-ms-input-placeholder {
+          transition: line-height 0.5s ease; }
+      .feedback__form .row textarea {
+        border-radius: 18px;
+        flex: 1;
+        overflow: hidden;
+        height: 7rem; }
+        .feedback__form .row textarea::-webkit-input-placeholder {
+          color: #fff; }
+        .feedback__form .row textarea::-moz-placeholder {
+          color: #fff; }
+        .feedback__form .row textarea:-ms-input-placeholder {
+          color: #fff; }
+        .feedback__form .row textarea:focus::-webkit-input-placeholder {
+          transition: line-height 0.5s ease; }
+        .feedback__form .row textarea:focus::-moz-placeholder {
+          transition: line-height 0.5s ease; }
+        .feedback__form .row textarea:focus:-ms-input-placeholder {
+          transition: line-height 0.5s ease; }
+      .feedback__form .row .error {
+        border: 1px solid red !important; }
+    .feedback__form .submit {
+      background-image: -webkit-linear-gradient(top, #c3133a 0%, #7b0619 100%);
+      background-image: -o-linear-gradient(top, #c3133a 0%, #7b0619 100%);
+      background-image: linear-gradient(to bottom, #c3133a 0%, #7b0619 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC3133A', endColorstr='#FF7B0619', GradientType=0);
+      transition: all .3s;
+      border-radius: 32px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 17px;
+      height: 32px;
+      margin: 0 auto;
+      padding-bottom: 4px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: lowercase;
+      width: 20rem; }
+      .feedback__form .submit:hover {
+        opacity: .9; }
+      .feedback__form .submit:disabled {
+        filter: saturate(0.6) grayscale(0.1) brightness(0.9);
+        cursor: default; }
+        .feedback__form .submit:disabled:hover {
+          opacity: 1; }
+    .feedback__form .policy {
+      margin-top: 20px; }
+
+.policy {
+  color: #383838; }
+  .policy a {
+    color: #f26e26; }
+
+.user-access + label {
+  cursor: pointer;
+  font-size: 14px; }
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.user-access:not(checked) + label {
+  color: #000;
+  display: block;
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px;
+  /* оставляем слева от label место под псевдочекбокс */ }
+  .user-access:not(checked) + label a {
+    color: #ff3333; }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 46px;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  border-radius: 30px;
+  text-align: center; }
+
+/* Меняем фон чекбокса, когда он включен. */
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+  content: '*';
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  width: 22px;
+  height: 22px;
+  font-size: 36px;
+  color: #ff3333; }
 
 .fade {
   opacity: 0;

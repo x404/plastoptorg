@@ -11,6 +11,10 @@ $color6:#ba2a2a;
 $color7:#333;
 $color8:#e98546;
 $color9:red;
+$color10:#807474;
+$color11:#ff3333;
+$color12:#a6a6a6;
+$color13:#808080;
 
 
 
@@ -478,6 +482,33 @@ input::-moz-focus-inner{
 /* =footer
 ---------------------------*/
 footer{
-	height: 40px;
-	background: #FFCC00;
+	background: url(../images/footer-bg.jpg) no-repeat center top /cover;
+	position: relative;
+	padding-top: 185px;
 }
+/* =footer
+---------------------------*/
+
+
+
+/* =share
+---------------------------*/
+.share{
+	@extend .italic;
+	color: $color13;
+	font-size: 18px;
+	margin-top: 25px;
+	.container{
+		padding-top: 20px;
+		border: 1px solid transparent;
+		border-width: 1px 0 0;
+		-webkit-border-image: -webkit-linear-gradient(right, #fdfefe 0%, #8fd0bb 50%,  #fdfefe 100%);
+		border-image: linear-gradient(to right, #fdfefe 0%, #8fd0bb 50%,  #fdfefe 100%);
+		border-image-slice: 1;
+	}
+	p{
+		padding-bottom: 18px;
+	}
+}
+/* =/share
+---------------------------*/

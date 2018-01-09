@@ -124,6 +124,21 @@ addLoadEvent(function(){
 
 
 
+$(function(){
+	$('.policy input').click(function(){
+		var $this = $(this),
+			$submit = $this.closest('.form-policy');
+
+		if ($this.is(':checked')){
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').removeAttr('disabled');
+		} else {
+			$submit.addClass('disabled');
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').attr('disabled', true);
+		}
+	})
+});
+
+
 $(function() {
     var $el = $('.parallax-background');
     $(window).on('scroll', function () {
