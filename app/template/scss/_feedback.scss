@@ -34,8 +34,8 @@
 		padding: 35px 0 10px;
 	}
 	&__form{
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 10px;
+		padding-right: 10px;
 		position: relative;
 		max-width: 1100px;
 		margin-left: auto;
@@ -124,6 +124,16 @@
 		}
 		.policy{
 			margin-top: 20px;
+		}
+
+		#msg{
+			padding-right: 80px;
+		}
+
+		.sending,
+		.thank{
+			height: 238px;
+			padding-top: 105px;
 		}
 	}
 }

@@ -106,38 +106,92 @@ $(document).ready(function(){
 
 
 	// var thank = '<div class="thank text-center"><p>Спасибо за заказ продукта на нашем сайте. В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
-	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
+	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+	var thankaddreview = '<div class="thank text-center"><p>Ваш отзыв отправлен!</p></div>';
 	// var thankreview = '<div class="thank text-center"><p>Спасибо за оставленный отзыв.</p></div>';
 	// var thankqorder = '<div class="thank text-center"><p>Спасибо за заказ продукта на нашем сайте. В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей.</p></div>';
 	var errorTxt = 'Возникла ошибка при отправке заявки!';
 
 
 
-	// validation quick form
+	// validation forms
 	$('#callback-form').validate({
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
-			$('#callback-form fieldset').hide();
-			$('#callback-form').append('<div class="sending">Идет отправка ...</div>');
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
 			$.ajax({
 				type: "POST",
 				url: $(form).attr('action'),
 				data: strSubmit,
 				success: function(){
-					$('#callback-form').html(thankcallback);
+					$(form).closest('.modal__body').html(thankcallback);
 					startClock('callback-form');
 				},
-				  error: function(){
-				    alert('error!');
-					$('#callback-form fieldset').show();
-					('.sending').removeClass('sending');
-				  }
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
 			})
 			.fail(function(error){
 				alert(errorTxt);
 			});
 		}
-	}); 
+	});
+
+
+	$('#addreview-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).closest('.modal__body').html(thankaddreview);
+					startClock('addreview-form');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
+
+	$('#feedback-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).html(thankcallback);
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+				},
+				always: function(){
+					$('.sending').remove();					
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
 
 });
 

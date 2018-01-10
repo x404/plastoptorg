@@ -378,7 +378,7 @@
 						</div>
 					</div>
 					<div class="file-name"></div>
-					<button type="button" class="submit">Отправить</button>
+					<input type="submit" class="submit" value="Отправить" />
 					<div class="policy">
 						<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access">
 						<label for="checkbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
@@ -478,22 +478,24 @@
 <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="container">
-			<p class="title">ФОРМА ЗАКАЗА ЗВОНКА</p>
+			<div class="modal__body">
+				<p class="title">ФОРМА ЗАКАЗА ЗВОНКА</p>
+				<form action="#" method="post" class="form-policy" id="callback-form">
+					<fieldset>
+						<label for="cbname" class="visually-hidden">ваше имя</label>
+						<input type="text" id="cbname" name="name" class="form-control required" value="" placeholder="ваше имя" tabindex="0" autofocus />
+
+						<label for="cbtel" class="visually-hidden">телефон</label>
+						<input type="tel" id="cbtel" name="tel" class="form-control required" value="" placeholder="телефон" tabindex="2" />
+
+						<input type="submit" class="submit" tabindex="2" value="позвонить мне" />
+						<div class="policy">
+							<input type="checkbox" id="cbcheckbox" value="" name="checkbox" checked="checked" class="user-access">
+							<label for="cbcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+						</div>
+					</fieldset>
+			</div>
 			<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
-			<form action="#" method="post" class="form-policy" id="callback-form">
-				<fieldset>
-					<label for="cbname" class="visually-hidden">ваше имя</label>
-					<input type="text" id="cbname" name="text" class="form-control required" value="" placeholder="ваше имя" tabindex="0" autofocus />
-
-					<label for="cbtel" class="visually-hidden">телефон</label>
-					<input type="tel" id="cbtel" name="tel" class="form-control required" value="" placeholder="телефон" tabindex="2" />
-
-					<input type="submit" class="submit" tabindex="2" value="позвонить мне" />
-					<div class="policy">
-						<input type="checkbox" id="cbcheckbox" value="" name="checkbox" checked="checked" class="user-access">
-						<label for="cbcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
-					</div>
-				</fieldset>
 			</form>
 		</div>
 	</div>
@@ -546,34 +548,36 @@
 <!-- =modal addreview -->
 <div class="modal fade" id="addreview" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog" role="document">
-		<p class="title">ФОРМА ОТЗЫВА</p>
-		<p class="text-center">Представьтесь и напишите ваше сообщение. Мы обязательно ответим как можно скорее.</p>
-		<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
-		<form class=" form-policy">
-			<div class="feedback__form">
+		<div class="modal__body">
+			<p class="title">ФОРМА ОТЗЫВА</p>
+			<p class="text-center">Представьтесь и напишите ваше сообщение. Мы обязательно ответим как можно скорее.</p>
+			<form class="form-policy feedback__form" id="addreview-form">
 				<div class="container">
-					<div class="row">
-						<label for="arname" class="visually-hidden">ваше имя</label>
-						<input name="name" id="arname" type="text" value="" class="form-control required" placeholder="как вас зовут ? *" />
-
-						<label for="aremail" class="visually-hidden">ваше email</label>
-						<input name="email" id="aremail" type="email" value="" class="form-control required email" placeholder="ваш e-mail *" />
-
-						<label for="artel" class="visually-hidden">ваш номер телефона</label>
-						<input name="tel" id="artel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *" />
-					</div>
-					<div class="row">
-						<label for="armsg" class="visually-hidden">текст вашего сообщения</label>
-						<textarea name="msg" id="armsg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
-					</div>
-					<input type="submit" class="submit" value="заказать" />
-					<div class="policy">
-						<input type="checkbox" id="archeckbox" value="" name="checkbox" checked="checked" class="user-access">
-						<label for="archeckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
-					</div>
+					<fieldset>
+						<div class="row">
+							<label for="arname" class="visually-hidden">ваше имя</label>
+							<input name="name" id="arname" type="text" value="" class="form-control required" placeholder="как вас зовут ? *" />
+					
+							<label for="aremail" class="visually-hidden">ваше email</label>
+							<input name="email" id="aremail" type="email" value="" class="form-control required email" placeholder="ваш e-mail *" />
+					
+							<label for="artel" class="visually-hidden">ваш номер телефона</label>
+							<input name="tel" id="artel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *" />
+						</div>
+						<div class="row">
+							<label for="armsg" class="visually-hidden">текст вашего сообщения</label>
+							<textarea name="msg" id="armsg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+						</div>
+						<input type="submit" class="submit" value="заказать" />
+						<div class="policy">
+							<input type="checkbox" id="archeckbox" value="" name="checkbox" checked="checked" class="user-access">
+							<label for="archeckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+						</div>
+					</fieldset>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
+		<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
 	</div>
 </div>
 <!-- =/modal addreview -->
