@@ -275,7 +275,7 @@
 		<div class="container">
 			<header class="flexbox">
 				<h1 class="title">О НАС ГОВОРЯТ</h1>
-				<button type="button" class="btn btn-orange">оставить отзыв</button>
+				<button type="button" class="btn btn-orange" data-toggle="modal" data-target="#addreview">оставить отзыв</button>
 			</header>
 			<article class="reviews__item">
 				<div class="reviews__title">Владимир : <time datetime="2014-04-21T11:00:00">04.12.2017</time></div>
@@ -512,11 +512,42 @@
 					<label for="opcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
 				</div>
 			</div>
+		</div>
 		</form>
 	</div>
 </div>
 <!-- =/modal qorder -->
 
+12
+
+<!-- =modal addreview -->
+<div class="modal fade" id="addreview" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<p class="title">ФОРМА ОТЗЫВА</p>
+		<p class="text-center">Представьтесь и напишите ваше сообщение. Мы обязательно ответим как можно скорее.</p>
+		<button type="button" data-dismiss="modal" class="close-modal"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
+		<form class=" form-policy">
+			<div class="feedback__form">
+				<div class="container">
+					<div class="row">
+						<input name="name" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
+						<input name="email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+						<input name="tel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+					</div>
+					<div class="row">
+						<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+					</div>
+					<input type="submit" class="submit" value="заказать" />
+					<div class="policy">
+						<input type="checkbox" id="archeckbox" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="archeckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- =/modal addreview -->
 
 
 <div id="outdated"></div>

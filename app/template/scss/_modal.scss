@@ -145,15 +145,6 @@ form{
 }
 
 #callback{
-	.modal-dialog{
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: 98px;
-		padding: 40px 0 12px;
-		width: 100%;
-	}
-
-
 	form{
 		// background-color: $color2;
 		@extend .italic;
@@ -184,6 +175,50 @@ form{
 		}
 	}
 }
+
+
+#qorder,
+#addreview{
+	.modal-dialog{
+		padding-bottom: 0;
+		.close-modal{
+			top: -17px;
+		}
+	}
+	.submit{
+		margin-top: 24px;
+	}
+	.feedback__form{
+		background-color: $color15;
+		max-width: 100%;
+		padding-top: 15px;
+		padding-bottom: 25px;
+		.file-upload{
+			background: url(../images/upload.png) no-repeat left -53px;
+		}
+	}
+}
+
+
+#addreview{
+	.form-policy{
+		margin-top: 40px;
+	}
+}
+
+
+// #addreview,
+// #qorder
+// {
+// 	.modal-dialog{
+// 		margin-left: 0;
+// 		margin-right: 0;
+// 		margin-top: 98px;
+// 		padding: 40px 0 0;
+// 		width: 100%;
+
+// 	}
+// }
 
 #about{
 	.modal__content{

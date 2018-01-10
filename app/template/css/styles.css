@@ -636,20 +636,6 @@ footer {
   #inline-order:hover {
     filter: drop-shadow(0 0 3px #000); }
 
-#qorder .modal-dialog {
-  padding-bottom: 0; }
-
-#qorder .submit {
-  margin-top: 24px; }
-
-#qorder .feedback__form {
-  background-color: #f2f2f2;
-  max-width: 100%;
-  padding-top: 15px;
-  padding-bottom: 25px; }
-  #qorder .feedback__form .file-upload {
-    background: url(../images/upload.png) no-repeat left -53px; }
-
 label.error {
   display: none !important; }
 
@@ -1074,7 +1060,11 @@ label.error {
   text-transform: lowercase;
   width: 20rem; }
   .submit:hover {
-    opacity: .9; }
+    background-image: -webkit-linear-gradient(top, #7b0619 0%, #c3133a 100%);
+    background-image: -o-linear-gradient(top, #7b0619 0%, #c3133a 100%);
+    background-image: linear-gradient(to bottom, #7b0619 0%, #c3133a 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7B0619', endColorstr='#FFC3133A', GradientType=0); }
   .submit:disabled {
     filter: saturate(0.6) grayscale(0.1) brightness(0.9);
     cursor: default; }
@@ -1231,13 +1221,6 @@ form .thank {
   font-size: 18px;
   padding: 90px 0 100px; }
 
-#callback .modal-dialog {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 98px;
-  padding: 40px 0 12px;
-  width: 100%; }
-
 #callback form {
   width: 90%;
   margin-left: auto;
@@ -1269,6 +1252,30 @@ form .thank {
   #callback form .policy {
     margin-top: 1.5rem;
     margin-bottom: 1rem; }
+
+#qorder .modal-dialog,
+#addreview .modal-dialog {
+  padding-bottom: 0; }
+  #qorder .modal-dialog .close-modal,
+  #addreview .modal-dialog .close-modal {
+    top: -17px; }
+
+#qorder .submit,
+#addreview .submit {
+  margin-top: 24px; }
+
+#qorder .feedback__form,
+#addreview .feedback__form {
+  background-color: #f2f2f2;
+  max-width: 100%;
+  padding-top: 15px;
+  padding-bottom: 25px; }
+  #qorder .feedback__form .file-upload,
+  #addreview .feedback__form .file-upload {
+    background: url(../images/upload.png) no-repeat left -53px; }
+
+#addreview .form-policy {
+  margin-top: 40px; }
 
 #about .modal__content {
   background-color: #fff;

@@ -795,24 +795,6 @@ footer{
 }
 
 
-#qorder{
-	.modal-dialog{
-		padding-bottom: 0;
-	}
-	.submit{
-		margin-top: 24px;
-	}
-	.feedback__form{
-		background-color: $color15;
-		max-width: 100%;
-		padding-top: 15px;
-		padding-bottom: 25px;
-		.file-upload{
-			background: url(../images/upload.png) no-repeat left -53px;
-		}
-	}
-}
-
 
 label.error{
 	display: none !important;

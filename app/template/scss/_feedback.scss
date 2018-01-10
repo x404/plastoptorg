@@ -130,7 +130,9 @@
 
 .submit{
 	@extend .bi;
-	@include gradient-vertical(#c3133a, #7b0619);
+	$colorg1 : #c3133a;
+	$colorg2 : #7b0619;
+	@include gradient-vertical($colorg1, $colorg2);
 	transition: all .3s;
 	border-radius: 32px;
 	border: none;
@@ -146,7 +148,7 @@
 	text-transform: lowercase;
 	width: 20rem;
 	&:hover{
-		opacity: .9
+		@include gradient-vertical($colorg2, $colorg1);
 	}
 	&:disabled{
 		filter: saturate(.6) grayscale(.1) brightness(0.9);
