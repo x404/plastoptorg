@@ -642,6 +642,13 @@ label.error {
 .form-control.error {
   border-color: red !important; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
+
 .homepage {
   background: url(../images/bg.jpg) no-repeat center top/contain; }
   .homepage .header {

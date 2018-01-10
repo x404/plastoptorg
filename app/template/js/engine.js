@@ -231,10 +231,11 @@ function go_to(lat,lon){
 	map.setCenter([lat, lon], 16);
 }
 
-function getFileName(){
-	var file = document.getElementById('uploaded-file').value;
+
+function getFileName(el){
+	var file = el.value;
 	file = file.replace(/\\/g, "/").split ('/').pop();
-	document.getElementById('file-name').innerHTML = 'Имя файла: ' + file;
+	$(el).closest('fieldset').find('.file-name').html('Имя файла: ' + file);
 }
 
 
