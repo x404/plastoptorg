@@ -52,15 +52,26 @@ gulp.task('browser-sync', function(){
 });
 
 
+gulp.task('js-libs', function(){
+	var buildJs = gulp.src(config.libsDir + '/jquery.countdown/dist/jquery.countdown.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
+});
+
+
+// gulp.task('inject-favicon-markups', function() {
+// 	return gulp.src([ 'app/*.html' ])
+// 		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+// 		.pipe(gulp.dest('app/'));
+// });
+
+
 gulp.task('compress', function(){
 	pump([
 			gulp.src([  // Берем все необходимые библиотеки
 				config.libsDir + '/jquery/dist/jquery.js',
 				config.sourceDir + '/js/util.js',
 				config.sourceDir + '/js/modal.js',
-				config.sourceDir + '/js/tab.js',
+				// config.sourceDir + '/js/tab.js',
 				config.sourceDir + '/js/popper.min.js',
-				config.sourceDir + '/js/scrollspy.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.js'
 			]),
 			concat('libs.min.js'), // Собираем их в кучу в новом файле libs.min.js
@@ -78,7 +89,7 @@ gulp.task('clean', function() {
 
 // отслеживаем изменения
 // в квадратных скобках перечисляются таски, которые должны выполниться до watcher (до запуска сервера)
-gulp.task('watcher', ['browser-sync', 'css-libs', 'compress'], function(){
+gulp.task('watcher', ['browser-sync', 'css-libs', 'compress', 'js-libs'], function(){
 	return gulp.watch('app/template/scss/**/*.scss', ['scss', 'css-libs']), // при изменении любого *scss-файла вызываем таск scss
 		gulp.watch('app/*.html', browserSync.reload),
 		gulp.watch('app/template/js/**/*.js', browserSync.reload)

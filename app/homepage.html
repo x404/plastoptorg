@@ -33,10 +33,11 @@
 <div class="homepage parallax-background">
 	<!-- =header -->
 	<header class="header">
+		<!-- =nav -->
 		<div class="header__top flexbox">
 			<div class="logo">
 				<a href="/" class="logo__link">
-					<img src="/template/images/logo.png" alt="" />				
+					<img src="/template/images/logo.png" alt="" />
 				</a>
 			</div>
 			
@@ -47,15 +48,27 @@
 						<li><a href="#">компания</a></li>
 						<li>
 							<a href="#">продукция</a>
-							<ul>
-								<li><a href="#" title="">сотовый поликарбонат</a></li>
-								<li><a href="#" title="">монолитный поликарбонат</a></li>
-								<li><a href="#" title="">комплектующие</a></li>
-								<li><a href="#" title="">бренды</a></li>
-							</ul>
+							<div class="subnav">
+								<ul>
+									<li><a href="#" title="">сотовый поликарбонат</a></li>
+									<li><a href="#" title="">монолитный поликарбонат</a></li>
+									<li><a href="#" title="">комплектующие</a></li>
+									<li><a href="#" title="">бренды</a></li>
+								</ul>
+							</div>
 						</li>
 						<li><a href="#">прайс</a></li>
-						<li><a href="#">важно</a></li>
+						<li>
+							<a href="#">важно</a>
+							<div class="subnav">
+								<ul>
+									<li><a href="#" title="">оптовикам</a></li>
+									<li><a href="#" title="">монтаж</a></li>
+									<li><a href="#" title="">доставка и оплата</a></li>
+									<li><a href="#" title="">возврат товара</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="#">контакты</a></li>
 					</ul>
 				</nav>
@@ -67,11 +80,41 @@
 					<p>
 						+7 (499) 391-31-80
 					</p>
-					<p>office@plastoptorg.ru</p>
+					<p><a href="mailto:office@plastoptorg.ru" title="">office@plastoptorg.ru</a></p>
 					<button type="button" class="btn btn-red" data-toggle="modal" data-target="#callback">ЗАКАЗАТЬ ЗВОНОК</button>
 				</div>
 			</div>
 		</div>
+		<!-- =/nav -->
+
+		<!-- =timer -->
+		<div class="container">
+			<div class="timer flexbox">
+				<div class="timer__text">
+					<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
+					<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
+					<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>
+				</div>
+				<div class="timer__digit">
+					<div id="clock"></div>
+					<script type="text/javascript">
+						$(function(){
+							$('#clock').countdown('2018/10/10', function(event) {
+								var $this = $(this).html(event.strftime(''
+									+ '<span>%D</span> '
+									+ '<span>%H</span> '
+									+ '<span>%M</span> '
+									+ '<span>%S</span>'));
+							});
+							// http://hilios.github.io/jQuery.countdown/documentation.html#event-object
+						})
+					</script>
+				</div>
+			</div>
+			
+		</div>
+		<!-- =/timer -->
+
 		<!-- =cats -->
 		<div class="cats">
 			<div class="container">
@@ -419,8 +462,8 @@
 					</div>
 					<div class="column">
 						<h5>E-MAIL</h5>
-						<p>office@plastoptorg.ru</p>
-						<p>zakaz@plastoptorg.ru</p>
+						<p><a href="mailto:office@plastoptorg.ru" title="">office@plastoptorg.ru</a></p>
+						<p><a href="mailto:zakaz@plastoptorg.ru" title="">zakaz@plastoptorg.ru</a></p>
 					</div>
 				</div>
 			</div>
@@ -471,7 +514,7 @@
 </footer>
 <!-- =/footer -->
 
-<a href="#" role="button" id="inline-order" data-toggle="modal" data-target="#qorder">ON-LINE <br>ЗАКАЗ</a>
+<a href="#" role="button" id="inline-order" data-toggle="modal" data-target="#qorder"><span>ON-LINE <br>ЗАКАЗ</span></a>
 
 
 <!-- =modal callback -->
@@ -596,6 +639,7 @@
 
 <script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
 
+<script src="/template/js/jquery.countdown.min.js"></script>
 <script src="/template/js/engine.js"></script>
 </body>
 </html>
