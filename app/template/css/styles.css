@@ -128,7 +128,7 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title {
+.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title {
   font-family: "SegoeUIBold"; }
 
 .italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content {
@@ -319,6 +319,56 @@ input::-moz-focus-inner {
   text-align: center;
   width: 114px; }
 
+nav {
+  font-family: "SegoeUIBoldItalic";
+  color: #fff;
+  text-transform: uppercase; }
+  nav ul {
+    display: flex; }
+    nav ul li {
+      margin-left: 25px;
+      position: relative; }
+      nav ul li .subnav {
+        left: -10px;
+        opacity: 0;
+        padding-top: 10px;
+        position: absolute;
+        top: 21px;
+        transition: opacity .3s;
+        width: 250px;
+        z-index: -1; }
+      nav ul li.nav5 .subnav {
+        width: 190px; }
+      nav ul li ul {
+        border-radius: 3px;
+        background-color: #fff;
+        display: block;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-top: 5px; }
+        nav ul li ul li {
+          margin-left: 0;
+          padding: 4px 0; }
+          nav ul li ul li a {
+            color: #808080; }
+            nav ul li ul li a:hover {
+              color: #1c4070; }
+      nav ul li:hover > a {
+        border-bottom: 2px dashed; }
+      nav ul li:hover .subnav {
+        opacity: 1;
+        z-index: 2; }
+    nav ul .active span {
+      border-bottom: 2px dashed; }
+  nav a {
+    -webkit-transition: border-bottom 0.2s ease-out;
+    transition: border-bottom 0.2s ease-out;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0);
+    color: #fff;
+    text-decoration: none; }
+    nav a:hover {
+      border-bottom: 2px dashed white; }
+
 .header {
   min-height: 1132px;
   color: #fff;
@@ -327,53 +377,7 @@ input::-moz-focus-inner {
   .header__top {
     flex-grow: 1; }
   .header nav {
-    padding-top: 4.5rem;
-    font-family: "SegoeUIBoldItalic";
-    color: #fff;
-    text-transform: uppercase; }
-    .header nav ul {
-      display: flex; }
-      .header nav ul li {
-        margin-left: 25px;
-        position: relative; }
-        .header nav ul li .subnav {
-          left: -10px;
-          opacity: 0;
-          padding-top: 10px;
-          position: absolute;
-          top: 21px;
-          transition: opacity .3s;
-          width: 250px;
-          z-index: -1; }
-        .header nav ul li ul {
-          border-radius: 3px;
-          background-color: #fff;
-          display: block;
-          padding-bottom: 10px;
-          padding-left: 10px;
-          padding-top: 5px; }
-          .header nav ul li ul li {
-            margin-left: 0;
-            padding: 4px 0; }
-            .header nav ul li ul li a {
-              color: #808080; }
-              .header nav ul li ul li a:hover {
-                color: #1c4070; }
-        .header nav ul li:hover > a {
-          border-bottom: 2px dashed; }
-        .header nav ul li:hover .subnav {
-          opacity: 1;
-          z-index: 2; }
-      .header nav ul .active span {
-        border-bottom: 2px dashed; }
-    .header nav a {
-      -webkit-transition: border-bottom 0.2s ease-out;
-      transition: border-bottom 0.2s ease-out;
-      border-bottom: 2px dashed rgba(255, 255, 255, 0);
-      color: #fff;
-      text-decoration: none; }
-      .header nav a:hover {
-        border-bottom: 2px dashed white; }
+    padding-top: 4.5rem; }
   .header .timer {
     margin-bottom: 90px; }
   .header .contacts {
@@ -470,6 +474,49 @@ input::-moz-focus-inner {
         transition: transform .2s; }
         .header .cats .popup__close:hover {
           transform: rotate(90deg); }
+
+.fixed-header {
+  background: url(../images/bg-2.jpg) no-repeat center center/cover;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 15px 40px #818181;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transform: translateY(-140%);
+  z-index: 999;
+  transition: transform .8s; }
+  .fixed-header .flexbox {
+    height: 145px;
+    justify-content: space-between;
+    align-items: center; }
+  .fixed-header .logo a {
+    align-items: center;
+    display: flex;
+    text-decoration: none; }
+  .fixed-header .logo img {
+    vertical-align: top; }
+  .fixed-header .mainnav {
+    border: 1px solid #fff;
+    padding: 20px 25px 20px 0; }
+    .fixed-header .mainnav nav ul li .subnav {
+      top: 30px; }
+  .fixed-header .contacts {
+    text-align: center; }
+    .fixed-header .contacts a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none; }
+    .fixed-header .contacts .tel {
+      font-size: 22px;
+      margin-bottom: 12px; }
+    .fixed-header .contacts .email {
+      font-size: 17px;
+      margin-bottom: 12px; }
+    .fixed-header .contacts .btn {
+      padding-left: 25px;
+      padding-right: 25px; }
+  .fixed-header.sticky {
+    transform: translateY(0); }
 
 /* =/header
 ---------------------------*/

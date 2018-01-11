@@ -366,6 +366,77 @@ input::-moz-focus-inner{
 	}
 }
 
+nav{	
+	font-family: "SegoeUIBoldItalic";
+	color: $color2;
+	text-transform: uppercase;
+
+	ul{
+		display: flex;
+		li{
+			margin-left: 25px;
+			position: relative;
+			.subnav{
+				left: -10px;
+				opacity: 0;
+				padding-top: 10px;
+				position: absolute;
+				top: 21px;
+				transition: opacity .3s;
+				width: 250px;
+				z-index: -1;
+			}
+
+			&.nav5{
+				.subnav{
+					width: 190px;
+				}
+			}
+			ul{
+				border-radius: 3px;
+				background-color: $color2;
+				display: block;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-top: 5px;
+				li{
+					margin-left: 0;
+					padding: 4px 0;
+					a{
+						color: #808080;
+						&:hover{
+							color: $color16;
+						}
+					}
+				}
+			}
+			&:hover{
+				& > a{
+					border-bottom: 2px dashed;						
+				}
+				.subnav{
+					opacity: 1;
+					z-index: 2;
+				}
+			}
+		}
+		.active{
+			span{
+				border-bottom: 2px dashed;
+			}
+		}
+	}
+	a{
+		@include transition-param(border-bottom);
+		border-bottom: 2px dashed rgba(255,255,255,0);
+		color: $color2;
+		text-decoration: none;
+		&:hover{
+			border-bottom: 2px dashed rgba(255,255,255,1);
+		}
+	}
+}
+
 .header{
 	min-height: 1132px;
 	color: $color2;
@@ -374,70 +445,11 @@ input::-moz-focus-inner{
 	&__top{
 		flex-grow: 1;
 	}
+
 	nav{
 		padding-top: 4.5rem;
-		font-family: "SegoeUIBoldItalic";
-		color: $color2;
-		text-transform: uppercase;
-		ul{
-			display: flex;
-			li{
-				margin-left: 25px;
-				position: relative;
-				.subnav{
-					left: -10px;
-					opacity: 0;
-					padding-top: 10px;
-					position: absolute;
-					top: 21px;
-					transition: opacity .3s;
-					width: 250px;
-					z-index: -1;
-				}
-				ul{
-					border-radius: 3px;
-					background-color: $color2;
-					display: block;
-					padding-bottom: 10px;
-					padding-left: 10px;
-					padding-top: 5px;
-					li{
-						margin-left: 0;
-						padding: 4px 0;
-						a{
-							color: #808080;
-							&:hover{
-								color: $color16;
-							}
-						}
-					}
-				}
-				&:hover{
-					& > a{
-						border-bottom: 2px dashed;						
-					}
-					.subnav{
-						opacity: 1;
-						z-index: 2;
-					}
-				}
-			}
-			.active{
-				span{
-					border-bottom: 2px dashed;
-				}
-			}
-		}
-		a{
-			@include transition-param(border-bottom);
-			border-bottom: 2px dashed rgba(255,255,255,0);
-			color: $color2;
-			text-decoration: none;
-			&:hover{
-				border-bottom: 2px dashed rgba(255,255,255,1);
-			}
-		}
 	}
+
 
 	.timer{
 		margin-bottom: 90px;
@@ -586,6 +598,75 @@ input::-moz-focus-inner{
 				}
 			}
 		}
+	}
+}
+
+.fixed-header{
+	background: url(../images/bg-2.jpg) no-repeat center center / cover;
+	border-bottom: 1px solid $color2;
+	box-shadow: 0 15px 40px #818181;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transform: translateY(-140%);
+	z-index: 999;
+	transition: transform .8s;
+
+	.flexbox{
+		height: 145px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo{
+		a{
+			align-items: center;
+			display: flex;
+			text-decoration: none;
+		}
+		img{
+			vertical-align: top;
+		}
+	}
+
+	.mainnav{
+		border: 1px solid $color2;
+		padding: 20px 25px 20px 0;
+		nav{
+			ul li{
+				.subnav{
+					top: 30px;
+				}
+			}
+		}
+	}
+
+	.contacts{
+		text-align: center;
+		a{
+			display: inline-block;
+			color: $color2;
+			text-decoration: none;
+		}
+		.tel{
+			@extend .bold;
+			font-size: 22px;
+			margin-bottom: 12px;
+		}
+		.email{
+			font-size: 17px;
+			margin-bottom: 12px;
+		}
+		
+		.btn{
+			@extend .bold;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+
+	&.sticky{
+		transform: translateY(0);
 	}
 }
 

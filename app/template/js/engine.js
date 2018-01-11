@@ -77,11 +77,9 @@ $(document).ready(function(){
 	$('.bganimated').each(function () {
 		var block = $(this),
 			blockh = block.height() + parseInt(block.css("padding-top")) ;
-			// console.log(blockh);
 
 		$(window).scroll(function() {
 			var top = block.offset().top;
-			// console.log(top);
 			top = top - $(window).height() + blockh/2+ 250;
 			var scroll_top = $(this).scrollTop();
 			if ((scroll_top > top)) {
@@ -90,6 +88,20 @@ $(document).ready(function(){
 				}
 			}
 		});
+	});
+
+
+	var fh = document.querySelector('.fixed-header'),
+		headerh = document.querySelector('.header').offsetHeight;
+
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > (headerh - 200) ) {
+			fh.classList.add('sticky');
+		} else {
+			if ($(this).scrollTop() < 400) {
+				fh.classList.remove('sticky');
+			}
+		}
 	});
 
 
