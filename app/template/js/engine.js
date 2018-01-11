@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 		$(window).scroll(function() {
 			var top = block.offset().top;
-			top = top - $(window).height() + blockh/2+ 250;
+			top = top - $(window).height() + blockh/2+ 500;
 			var scroll_top = $(this).scrollTop();
 			if ((scroll_top > top)) {
 				if (block.hasClass("bganimated")) {
