@@ -12,10 +12,10 @@
 		margin-top: 10px;
 	}
 	.lightbox{
-		color: $color9;
-		text-decoration: none;
-		border-bottom: 1px dashed rgba(255, 0, 0, 0);
 		@include transition-param(border-bottom);
+		color: $color9;
+		border-bottom: 1px dashed rgba(255, 0, 0, 0);
+		text-decoration: none;
 		&:hover{
 			border-bottom: 1px dashed rgba(255, 0, 0, 1);
 		}

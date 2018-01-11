@@ -384,7 +384,7 @@
 		<div class="container">
 			<header class="flexbox">
 				<h1 class="title">О НАС ГОВОРЯТ</h1>
-				<button type="button" class="btn btn-orange" data-toggle="modal" data-target="#addreview">оставить отзыв</button>
+				<button type="button" class="btn btn-lightgrey btn-hoverorange" data-toggle="modal" data-target="#addreview">оставить отзыв</button>
 			</header>
 			<article class="reviews__item">
 				<div class="reviews__title">Владимир : <time datetime="2014-04-21T11:00:00">04.12.2017</time></div>
@@ -698,5 +698,18 @@
 
 <script src="/template/js/jquery.countdown.min.js"></script>
 <script src="/template/js/engine.js"></script>
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
+$(function(){
+	// popup
+	var popup = document.querySelector('.cats .popup').style;
+		popup.opacity = 1;
+		popup.display = 'none';
+	$('.c01 .cat__title').click(function(e){
+		e.preventDefault();
+		$('.cats .popup').fadeToggle();
+	});
+});
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

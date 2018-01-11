@@ -1,0 +1,74 @@
+.about_advantages{
+	color: $color5;
+	padding-top: 790px;
+	margin-top: -50px;
+	&:before{
+		background: url(../images/divider_3.png) no-repeat right top;
+	}
+	h1{
+		color: #333;
+		margin-bottom: 40px;
+	}
+
+}
+
+
+.sertificats{
+	&:before{
+		background: url(../images/divider_2.png) no-repeat right top;
+	}
+	padding-top: 650px;
+	h1{
+		color: #333;
+		text-align: right;
+	}
+	.nav-tabs{
+		text-align: right;
+		margin-top: 20px;
+		margin-right: 25px;
+		li{
+			margin-left: 20px;
+			&.active{
+				background-color: red;
+			}
+		}
+	}
+	
+	.tab-pane .flexbox{
+		display: flex;
+		margin-top: 37px;
+	}
+
+	.item{
+		width: 25%;
+		a{
+			display: inline-block;
+			position: relative;
+			&:after{
+				@extend .before;
+				background:url(../images/zoom.png) no-repeat center rgba(255,0,0,.44);
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				top: 0;
+				width: 100%;
+				@include transition-param;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		img{
+			vertical-align: top;
+		}
+	}
+}
+
+
+.reviews_about{
+	&:before{
+		background: url(../images/divider_7.png) no-repeat right top;
+	}	
+}

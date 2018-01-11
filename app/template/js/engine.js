@@ -36,17 +36,6 @@ $(document).ready(function(){
 	});
 
 
-
-	// popup
-	// $('.cats .popup').hide();
-	var popup = document.querySelector('.cats .popup').style;
-		popup.opacity = 1;
-		popup.display = 'none';
-	$('.c01 .cat__title').click(function(e){
-		e.preventDefault();
-		$('.cats .popup').fadeToggle();
-	});
-
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),
@@ -80,7 +69,7 @@ $(document).ready(function(){
 
 		$(window).scroll(function() {
 			var top = block.offset().top;
-			top = top - $(window).height() + blockh/2+ 500;
+			top = top - $(window).height() + blockh/2 ;
 			var scroll_top = $(this).scrollTop();
 			if ((scroll_top > top)) {
 				if (block.hasClass("bganimated")) {

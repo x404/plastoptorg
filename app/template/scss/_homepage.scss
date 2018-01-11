@@ -1,27 +1,5 @@
 .homepage{
 	background: url(../images/bg.jpg) no-repeat center top / contain;
-	// min-height: 1132px;
-
-	.header{
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: -110px;
-		width: 86%;
-		.logo{
-			padding-top: 104px;
-			width: 56%;
-			&__link{
-				display: block;
-				width: 357px;
-				text-align: center;
-				margin-left: auto;
-				margin-right: auto;		
-			}
-			img{
-				display: block;
-			}
-		}
-	}
 
 	.articles{
 		padding-top: 900px;

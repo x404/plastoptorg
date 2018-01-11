@@ -1,0 +1,82 @@
+.inner{
+	background: url(../images/bg-3.jpg) no-repeat center top / contain;
+	.header{
+		min-height: 668px;
+	}
+}
+
+
+/* =neck
+---------------------------*/
+.neck{
+	background: url(../images/neck-1.png) no-repeat left top;
+	align-items: center;
+	display: flex;
+	height: 700px;
+	left: 0;
+	padding-left: 130px;
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	.title{
+		@extend .bi;
+		font-size: 48px;
+	}
+	.btn{
+		@extend .bold;
+		margin-top: 28px;
+	}
+}
+/* =/neck
+---------------------------*/
+
+
+/* =breadcrumbs
+---------------------------*/
+.breadcrumbs{
+	@extend .bi;
+	font-size: 18px;
+	margin-top: 5px;
+	padding-left: 34px;
+	text-transform: uppercase;
+	ul{
+		display: flex;
+		li{
+			margin: 0 4px;
+		}
+	}
+	a{
+		color: $color2;
+		text-decoration: none;
+	}
+}
+/* =/breadcrumbs
+---------------------------*/
+
+
+.main{
+	margin-top: 220px;
+	main{
+		color: $color5;
+		h1{
+			color: #333;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.nav-tabs{
+	display: flex;
+	justify-content: flex-end;
+	li{
+		a{
+			@extend .bi;
+			color: $color2;
+			text-decoration: none;
+			padding-top: 6px;
+			&.active{
+				background-color: red;
+			}
+		}
+	}
+}
