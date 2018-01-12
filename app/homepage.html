@@ -48,7 +48,20 @@
 				<nav id="navbar">
 					<ul>
 						<li class="active"><span>главная</span></li>
-						<li><a href="#">компания</a></li>
+						<li>
+							<a href="#">компания</a>
+							<div class="subnav">
+								<ul>
+									<li><a href="about.html" title="">О нас</a></li>
+									<li><a href="advantages.html" title="">Преимущества</a></li>
+									<li><a href="sertificats.html" title="">Сертификаты</a></li>
+									<li><a href="reviews.html" title="">Отзывы</a></li>
+									<li><a href="faq.html" title="">Вопросы и ответы</a></li>
+									<li><a href="video.html" title="">Видео</a></li>
+									<li><a href="info.html" title="">Полезная информация</a></li>
+								</ul>
+							</div> 
+						</li>
 						<li>
 							<a href="#">продукция</a>
 							<div class="subnav">
@@ -694,8 +707,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
-<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
-
 <script src="/template/js/jquery.countdown.min.js"></script>
 <script src="/template/js/engine.js"></script>
 
@@ -710,6 +721,42 @@ $(function(){
 		$('.cats .popup').fadeToggle();
 	});
 });
+
+<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
+<script>
+var map;
+var myCollection;
+ymaps.ready(function () {
+    map = new ymaps.Map('map', {
+        center: [55.738287, 37.747568],
+        zoom: 16
+    });
+
+	myCollection = new ymaps.GeoObjectCollection(null, {
+        preset: 'islands#redDotIcon'
+	});
+	myCollection.add(new ymaps.Placemark(
+		[55.738287, 37.747568],
+		{
+			hintContent: 'Восточный офис',
+			balloonContent: ''
+		}
+	));
+
+	myCollection.add(new ymaps.Placemark(
+		[55.843884, 38.200813],
+		{
+			hintContent: 'Северный склад',
+			balloonContent: ''
+		}
+	));
+	map.geoObjects.add(myCollection);
+})
+
+function go_to(lat,lon){
+	map.setCenter([lat, lon], 16);
+}
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

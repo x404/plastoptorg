@@ -257,42 +257,6 @@ $(function() {
 });
 
 
-
-
-var map;
-var myCollection;
-ymaps.ready(function () {
-    map = new ymaps.Map('map', {
-        center: [55.738287, 37.747568],
-        zoom: 16
-    });
-
-	myCollection = new ymaps.GeoObjectCollection(null, {
-        preset: 'islands#redDotIcon'
-	});
-	myCollection.add(new ymaps.Placemark(
-		[55.738287, 37.747568],
-		{
-			hintContent: 'Восточный офис',
-			balloonContent: ''
-		}
-	));
-
-	myCollection.add(new ymaps.Placemark(
-		[55.843884, 38.200813],
-		{
-			hintContent: 'Северный склад',
-			balloonContent: ''
-		}
-	));
-	map.geoObjects.add(myCollection);
-})
-
-function go_to(lat,lon){
-	map.setCenter([lat, lon], 16);
-}
-
-
 function getFileName(el){
 	var file = el.value;
 	file = file.replace(/\\/g, "/").split ('/').pop();
