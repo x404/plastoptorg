@@ -70,6 +70,7 @@ gulp.task('compress', function(){
 				config.libsDir + '/jquery/dist/jquery.js',
 				config.sourceDir + '/js/util.js',
 				config.sourceDir + '/js/modal.js',
+				config.sourceDir + '/js/collapse.js',
 				config.sourceDir + '/js/tab.js',
 				config.sourceDir + '/js/popper.min.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.js'

@@ -34,24 +34,4 @@
 			border-bottom: 1px dashed rgba(255, 0, 0, 1);
 		}
 	}
-
-	// page
-	&-page{
-		padding-top: 0;
-		margin-top: -217px;
-		position: relative;
-		.title + .btn{
-			margin-top: 18px;
-		}
-		.flexbox{
-			align-items: flex-end;
-			justify-content: flex-end;
-			flex-flow: column;
-			margin-bottom: -8px;
-		}
-
-		.btn-group{
-			margin-bottom: 40px;
-		}
-	}
 }

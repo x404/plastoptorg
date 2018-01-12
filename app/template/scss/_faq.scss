@@ -1,0 +1,39 @@
+.faq{
+	&__list{
+		margin: 76px auto 0;
+		width: 92%;
+	}
+	&__item{
+		margin-top: 20px;
+	}
+	&__header{
+		text-transform: uppercase;
+		a{
+			color: $color19;
+			border-bottom: 1px dashed $color19;
+			text-decoration: none;
+			&.collapsed{
+				$color: $color5;
+				color: $color;
+				border-bottom-color: $color;
+			}
+			&:hover{
+				color: $color19;
+				border-bottom-color: $color19;
+			}
+		}
+	}
+	&__title{
+		@extend .italic;
+		font-weight: normal;
+		font-size: 14px;		
+	}
+
+	&__body{
+		color: $color5;
+		border: 1px solid $color19;
+		line-height: 1.6;
+		margin-top: 20px; 
+		padding: 14px 25px 16px;
+	}
+}

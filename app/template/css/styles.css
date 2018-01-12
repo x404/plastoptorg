@@ -131,11 +131,11 @@ input::-moz-focus-inner {
 .bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content {
+.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
-.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .neck .title, .breadcrumbs, .nav-tabs li a {
+.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -1044,20 +1044,6 @@ label.error {
   .reviews .lightbox:hover {
     border-bottom: 1px dashed red; }
 
-.reviews-page {
-  padding-top: 0;
-  margin-top: -217px;
-  position: relative; }
-  .reviews-page .title + .btn {
-    margin-top: 18px; }
-  .reviews-page .flexbox {
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-flow: column;
-    margin-bottom: -8px; }
-  .reviews-page .btn-group {
-    margin-bottom: 40px; }
-
 .feedback {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 15px; }
@@ -1467,7 +1453,9 @@ form .thank {
   .inner .header {
     min-height: 668px; }
     .inner .header .logo {
-      padding-top: 35px; }
+      padding-top: 35px;
+      position: relative;
+      z-index: 100; }
 
 /* =neck
 ---------------------------*/
@@ -1505,12 +1493,31 @@ form .thank {
 
 /* =/breadcrumbs
 ---------------------------*/
+.header-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-flow: column;
+  margin-bottom: -8px; }
+  .header-right .btn {
+    margin-top: 18px;
+    padding-left: 30px;
+    padding-right: 30px; }
+  .header-right .title {
+    color: #333; }
+
 .main {
   margin-top: 220px; }
   .main main {
     color: #4c4c4c; }
     .main main h1 {
       color: #333;
+      margin-bottom: 40px; }
+  .main__body {
+    padding-top: 0;
+    margin-top: -217px;
+    position: relative; }
+    .main__body .btn-group {
       margin-bottom: 40px; }
 
 .nav-tabs {
@@ -1522,6 +1529,11 @@ form .thank {
     padding-top: 6px; }
     .nav-tabs li a.active {
       background-color: red; }
+
+.collapse {
+  display: none; }
+  .collapse.show {
+    display: block; }
 
 .about_advantages {
   color: #4c4c4c;
@@ -1572,6 +1584,37 @@ form .thank {
 
 .reviews_about:before {
   background: url(../images/divider_7.png) no-repeat right top; }
+
+.faq__list {
+  margin: 76px auto 0;
+  width: 92%; }
+
+.faq__item {
+  margin-top: 20px; }
+
+.faq__header {
+  text-transform: uppercase; }
+  .faq__header a {
+    color: #a8340d;
+    border-bottom: 1px dashed #a8340d;
+    text-decoration: none; }
+    .faq__header a.collapsed {
+      color: #4c4c4c;
+      border-bottom-color: #4c4c4c; }
+    .faq__header a:hover {
+      color: #a8340d;
+      border-bottom-color: #a8340d; }
+
+.faq__title {
+  font-weight: normal;
+  font-size: 14px; }
+
+.faq__body {
+  color: #4c4c4c;
+  border: 1px solid #a8340d;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding: 14px 25px 16px; }
 
 .fade {
   opacity: 0;
