@@ -123,3 +123,63 @@
 	}
 }
 
+
+
+/* =pagination
+---------------------------*/
+.pagination{
+	margin-top: -10px;
+	margin-bottom: 41px;
+	ul{
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+		@extend .bi;
+		text-align: center;
+		align-items: center;
+		li{
+			margin: 0 5px;
+		}
+	}
+	a{
+		background-color: $color20;
+		transition: background-color .3s;
+		text-decoration: none;
+		&:hover{
+			background-color: $color21;
+		}
+	}
+	span{
+		background-color: $color21;
+	}
+	a, span{
+		border-radius: 2px;
+		width: 30px;
+		height: 30px;
+		color: $color2;
+		@extend .flexcenter;
+	}
+}
+/* =/pagination
+---------------------------*/
+
+
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 25%;
+}
+
+ .grid-item--width2{
+ 	width: 50%;
+ }
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}

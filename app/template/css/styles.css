@@ -135,7 +135,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
-.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a {
+.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -244,7 +244,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIBoldItalic";
   font-weight: normal; }
 
-.flexcenter, .products__title, .articles__link {
+.flexcenter, .products__title, .articles__link, .pagination a, .pagination span {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -341,7 +341,8 @@ nav {
         opacity: 0;
         padding-top: 10px;
         position: absolute;
-        top: 21px;
+        top: 0;
+        padding-top: 28px;
         transition: opacity .3s;
         width: 250px;
         z-index: -1; }
@@ -1534,6 +1535,50 @@ form .thank {
   display: none; }
   .collapse.show {
     display: block; }
+
+/* =pagination
+---------------------------*/
+.pagination {
+  margin-top: -10px;
+  margin-bottom: 41px; }
+  .pagination ul {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+    align-items: center; }
+    .pagination ul li {
+      margin: 0 5px; }
+  .pagination a {
+    background-color: #465994;
+    transition: background-color .3s;
+    text-decoration: none; }
+    .pagination a:hover {
+      background-color: #4982bb; }
+  .pagination span {
+    background-color: #4982bb; }
+  .pagination a, .pagination span {
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    color: #fff; }
+
+/* =/pagination
+---------------------------*/
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 25%; }
+
+.grid-item--width2 {
+  width: 50%; }
+
+.grid-item {
+  float: left; }
+
+.grid-item img {
+  display: block;
+  max-width: 100%; }
 
 .about_advantages {
   color: #4c4c4c;

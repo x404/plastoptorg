@@ -21,6 +21,8 @@ $color16:#1c4070;
 $color17:#b3b3b3;
 $color18:#8c8c8c;
 $color19:#a8340d;
+$color20:#465994;
+$color21:#4982bb;
 
 
 
@@ -400,7 +402,8 @@ nav{
 				opacity: 0;
 				padding-top: 10px;
 				position: absolute;
-				top: 21px;
+				top: 0;
+				padding-top: 28px;
 				transition: opacity .3s;
 				width: 250px;
 				z-index: -1;
