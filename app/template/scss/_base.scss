@@ -400,10 +400,9 @@ nav{
 			.subnav{
 				left: -10px;
 				opacity: 0;
-				padding-top: 10px;
+				padding-top: 12px;
 				position: absolute;
 				top: 16px;
-				padding-top: 12px;
 				transition: opacity .3s;
 				width: 250px;
 				z-index: -1;
@@ -488,7 +487,6 @@ nav{
 	nav{
 		padding-top: 4.5rem;
 		position: relative;
-		z-index: 50;
 	}
 
 
@@ -676,7 +674,13 @@ nav{
 		nav{
 			ul li{
 				.subnav{
-					top: 30px;
+					display: none;
+					padding-top: 23px;
+				}
+				&:hover{
+					.subnav{
+						display: block;
+					}
 				}
 			}
 		}
