@@ -1,0 +1,49 @@
+.address{
+	&-page{
+		padding-top: 0;
+		.flexbox{
+			justify-content: flex-start;
+		}
+
+	}
+	&__info{
+
+	}
+
+	.btn-groups{
+		.btn{
+			min-width: 215px
+		}
+	}
+
+
+	.btn-groups,
+	.address__info
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 970px;
+	}
+
+	.address__info{
+		margin-top: 55px;
+		margin-bottom: 40px;
+		h5{
+			@extend .bold;
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+		p{
+			font-size: 15px;
+			color: #4c4c4c;
+			line-height: 1.7;
+		}
+		.cell{
+			margin-right: 35px;
+		}
+		a{
+			color: #4c4c4c;
+			@extend .tdn;
+		}
+	}
+}

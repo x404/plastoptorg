@@ -128,7 +128,7 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn, .insert .box {
+.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn, .insert .box, .address .address__info h5 {
   font-family: "SegoeUIBold"; }
 
 .italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title {
@@ -162,9 +162,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.tdn, .header .contacts a, .feedback .vcard .email, .policy a {
+.tdn, .header .contacts a, .feedback .vcard .email, .policy a, .address .address__info a {
   text-decoration: none; }
-  .tdn:hover, .header .contacts a:hover, .feedback .vcard .email:hover, .policy a:hover {
+  .tdn:hover, .header .contacts a:hover, .feedback .vcard .email:hover, .policy a:hover, .address .address__info a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -1590,7 +1590,6 @@ form .thank {
   margin: 45px 0;
   padding: 42px 0; }
   .insert .box {
-    background: url(../images/car.png) no-repeat 115px center;
     border: 4px solid #fff;
     color: #fff;
     display: flex;
@@ -1600,11 +1599,13 @@ form .thank {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 350px;
     padding-right: 24px;
     width: 1130px; }
     .insert .box p {
       line-height: 1.5; }
+  .insert-type1 .box {
+    background: url(../images/car.png) no-repeat 115px center;
+    padding-left: 350px; }
 
 /* fluid 5 columns */
 .grid-sizer,
@@ -1701,6 +1702,35 @@ form .thank {
   line-height: 1.6;
   margin-top: 20px;
   padding: 14px 25px 16px; }
+
+.address-page {
+  padding-top: 0; }
+  .address-page .flexbox {
+    justify-content: flex-start; }
+
+.address .btn-groups .btn {
+  min-width: 215px; }
+
+.address .btn-groups,
+.address .address__info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 970px; }
+
+.address .address__info {
+  margin-top: 55px;
+  margin-bottom: 40px; }
+  .address .address__info h5 {
+    font-size: 15px;
+    margin-bottom: 5px; }
+  .address .address__info p {
+    font-size: 15px;
+    color: #4c4c4c;
+    line-height: 1.7; }
+  .address .address__info .cell {
+    margin-right: 35px; }
+  .address .address__info a {
+    color: #4c4c4c; }
 
 .fade {
   opacity: 0;
