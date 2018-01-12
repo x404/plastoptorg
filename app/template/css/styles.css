@@ -341,8 +341,8 @@ nav {
         opacity: 0;
         padding-top: 10px;
         position: absolute;
-        top: 0;
-        padding-top: 28px;
+        top: 16px;
+        padding-top: 12px;
         transition: opacity .3s;
         width: 250px;
         z-index: -1; }
@@ -379,11 +379,11 @@ nav {
       border-bottom: 2px dashed white; }
 
 .header {
-  min-height: 1132px;
   color: #fff;
   display: flex;
   flex-flow: column;
   margin: 0 auto -110px;
+  min-height: 1132px;
   width: 86%; }
   .header .logo {
     padding-top: 104px;
@@ -399,7 +399,9 @@ nav {
   .header__top {
     flex-grow: 1; }
   .header nav {
-    padding-top: 4.5rem; }
+    padding-top: 4.5rem;
+    position: relative;
+    z-index: 50; }
   .header .timer {
     margin-bottom: 90px; }
   .header .contacts {
@@ -1013,6 +1015,12 @@ label.error {
     display: flex;
     justify-content: center;
     width: 229px; }
+
+.brands-page .brands__cell {
+  margin-top: 70px; }
+
+.brands-page main {
+  margin: 40px 0 20px; }
 
 .reviews__item {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAMAAAD0U0w/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEX////x8fGenZ9ZV1vV1dYwLjN1c3fx8fFZV1uCgYTV1db///+sq63j4+OenZ9nZWnHx8h1c3cwLjM9O0BLSU7///8I0MjiAAAAEnRSTlMAAAAAAAAAVPTIckacY6vmftekOjI4AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IBCBUTOtKC6M0AAACASURBVBjTbc/bDoMwDANQAysUwm1h//+ta6BQN8JPJ5JltcCVIY6TvBiQqKpxFu90jWo5Fud0reel1mSnLNe1iXMeT9mdy8Qmte2tRymySzFKbSquzg2Qizqgdvs86XwEGR0mLRvsT3g2dtoztwFfmmf3AXn+Z/PsLkDu2BfJwB/jGxKCFd+F5AAAAABJRU5ErkJggg==") no-repeat left 2px;

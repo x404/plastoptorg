@@ -15,4 +15,15 @@
 			width: 229px;
 		}
 	}
+
+	&-page{
+		.brands{
+			&__cell{
+				margin-top: 70px;
+			}
+		}
+		main{
+			margin: 40px 0 20px; 
+		}
+	}
 }
