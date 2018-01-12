@@ -8,6 +8,18 @@
 			z-index: 100;
 		}
 	}
+
+	main{
+		p{
+			margin: 5px 0;
+		}
+	}
+	.text{
+		color: $color5;
+		p{
+			margin: 5px 0;
+		}
+	}
 }
 
 
@@ -95,6 +107,9 @@
 		.btn-group{
 			margin-bottom: 40px;
 		}
+		main{
+			margin-top: 40px;
+		}
 	}
 }
 
@@ -165,6 +180,33 @@
 
 
 
+.insert{
+	background: url(../images/insert-bg.jpg) no-repeat center top /cover  #d68c35;
+	margin: 45px 0;
+	padding: 42px 0;
+	.box{
+		background: url(../images/car.png) no-repeat 115px center; 
+		@extend .bold;
+		border: 4px solid $color2;
+		color: $color2;
+		display: flex;
+		flex-flow: column;
+		font-size: 18px;
+		height: 130px;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 350px;
+		padding-right: 24px;
+		width: 1130px;
+		p{
+			line-height: 1.5;
+		}
+	}
+}
+
+
+
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item {
@@ -183,3 +225,6 @@
   display: block;
   max-width: 100%;
 }
+
+
+

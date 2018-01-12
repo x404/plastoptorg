@@ -128,7 +128,7 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn {
+.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn, .insert .box {
   font-family: "SegoeUIBold"; }
 
 .italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title {
@@ -1469,6 +1469,12 @@ form .thank {
       padding-top: 35px;
       position: relative;
       z-index: 100; }
+  .inner main p {
+    margin: 5px 0; }
+  .inner .text {
+    color: #4c4c4c; }
+    .inner .text p {
+      margin: 5px 0; }
 
 /* =neck
 ---------------------------*/
@@ -1532,6 +1538,8 @@ form .thank {
     position: relative; }
     .main__body .btn-group {
       margin-bottom: 40px; }
+    .main__body main {
+      margin-top: 40px; }
 
 .nav-tabs {
   display: flex;
@@ -1577,6 +1585,27 @@ form .thank {
 
 /* =/pagination
 ---------------------------*/
+.insert {
+  background: url(../images/insert-bg.jpg) no-repeat center top/cover #d68c35;
+  margin: 45px 0;
+  padding: 42px 0; }
+  .insert .box {
+    background: url(../images/car.png) no-repeat 115px center;
+    border: 4px solid #fff;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    font-size: 18px;
+    height: 130px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 350px;
+    padding-right: 24px;
+    width: 1130px; }
+    .insert .box p {
+      line-height: 1.5; }
+
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item {
