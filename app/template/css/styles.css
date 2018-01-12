@@ -1016,13 +1016,24 @@ label.error {
 .reviews__item {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAMAAAD0U0w/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEX////x8fGenZ9ZV1vV1dYwLjN1c3fx8fFZV1uCgYTV1db///+sq63j4+OenZ9nZWnHx8h1c3cwLjM9O0BLSU7///8I0MjiAAAAEnRSTlMAAAAAAAAAVPTIckacY6vmftekOjI4AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IBCBUTOtKC6M0AAACASURBVBjTbc/bDoMwDANQAysUwm1h//+ta6BQN8JPJ5JltcCVIY6TvBiQqKpxFu90jWo5Fud0reel1mSnLNe1iXMeT9mdy8Qmte2tRymySzFKbSquzg2Qizqgdvs86XwEGR0mLRvsT3g2dtoztwFfmmf3AXn+Z/PsLkDu2BfJwB/jGxKCFd+F5AAAAABJRU5ErkJggg==") no-repeat left 2px;
   font-size: 16px;
-  margin: 35px 0;
+  margin: 31px 0;
   padding-left: 40px; }
 
 .reviews__text {
   color: #4c4c4c;
   line-height: 1.5;
   margin-top: 10px; }
+
+.reviews .answer {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAQAAABphHSGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQwOOCIoj1Y0AAAAv0lEQVQoz32QwQnCQBBFH4M3a7ADG7CBBa8iWECwAQtIJTYg6cC7kLtgCeYu8Tweskl21p38PQy8z+z/DIp5R+211YuGJW6toL0O6vWaLGbcrrSaqvJ4utIYa0wq8HmpMtZ7Klfg/60H1UtcAAicWTOro13k8aBazHG4AIETqb5TTplT+q9xckaOQPYf3OL0OEJgb6yOTyxX5oCwNfeBB3cAlwPCLivxjNPjMcnqFafHAWGTmWNzjwMrDpTlceAHR0hYAuhyQ+0AAAAASUVORK5CYII=") no-repeat 18px 10px;
+  background-color: #8c8c8c;
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  padding: 8px 20px 10px 58px; }
+  .reviews .answer__text {
+    margin-top: 10px; }
 
 .reviews .lightbox {
   -webkit-transition: border-bottom 0.2s ease-out;
@@ -1032,6 +1043,20 @@ label.error {
   text-decoration: none; }
   .reviews .lightbox:hover {
     border-bottom: 1px dashed red; }
+
+.reviews-page {
+  padding-top: 0;
+  margin-top: -217px;
+  position: relative; }
+  .reviews-page .title + .btn {
+    margin-top: 18px; }
+  .reviews-page .flexbox {
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-flow: column;
+    margin-bottom: -8px; }
+  .reviews-page .btn-group {
+    margin-bottom: 40px; }
 
 .feedback {
   background-color: rgba(255, 255, 255, 0.8);
@@ -1441,6 +1466,8 @@ form .thank {
   background: url(../images/bg-3.jpg) no-repeat center top/contain; }
   .inner .header {
     min-height: 668px; }
+    .inner .header .logo {
+      padding-top: 35px; }
 
 /* =neck
 ---------------------------*/
