@@ -69,10 +69,11 @@ gulp.task('compress', function(){
 			gulp.src([  // Берем все необходимые библиотеки
 				config.libsDir + '/jquery/dist/jquery.js',
 				config.sourceDir + '/js/util.js',
+				config.sourceDir + '/js/popper.min.js',
 				config.sourceDir + '/js/modal.js',
 				config.sourceDir + '/js/collapse.js',
+				config.sourceDir + '/js/tooltip.js',
 				config.sourceDir + '/js/tab.js',
-				config.sourceDir + '/js/popper.min.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.js'
 			]),
 			concat('libs.min.js'), // Собираем их в кучу в новом файле libs.min.js

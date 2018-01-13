@@ -1,0 +1,31 @@
+.accessories{
+	&__text{
+		padding-top: 810px;
+		&:before{
+			background: url(../images/divider_3.png) no-repeat right top;
+		}
+	}
+
+	&__list{
+		.flexbox{
+			flex-wrap: wrap;
+		}
+	}
+	&__col{
+		width: 33.3%;
+	}
+	&__cell{
+		width: 368px;
+	}
+
+	&__title{
+		@extend .italic;
+		@extend .flexcenter;
+		color: $color2;
+		font-size: 18px;
+		font-weight: normal;
+		height: 378px;
+		text-align: center;
+		width: calc(100% - 42px);
+	}
+}

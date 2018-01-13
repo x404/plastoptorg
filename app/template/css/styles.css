@@ -128,14 +128,19 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .inner main h3, .inner main h4, .inner main strong, .neck .btn, .insert .box, .address .address__info h5 {
+.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .inner main h3, .inner main h4,
+.inner .text h3,
+.inner .text h4, .inner main strong,
+.inner .text strong, .neck .btn, .insert .box, .address .address__info h5 {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em, .faq__title {
+.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em,
+.inner .text em, .faq__title, .accessories__title {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
-.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul {
+.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2,
+.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .pricelist th {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -172,7 +177,9 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .effect:before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, #inline-order:after, .articles__link:before, .inner main ul li:before, .inner main .owl-carousel a:after, .sertificats .item a:after {
+.before, .effect:before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, #inline-order:after, .articles__link:before, .inner main ul li:before,
+.inner .text ul li:before, .inner main .owl-carousel a:after,
+.inner .text .owl-carousel a:after, .sertificats .item a:after {
   content: "";
   display: block;
   position: absolute; }
@@ -244,7 +251,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIBoldItalic";
   font-weight: normal; }
 
-.flexcenter, .products__title, .articles__link, .pagination a, .pagination span {
+.flexcenter, .products__title, .articles__link, .pagination a, .pagination span, .accessories__title {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -1468,44 +1475,61 @@ form .thank {
     .inner .header .logo {
       padding-top: 35px;
       position: relative;
-      z-index: 100; }
-  .inner main h2 {
+      z-index: 2; }
+  .inner main h2,
+  .inner .text h2 {
     font-size: 30px;
     font-weight: normal;
     margin: 20px 0; }
-  .inner main h3, .inner main h4 {
+  .inner main h3, .inner main h4,
+  .inner .text h3,
+  .inner .text h4 {
     font-weight: normal; }
-  .inner main p {
+  .inner main p,
+  .inner .text p {
     margin: 5px 0; }
-  .inner main ul li {
+  .inner main ul li,
+  .inner .text ul li {
     position: relative;
     padding-left: 10px;
     margin: 5px 0; }
-    .inner main ul li:before {
+    .inner main ul li:before,
+    .inner .text ul li:before {
       content: "•";
       left: 0;
       top: 0; }
-  .inner main .owl-carousel {
+  .inner main .owl-carousel,
+  .inner .text .owl-carousel {
     margin: 40px auto;
     width: 955px; }
-    .inner main .owl-carousel .owl-item {
+    .inner main .owl-carousel .owl-item,
+    .inner .text .owl-carousel .owl-item {
       text-align: center; }
-    .inner main .owl-carousel .owl-nav {
+    .inner main .owl-carousel .owl-nav,
+    .inner .text .owl-carousel .owl-nav {
       margin-top: -12px; }
-    .inner main .owl-carousel .owl-next, .inner main .owl-carousel .owl-prev {
+    .inner main .owl-carousel .owl-next, .inner main .owl-carousel .owl-prev,
+    .inner .text .owl-carousel .owl-next,
+    .inner .text .owl-carousel .owl-prev {
       background: url(../images/prevnext-2.png) no-repeat;
       -webkit-transition: opacity 0.2s ease-out;
       transition: opacity 0.2s ease-out; }
-      .inner main .owl-carousel .owl-next:hover, .inner main .owl-carousel .owl-prev:hover {
+      .inner main .owl-carousel .owl-next:hover, .inner main .owl-carousel .owl-prev:hover,
+      .inner .text .owl-carousel .owl-next:hover,
+      .inner .text .owl-carousel .owl-prev:hover {
         opacity: 1; }
-    .inner main .owl-carousel .owl-next {
+    .inner main .owl-carousel .owl-next,
+    .inner .text .owl-carousel .owl-next {
       right: -50px; }
-    .inner main .owl-carousel .owl-prev {
+    .inner main .owl-carousel .owl-prev,
+    .inner .text .owl-carousel .owl-prev {
       left: -50px; }
-    .inner main .owl-carousel a {
+    .inner main .owl-carousel a,
+    .inner .text .owl-carousel a {
       display: inline-block;
       position: relative; }
-      .inner main .owl-carousel a:after {
+      .inner main .owl-carousel a:after,
+      .inner .text .owl-carousel a:after {
         background: url(../images/overlay-owl.png) no-repeat left top;
         height: 133px;
         width: 114px;
@@ -1513,7 +1537,8 @@ form .thank {
         top: 0;
         opacity: 0;
         transition: opacity .3s; }
-      .inner main .owl-carousel a:hover:after {
+      .inner main .owl-carousel a:hover:after,
+      .inner .text .owl-carousel a:hover:after {
         opacity: 1; }
   .inner .text {
     color: #4c4c4c; }
@@ -1536,6 +1561,11 @@ form .thank {
     font-size: 48px; }
   .neck .btn {
     margin-top: 28px; }
+  .neck .title,
+  .neck .breadcrumbs,
+  .neck .btn {
+    position: relative;
+    z-index: 3; }
 
 /* =/neck
 ---------------------------*/
@@ -1668,6 +1698,15 @@ form .thank {
   display: block;
   max-width: 100%; }
 
+.table-bordered {
+  border-collapse: collapse;
+  border: 1px solid #dee2e6; }
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+  padding: 5px 10px; }
+
 .about_advantages {
   color: #4c4c4c;
   padding-top: 790px;
@@ -1779,6 +1818,54 @@ form .thank {
     margin-right: 35px; }
   .address .address__info a {
     color: #4c4c4c; }
+
+.accessories__text {
+  padding-top: 810px; }
+  .accessories__text:before {
+    background: url(../images/divider_3.png) no-repeat right top; }
+
+.accessories__list .flexbox {
+  flex-wrap: wrap; }
+
+.accessories__col {
+  width: 33.3%; }
+
+.accessories__cell {
+  width: 368px; }
+
+.accessories__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  height: 378px;
+  text-align: center;
+  width: calc(100% - 42px); }
+
+.pricelist .nav {
+  margin-top: 70px;
+  text-align: center;
+  justify-content: center; }
+  .pricelist .nav li {
+    margin: 0 9px; }
+
+.pricelist .tab-content {
+  margin-top: 35px; }
+
+.tooltip {
+  margin-top: -22px; }
+  .tooltip-inner {
+    padding-right: 8px; }
+  .tooltip img {
+    border: 3px solid #336b7a;
+    border-radius: 5px; }
+  .tooltip .arrow {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAkQbMI/BXmAnRKPRe0vHNF1xLZwAAAAFiS0dEAIgFHUgAAAAHdElNRQfiAQ0XCS3VJrONAAAAMklEQVQI12NgZGKAAAFmFihDgJUNyhAQYOeAMgQ4uaAMAW4eNAYvF4piPqh2fqiBMCsAoDIC9nnaf5QAAAAASUVORK5CYII=") no-repeat left top;
+    height: 12px;
+    width: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -20px; }
 
 .fade {
   opacity: 0;

@@ -5,16 +5,16 @@
 		.logo{
 			padding-top: 35px;
 			position: relative;
-			z-index: 100;
+			z-index: 2;
 		}
 	}
 
-	main{
-
+	main,
+	.text{
 		h2{
+			@extend .bi;
 			font-size: 30px;
 			font-weight: normal;
-			@extend .bi;
 			margin: 20px 0;
 		}
 
@@ -132,6 +132,13 @@
 	.btn{
 		@extend .bold;
 		margin-top: 28px;
+	}
+
+	.title,
+	.breadcrumbs,
+	.btn{
+		position: relative;
+		z-index: 3;		
 	}
 }
 /* =/neck
@@ -323,3 +330,21 @@
 
 
 
+
+
+
+.table-bordered {
+	border-collapse: collapse;
+	border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+  padding: 5px 10px;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  // border-bottom-width: 2px;
+}
