@@ -128,14 +128,14 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .neck .btn, .insert .box, .address .address__info h5 {
+.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .inner main h3, .inner main h4, .inner main strong, .neck .btn, .insert .box, .address .address__info h5 {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title {
+.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em, .faq__title {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
-.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul {
+.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -172,7 +172,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .effect:before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, #inline-order:after, .articles__link:before, .sertificats .item a:after {
+.before, .effect:before, .header .cats li:before, .header .cats .popup:after, .header .cats .popup:before, .footer__logo:after, #inline-order:after, .articles__link:before, .inner main ul li:before, .inner main .owl-carousel a:after, .sertificats .item a:after {
   content: "";
   display: block;
   position: absolute; }
@@ -1469,8 +1469,52 @@ form .thank {
       padding-top: 35px;
       position: relative;
       z-index: 100; }
+  .inner main h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0; }
+  .inner main h3, .inner main h4 {
+    font-weight: normal; }
   .inner main p {
     margin: 5px 0; }
+  .inner main ul li {
+    position: relative;
+    padding-left: 10px;
+    margin: 5px 0; }
+    .inner main ul li:before {
+      content: "•";
+      left: 0;
+      top: 0; }
+  .inner main .owl-carousel {
+    margin: 40px auto;
+    width: 955px; }
+    .inner main .owl-carousel .owl-item {
+      text-align: center; }
+    .inner main .owl-carousel .owl-nav {
+      margin-top: -12px; }
+    .inner main .owl-carousel .owl-next, .inner main .owl-carousel .owl-prev {
+      background: url(../images/prevnext-2.png) no-repeat;
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
+      .inner main .owl-carousel .owl-next:hover, .inner main .owl-carousel .owl-prev:hover {
+        opacity: 1; }
+    .inner main .owl-carousel .owl-next {
+      right: -50px; }
+    .inner main .owl-carousel .owl-prev {
+      left: -50px; }
+    .inner main .owl-carousel a {
+      display: inline-block;
+      position: relative; }
+      .inner main .owl-carousel a:after {
+        background: url(../images/overlay-owl.png) no-repeat left top;
+        height: 133px;
+        width: 114px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity .3s; }
+      .inner main .owl-carousel a:hover:after {
+        opacity: 1; }
   .inner .text {
     color: #4c4c4c; }
     .inner .text p {
@@ -1517,13 +1561,15 @@ form .thank {
   align-items: flex-end;
   justify-content: flex-end;
   flex-flow: column;
-  margin-bottom: -8px; }
+  margin-bottom: -8px;
+  text-align: right; }
   .header-right .btn {
     margin-top: 18px;
     padding-left: 30px;
     padding-right: 30px; }
   .header-right .title {
-    color: #333; }
+    color: #333;
+    line-height: 1.1; }
 
 .main {
   margin-top: 220px; }
@@ -1707,6 +1753,8 @@ form .thank {
   padding-top: 0; }
   .address-page .flexbox {
     justify-content: flex-start; }
+  .address-page .map-wrapper {
+    height: auto; }
 
 .address .btn-groups .btn {
   min-width: 215px; }

@@ -10,8 +10,98 @@
 	}
 
 	main{
+
+		h2{
+			font-size: 30px;
+			font-weight: normal;
+			@extend .bi;
+			margin: 20px 0;
+		}
+
+		h3, h4{
+			font-weight: normal;
+			@extend .bold;
+		}
+
+		h4{
+
+		}
+
+		strong{
+			@extend .bold;			
+		}
+
+		em{
+			@extend .italic;
+		}
+
 		p{
 			margin: 5px 0;
+		}
+
+		ul{
+			li{
+				position: relative;
+				padding-left: 10px;
+				margin: 5px 0;
+				&:before{
+					@extend .before;
+					content: "•";
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		.owl-carousel{
+			margin: 40px auto;
+			width: 955px;
+			.owl-item{
+				text-align: center;
+			}
+
+
+			.owl{
+				&-nav{
+					margin-top: -12px;					
+				}
+				&-next, 
+				&-prev{
+					background: url(../images/prevnext-2.png) no-repeat;
+					@include transition-param;
+					&:hover{
+						opacity: 1;
+					}
+				}
+				$x: 50px;
+				&-next{
+					right: -$x;
+				}
+				&-prev{
+					left: -$x;
+				}
+			}
+
+
+			a{
+				display: inline-block;
+				position: relative;
+				&:after{
+					@extend .before;
+					background: url(../images/overlay-owl.png) no-repeat left top;
+					height: 133px;
+					width: 114px;
+					left: 0;
+					top: 0;
+					opacity: 0;
+					transition: opacity .3s;
+				}
+				&:hover{
+					&:after{
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 	.text{
@@ -77,6 +167,7 @@
 	justify-content: flex-end;
 	flex-flow: column;
 	margin-bottom: -8px;
+	text-align: right;
 	.btn{
 		margin-top: 18px;
 		@extend .bi;
@@ -85,6 +176,7 @@
 	}
 	.title{
 		color: $color7;
+		line-height: 1.1;
 	}
 }
 
