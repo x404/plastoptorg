@@ -105,7 +105,7 @@
 
 
 	<!-- =fixed-header -->
-  <div class="fixed-header">
+	<div class="fixed-header">
 		<div class="container">
 			<div class="flexbox">
 				<div class="logo">
@@ -170,8 +170,6 @@
 	<!-- =/header -->
 	<!-- TemplateBeginEditable name="EditRegion3" -->EditRegion3<!-- TemplateEndEditable -->
 
-
-
 	<!-- =share -->
 	<div class="share text-center">
 		<div class="container">
@@ -179,8 +177,7 @@
 			<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,lj,viber,whatsapp,skype,telegram"></div>
 		</div>
   </div>
-	<!-- =/share -->
-	
+	<!-- =/share -->	
 </div>
 
 
@@ -376,12 +373,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
-<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
-
 <script src="/template/js/engine.js"></script>
 
 <!-- TemplateBeginEditable name="EditRegion4" -->
 <!-- TemplateEndEditable -->
-
 </body>
 </html>
