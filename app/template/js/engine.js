@@ -1,6 +1,27 @@
 $(document).ready(function(){
 	'use strict';
 
+
+	$.fn.ForceNumericOnly =
+	function(){
+		return this.each(function()	{
+			$(this).keydown(function(e){
+				var key = e.charCode || e.keyCode || 0;
+				// Разр ешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
+				return (
+					key == 8 ||
+					key == 9 ||
+					key == 46 ||
+					(key >= 37 && key <= 40) ||
+					(key >= 48 && key <= 57) ||
+					(key >= 96 && key <= 105));
+			});
+		});
+	};
+
+
+	$('.order_accessories__body .form-control').ForceNumericOnly()
+
 	// карусель
 	$('#foo1').owlCarousel({
 		loop:false,
@@ -222,6 +243,32 @@ $(document).ready(function(){
 		}
 	});
 
+
+	$('#order-form22').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).html(thankcallback);
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+				},
+				always: function(){
+					$('.sending').remove();					
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
 
 	// modal
 	$('#addreview').on('show.bs.modal', function (e) {

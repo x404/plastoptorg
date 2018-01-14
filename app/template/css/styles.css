@@ -131,16 +131,20 @@ input::-moz-focus-inner {
 .bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .feedback .title, .modal-dialog .title, .inner main h3, .inner main h4,
 .inner .text h3,
 .inner .text h4, .inner main strong,
-.inner .text strong, .neck .btn, .insert .box, .address .address__info h5 {
+.inner .text strong, .neck .btn, .insert .box, .order .title, .order__row .plus,
+.order__row .minus, .address .address__info h5 {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em,
-.inner .text em, .faq__title, .accessories__title {
+.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control,
+.order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em,
+.inner .text em, .order_accessories__body .col .row label, .faq__title, .accessories__title {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
-.feedback__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .pricelist th {
+.feedback__form .row textarea,
+.order__form .row input.form-control,
+.order__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2,
+.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .order_accessories__title, .order_accessories__body .col .row .form-control, .pricelist th {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -167,9 +171,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.tdn, .header .contacts a, .feedback .vcard .email, .policy a, .address .address__info a {
+.tdn, .header .contacts a, .feedback .vcard .email, .policy a, .order__top a, .address .address__info a {
   text-decoration: none; }
-  .tdn:hover, .header .contacts a:hover, .feedback .vcard .email:hover, .policy a:hover, .address .address__info a:hover {
+  .tdn:hover, .header .contacts a:hover, .feedback .vcard .email:hover, .policy a:hover, .order__top a:hover, .address .address__info a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -239,6 +243,8 @@ input::-moz-focus-inner {
       background-color: #2b5a9b; }
   .btn-orange {
     background-color: #f26e26; }
+  .btn-brown {
+    background-color: #c86b28; }
   .btn-active {
     background-color: red; }
   .btn-hoverred:hover {
@@ -255,6 +261,9 @@ input::-moz-focus-inner {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.hide {
+  display: none; }
 
 .bgtrigger:before {
   opacity: 0 !important; }
@@ -1086,128 +1095,171 @@ label.error {
     line-height: 3; }
   .feedback__content {
     padding: 35px 0 10px; }
-  .feedback__form {
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto; }
-    .feedback__form .row {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between;
-      margin-top: 24px;
-      position: relative; }
-      .feedback__form .row:first-child {
-        margin-top: 0; }
-      .feedback__form .row input.form-control,
-      .feedback__form .row textarea {
-        color: #fff;
-        background-color: #a6a6a6;
-        border: 1px solid #a6a6a6;
-        font-size: 17px;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        transition: all .3s; }
-        .feedback__form .row input.form-control:disabled,
-        .feedback__form .row textarea:disabled {
-          cursor: default;
-          opacity: .7; }
-          .feedback__form .row input.form-control:disabled::-webkit-input-placeholder,
-          .feedback__form .row textarea:disabled::-webkit-input-placeholder {
-            color: #ccc; }
-          .feedback__form .row input.form-control:disabled::-moz-placeholder,
-          .feedback__form .row textarea:disabled::-moz-placeholder {
-            color: #ccc; }
-          .feedback__form .row input.form-control:disabled:-ms-input-placeholder,
-          .feedback__form .row textarea:disabled:-ms-input-placeholder {
-            color: #ccc; }
-          .feedback__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
-          .feedback__form .row textarea:disabled:focus::-webkit-input-placeholder {
-            transition: line-height 0.5s ease; }
-          .feedback__form .row input.form-control:disabled:focus::-moz-placeholder,
-          .feedback__form .row textarea:disabled:focus::-moz-placeholder {
-            transition: line-height 0.5s ease; }
-          .feedback__form .row input.form-control:disabled:focus:-ms-input-placeholder,
-          .feedback__form .row textarea:disabled:focus:-ms-input-placeholder {
-            transition: line-height 0.5s ease; }
-      .feedback__form .row input.form-control {
-        border-radius: 32px;
-        height: 32px;
-        padding-bottom: 4px;
-        width: 352px; }
-        .feedback__form .row input.form-control::-webkit-input-placeholder {
-          color: #fff; }
-        .feedback__form .row input.form-control::-moz-placeholder {
-          color: #fff; }
-        .feedback__form .row input.form-control:-ms-input-placeholder {
-          color: #fff; }
-        .feedback__form .row input.form-control:focus::-webkit-input-placeholder {
+
+.feedback__form,
+.order__form {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto; }
+  .feedback__form .row,
+  .order__form .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 24px;
+    position: relative; }
+    .feedback__form .row:first-child,
+    .order__form .row:first-child {
+      margin-top: 0; }
+    .feedback__form .row input.form-control,
+    .feedback__form .row textarea,
+    .order__form .row input.form-control,
+    .order__form .row textarea {
+      color: #fff;
+      background-color: #a6a6a6;
+      border: 1px solid #a6a6a6;
+      font-size: 17px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      transition: all .3s; }
+      .feedback__form .row input.form-control:disabled,
+      .feedback__form .row textarea:disabled,
+      .order__form .row input.form-control:disabled,
+      .order__form .row textarea:disabled {
+        cursor: default; }
+        .feedback__form .row input.form-control:disabled::-webkit-input-placeholder,
+        .feedback__form .row textarea:disabled::-webkit-input-placeholder,
+        .order__form .row input.form-control:disabled::-webkit-input-placeholder,
+        .order__form .row textarea:disabled::-webkit-input-placeholder {
+          color: #ccc; }
+        .feedback__form .row input.form-control:disabled::-moz-placeholder,
+        .feedback__form .row textarea:disabled::-moz-placeholder,
+        .order__form .row input.form-control:disabled::-moz-placeholder,
+        .order__form .row textarea:disabled::-moz-placeholder {
+          color: #ccc; }
+        .feedback__form .row input.form-control:disabled:-ms-input-placeholder,
+        .feedback__form .row textarea:disabled:-ms-input-placeholder,
+        .order__form .row input.form-control:disabled:-ms-input-placeholder,
+        .order__form .row textarea:disabled:-ms-input-placeholder {
+          color: #ccc; }
+        .feedback__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
+        .feedback__form .row textarea:disabled:focus::-webkit-input-placeholder,
+        .order__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
+        .order__form .row textarea:disabled:focus::-webkit-input-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row input.form-control:focus::-moz-placeholder {
+        .feedback__form .row input.form-control:disabled:focus::-moz-placeholder,
+        .feedback__form .row textarea:disabled:focus::-moz-placeholder,
+        .order__form .row input.form-control:disabled:focus::-moz-placeholder,
+        .order__form .row textarea:disabled:focus::-moz-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row input.form-control:focus:-ms-input-placeholder {
+        .feedback__form .row input.form-control:disabled:focus:-ms-input-placeholder,
+        .feedback__form .row textarea:disabled:focus:-ms-input-placeholder,
+        .order__form .row input.form-control:disabled:focus:-ms-input-placeholder,
+        .order__form .row textarea:disabled:focus:-ms-input-placeholder {
           transition: line-height 0.5s ease; }
-      .feedback__form .row textarea {
-        border-radius: 18px;
-        flex: 1;
-        overflow: hidden;
-        height: 7rem; }
-        .feedback__form .row textarea::-webkit-input-placeholder {
-          color: #fff; }
-        .feedback__form .row textarea::-moz-placeholder {
-          color: #fff; }
-        .feedback__form .row textarea:-ms-input-placeholder {
-          color: #fff; }
-        .feedback__form .row textarea:focus::-webkit-input-placeholder {
-          transition: line-height 0.5s ease; }
-        .feedback__form .row textarea:focus::-moz-placeholder {
-          transition: line-height 0.5s ease; }
-        .feedback__form .row textarea:focus:-ms-input-placeholder {
-          transition: line-height 0.5s ease; }
-      .feedback__form .row .error {
-        border: 1px solid red !important; }
-    .feedback__form .submit {
-      margin-top: 20px; }
-    .feedback__form .file-upload {
-      background: url(../images/upload.png) no-repeat left top;
-      bottom: 0;
-      height: 53px;
+    .feedback__form .row input.form-control,
+    .order__form .row input.form-control {
+      border-radius: 32px;
+      height: 32px;
+      padding-bottom: 4px;
+      width: 352px; }
+      .feedback__form .row input.form-control::-webkit-input-placeholder,
+      .order__form .row input.form-control::-webkit-input-placeholder {
+        color: #fff; }
+      .feedback__form .row input.form-control::-moz-placeholder,
+      .order__form .row input.form-control::-moz-placeholder {
+        color: #fff; }
+      .feedback__form .row input.form-control:-ms-input-placeholder,
+      .order__form .row input.form-control:-ms-input-placeholder {
+        color: #fff; }
+      .feedback__form .row input.form-control:focus::-webkit-input-placeholder,
+      .order__form .row input.form-control:focus::-webkit-input-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .row input.form-control:focus::-moz-placeholder,
+      .order__form .row input.form-control:focus::-moz-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .row input.form-control:focus:-ms-input-placeholder,
+      .order__form .row input.form-control:focus:-ms-input-placeholder {
+        transition: line-height 0.5s ease; }
+    .feedback__form .row textarea,
+    .order__form .row textarea {
+      border-radius: 18px;
+      flex: 1;
+      overflow: hidden;
+      height: 7rem; }
+      .feedback__form .row textarea::-webkit-input-placeholder,
+      .order__form .row textarea::-webkit-input-placeholder {
+        color: #fff; }
+      .feedback__form .row textarea::-moz-placeholder,
+      .order__form .row textarea::-moz-placeholder {
+        color: #fff; }
+      .feedback__form .row textarea:-ms-input-placeholder,
+      .order__form .row textarea:-ms-input-placeholder {
+        color: #fff; }
+      .feedback__form .row textarea:focus::-webkit-input-placeholder,
+      .order__form .row textarea:focus::-webkit-input-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .row textarea:focus::-moz-placeholder,
+      .order__form .row textarea:focus::-moz-placeholder {
+        transition: line-height 0.5s ease; }
+      .feedback__form .row textarea:focus:-ms-input-placeholder,
+      .order__form .row textarea:focus:-ms-input-placeholder {
+        transition: line-height 0.5s ease; }
+    .feedback__form .row .error,
+    .order__form .row .error {
+      border: 1px solid red !important; }
+  .feedback__form .submit,
+  .order__form .submit {
+    margin-top: 20px; }
+  .feedback__form .file-upload,
+  .order__form .file-upload {
+    background: url(../images/upload.png) no-repeat left top;
+    bottom: 0;
+    height: 53px;
+    position: absolute;
+    right: 0;
+    width: 92px;
+    z-index: 10; }
+    .feedback__form .file-upload input[type="file"],
+    .order__form .file-upload input[type="file"] {
+      display: none; }
+    .feedback__form .file-upload label,
+    .order__form .file-upload label {
+      display: block;
+      cursor: pointer;
+      height: 32px;
       position: absolute;
       right: 0;
-      width: 92px;
-      z-index: 10; }
-      .feedback__form .file-upload input[type="file"] {
-        display: none; }
-      .feedback__form .file-upload label {
-        display: block;
-        cursor: pointer;
-        height: 32px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 70px; }
-    .feedback__form .file-name {
-      text-align: right;
-      font-size: 12px;
-      padding-top: 2px;
-      padding-left: 15px; }
-    .feedback__form .policy {
-      margin-top: 20px; }
-    .feedback__form #msg {
-      padding-right: 80px; }
-    .feedback__form .sending,
-    .feedback__form .thank {
-      height: 238px;
-      padding-top: 105px; }
+      bottom: 0;
+      width: 70px; }
+  .feedback__form .file-name,
+  .order__form .file-name {
+    text-align: right;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-left: 15px; }
+  .feedback__form .policy,
+  .order__form .policy {
+    margin-top: 20px; }
+  .feedback__form #msg,
+  .order__form #msg {
+    padding-right: 80px; }
+  .feedback__form .sending,
+  .feedback__form .thank,
+  .order__form .sending,
+  .order__form .thank {
+    height: 238px;
+    padding-top: 105px; }
 
 .submit {
   background-image: -webkit-linear-gradient(top, #c3133a 0%, #7b0619 100%);
@@ -1272,6 +1324,7 @@ label.error {
   left: 0;
   width: 46px;
   height: 30px;
+  background-color: #fff;
   border: 1px solid #a6a6a6;
   border-radius: 30px;
   text-align: center; }
@@ -1707,6 +1760,94 @@ form .thank {
   border: 1px solid #dee2e6;
   padding: 5px 10px; }
 
+.order .title {
+  font-size: 24px;
+  padding-top: 50px; }
+
+.order__form {
+  background-color: #f2f2f2;
+  max-width: 100%;
+  padding-bottom: 30px; }
+
+.order__top p {
+  margin: 10px 0; }
+
+.order__top a {
+  color: #ff3333; }
+
+.order__params {
+  background: #f2f2f2;
+  margin-top: 35px;
+  padding-top: 8px;
+  padding-bottom: 25px; }
+
+.order .manage {
+  width: 105px; }
+
+.order__row {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .order__row select {
+    width: 198px; }
+  .order__row .plus,
+  .order__row .minus {
+    background-color: #808080;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    height: 33px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    width: 46px; }
+  .order__row .minus {
+    margin-left: 8px; }
+
+.order_accessories {
+  padding: 15px 0; }
+  .order_accessories__title {
+    color: #808080;
+    font-size: 17px;
+    padding-right: 145px;
+    text-align: right; }
+  .order_accessories__body {
+    padding-top: 15px; }
+    .order_accessories__body .col {
+      flex-basis: 33.3%;
+      padding-right: 35px; }
+      .order_accessories__body .col .row {
+        display: flex;
+        align-items: center;
+        margin-top: 16px; }
+        .order_accessories__body .col .row .form-control {
+          border-radius: 20px;
+          border: 1px solid;
+          color: #b2b2b2;
+          height: 32px;
+          margin-top: 0;
+          text-align: center;
+          width: 46px; }
+          .order_accessories__body .col .row .form-control.in {
+            color: #c86b28;
+            border-color: #b2b2b2; }
+            .order_accessories__body .col .row .form-control.in + label {
+              color: #000; }
+        .order_accessories__body .col .row label {
+          color: #666;
+          margin-left: 10px; }
+  .order_accessories .btn {
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 38px; }
+
+.order .file-upload {
+  background-position: left -106px; }
+  .order .file-upload:hover {
+    background-position: left -159px; }
+
 .about_advantages {
   color: #4c4c4c;
   padding-top: 790px;
@@ -1850,6 +1991,9 @@ form .thank {
 
 .pricelist .tab-content {
   margin-top: 35px; }
+
+.pricelist .btn {
+  margin-top: 40px; }
 
 .tooltip {
   margin-top: -22px; }

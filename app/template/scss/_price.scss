@@ -14,8 +14,12 @@
 	th{
 		@extend .bi;
 	}
-
+	.btn{
+		margin-top: 40px;
+	}
 }
+
+
 .tooltip{
 	margin-top: -22px;
 	&-inner{

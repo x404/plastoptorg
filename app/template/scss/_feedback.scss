@@ -33,6 +33,11 @@
 	&__content{
 		padding: 35px 0 10px;
 	}
+}
+
+.feedback,
+.order
+{
 	&__form{
 		padding-left: 10px;
 		padding-right: 10px;
@@ -61,7 +66,7 @@
 				transition: all .3s;
 				&:disabled{
 					cursor: default;
-					opacity: .7;
+					// opacity: .7;
 					@include placeholder(#ccc);
 				}
 			}
@@ -138,6 +143,7 @@
 	}
 }
 
+
 .submit{
 	@extend .bi;
 	$colorg1 : #c3133a;
@@ -207,6 +213,7 @@
 	left: 0;
 	width: 46px;
 	height: 30px;
+	background-color: #fff;
 	border: 1px solid $color12;
 	border-radius: 30px;
 	text-align: center;

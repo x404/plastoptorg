@@ -238,6 +238,10 @@ input::-moz-focus-inner{
 	&-orange{
 		background-color: $color4;
 	}
+
+	&-brown{
+		background-color: #c86b28;
+	}
 	&-active{
 		background-color: red;
 	}
@@ -266,6 +270,10 @@ input::-moz-focus-inner{
 	justify-content: center;
 }
 
+
+.hide{
+	display: none;
+}
 
 
 @mixin effect-bgslidefromright($x: 100%){
