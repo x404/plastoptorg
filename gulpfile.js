@@ -36,6 +36,8 @@ gulp.task('scss', function(){
 
 // сжатие css файла
 gulp.task('css-libs', ['scss'],  function(){
+	var selectric = gulp.src(config.libsDir + '/jquery-selectric/public/selectric.css').pipe(gulp.dest(config.sourceDir + '/css/'));
+
 	return gulp.src(config.destDir + '/css/styles.css') // Выбираем файл для минификации
 		.pipe(cleancss())  // Сжимаем
 		.pipe(rename({suffix: '.min'}))  // Добавляем суффикс .min
@@ -53,7 +55,8 @@ gulp.task('browser-sync', function(){
 
 
 gulp.task('js-libs', function(){
-	var buildJs = gulp.src(config.libsDir + '/jquery.countdown/dist/jquery.countdown.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
+	var countdown = gulp.src(config.libsDir + '/jquery.countdown/dist/jquery.countdown.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
+	var selectric = gulp.src(config.libsDir + '/jquery-selectric/public/jquery.selectric.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
 });
 
 

@@ -330,8 +330,14 @@
 
 
 
-
-
+.table{
+	a{
+		text-decoration: underline;
+		&:hover{
+			color: #cd1f46;
+		}
+	}
+}
 
 .table-bordered {
 	border-collapse: collapse;
@@ -393,6 +399,45 @@
 		justify-content: space-between;
 		select{
 			width: 198px;
+		}
+
+		.selectric{
+			$bg: #808080;
+			background: $bg;
+			border: none;
+			border-radius: 40px;
+			width: 210px;
+			.label{
+				@extend .bi;
+				color: $color2;
+				font-size: 17px;
+				height: 32px;
+				line-height: 30px;
+				padding-left: 17px;
+			}
+			.button{
+				background: url(../images/select-arrow.png) no-repeat 40% 10px; 
+				border-radius: 0 40px 40px 0;
+				&:after{
+					display: none;
+				}
+			}
+			&-items{
+				background: $bg;
+				border: none;
+				top: 14px;
+				padding-top: 18px;
+			}
+		}
+		
+		.selectric-items ul, 
+		.selectric-items li{
+			font-size: 15px;
+			@extend .bi;
+			color: $color2;
+		}
+		.selectric-items li{
+			padding-left: 25px;
 		}
 
 		.plus,

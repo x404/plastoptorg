@@ -244,17 +244,19 @@ $(document).ready(function(){
 	});
 
 
-	$('#order-form22').validate({
+	$('#order-form').validate({
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
 			$(form).find('fieldset').hide();
-			$(form).append('<div class="sending">Идет отправка ...</div>');
+			// $(form).append('<div class="sending">Идет отправка ...</div>');
 			$.ajax({
 				type: "POST",
 				url: $(form).attr('action'),
+				dataType : 'json',
 				data: strSubmit,
 				success: function(){
-					$(form).html(thankcallback);
+					// $(form).html(thankcallback);
+					console.log(strSubmit);
 				},
 				error: function(){
 					alert(errorTxt);

@@ -226,7 +226,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td rowspan="2" align="center">2 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">2 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td rowspan="10" align="center"><p>2R</p>
 										  <p><img src="images/2r.gif" width="105" height="22" alt=""/><br>
@@ -247,7 +247,7 @@
 										<td>от 151 руб.</td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">4 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">4 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -262,7 +262,7 @@
 										<td><img src="images/colors/color11.png" width="40" height="40" alt=""/></td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">6 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">6 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -277,7 +277,7 @@
 										<td><img src="images/colors/color8.png" width="40" height="40" alt=""/></td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">8 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">8 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -292,7 +292,7 @@
 										<td rowspan="2"><img src="images/colors/color12.png" width="40" height="40" alt=""/></td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">10 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">10 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -306,7 +306,7 @@
 										<td rowspan="2"><img src="images/colors/color9.png" width="40" height="40" alt=""/></td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">16 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">16 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td rowspan="2" align="center"><p>3R</p>
 									    <p><img src="images/3r.gif" width="105" height="22" alt=""/></p></td>
@@ -322,7 +322,7 @@
 										<td><img src="images/colors/color7.png" width="40" height="40" alt=""/></td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">16 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">16 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td rowspan="8" align="center"><p>3RХ</p>
 									    <p><img src="images/3rx.gif" width="105" height="22" alt=""/></p></td>
@@ -338,7 +338,7 @@
 										<td>от 151 руб.</td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">20 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">20 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -352,7 +352,7 @@
 										<td>от 151 руб.</td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">25 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">25 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -366,7 +366,7 @@
 										<td>от 151 руб.</td>
 									</tr>
 									<tr>
-										<td rowspan="2" align="center">32 мм</td>
+										<td rowspan="2" align="center"><a href="#" title="">32 мм</a></td>
 										<td align="center">прозрачный</td>
 										<td>от 1.750 руб.</td>
 										<td>от 3.500 руб.</td>
@@ -407,7 +407,7 @@
 			</div>
 
 			<div id="order">
-				<form class="form-policy" id="order-form">
+				<form class="form-policy" id="order-form" method="post" action="#">
 					<div class="order__params">
 						<div class="container">
 							<div class="order__row">
@@ -463,13 +463,14 @@
 							</div>
 						</div>
 					</div>
+
 <script>
 var $i = 1;
 $(document).on('click', '.manage .plus' , function(e){
 	e.preventDefault();
 	$i ++;
 	var template = `
-		<div class="order__row">
+		<div class="order__row order__row` + $i +`">
 			<div class="param1">
 				<select name="type" id="type` + $i +`">
 					<option value="">тип</option>
@@ -523,6 +524,8 @@ $(document).on('click', '.manage .plus' , function(e){
 		</div>
 	`;
 	$('.order__params .container').append(template);
+	$('select').selectric('refresh');
+	// $('.order__row'+ $i +' select').selectric();
 });
 
 
@@ -532,7 +535,6 @@ $(document).on('click', '.manage .minus' , function(e){
 		this.remove();
 	});
 });
-
 
 var products = [],
 	accessories = [];
@@ -577,17 +579,14 @@ function makeaccessories(){
 	});
 }
 
-$(document).on('click', '.json' , function(e){
-	e.preventDefault();
-	makeorders();
-	makeaccessories();
-	console.log(products);
-	console.log(accessories);
-})
+// $(document).on('click', '#order .submit' , function(e){
+// 	e.preventDefault();
+// 	makeorders();
+// 	makeaccessories();
+// 	console.log(products);
+// 	console.log(accessories);
+// })
 </script>
-<button type="button" class="json block-center" style="margin: 0 auto; display: block">json</button>
-
-
 
 					<div class="order_accessories">
 						<div class="container">
@@ -725,7 +724,6 @@ $(document).on('click', '.json' , function(e){
 							</div>
 						</div>
 					</div>
-
 				
 					<div class="order__form">
 						<div class="container">
@@ -749,7 +747,6 @@ $(document).on('click', '.json' , function(e){
 								</div>
 								<div class="file-name"></div>
 								<input type="submit" class="submit" value="заказать" />
-								<button type="button" class="json">json</button>
 								<div class="policy">
 									<input type="checkbox" id="ordercheckbox" value="" name="checkbox" checked="checked" class="user-access">
 									<label for="ordercheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
@@ -972,7 +969,15 @@ $(document).on('click', '.json' , function(e){
 <script src="/template/js/engine.js"></script>
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<link rel="stylesheet" property="stylesheet" href="template/css/selectric.css">
+<script src="/template/js/jquery.selectric.min.js"></script>
+
 <script>
+
+$('select').selectric({ forceRenderBelow: true });
+
+
+
 $(function () {
 	$('a[data-toggle="tooltip"]').tooltip({
 		placement: 'left',
@@ -1004,22 +1009,10 @@ $(document).on('click', '.toggle_accesories' , function(e){
 })
 
 </script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.11/vue.js"></script> -->
+
+
 <script>
-	// var app = new Vue({
-	// 	el: "#order22",
-	// 	data: function(){
-	// 		return {
-	// 			userinput: ''
-	// 		}
-	// 	}
-	// 	,
-	// 	watch: {
-	// 		userinput: function(val, oldVal) {
-	// 			console.log(val);
-	// 		}
-	// 	}
-	// })
+
 </script>
 <!-- InstanceEndEditable -->
 </body>

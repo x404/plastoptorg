@@ -144,7 +144,8 @@ input::-moz-focus-inner {
 .feedback__form .row textarea,
 .order__form .row input.form-control,
 .order__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .order_accessories__title, .order_accessories__body .col .row .form-control, .pricelist th {
+.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .order__row .selectric .label, .order__row .selectric-items ul,
+.order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control, .pricelist th {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -1751,6 +1752,11 @@ form .thank {
   display: block;
   max-width: 100%; }
 
+.table a {
+  text-decoration: underline; }
+  .table a:hover {
+    color: #cd1f46; }
+
 .table-bordered {
   border-collapse: collapse;
   border: 1px solid #dee2e6; }
@@ -1791,6 +1797,33 @@ form .thank {
   justify-content: space-between; }
   .order__row select {
     width: 198px; }
+  .order__row .selectric {
+    background: #808080;
+    border: none;
+    border-radius: 40px;
+    width: 210px; }
+    .order__row .selectric .label {
+      color: #fff;
+      font-size: 17px;
+      height: 32px;
+      line-height: 30px;
+      padding-left: 17px; }
+    .order__row .selectric .button {
+      background: url(../images/select-arrow.png) no-repeat 40% 10px;
+      border-radius: 0 40px 40px 0; }
+      .order__row .selectric .button:after {
+        display: none; }
+    .order__row .selectric-items {
+      background: #808080;
+      border: none;
+      top: 14px;
+      padding-top: 18px; }
+  .order__row .selectric-items ul,
+  .order__row .selectric-items li {
+    font-size: 15px;
+    color: #fff; }
+  .order__row .selectric-items li {
+    padding-left: 25px; }
   .order__row .plus,
   .order__row .minus {
     background-color: #808080;
