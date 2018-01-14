@@ -535,20 +535,22 @@ $(document).on('click', '.manage .minus' , function(e){
 
 
 var products = [],
-	product = {},
-	accessories = [],
-	output = '';
+	accessories = [];
 
 function makeorders(){
+	let product = {};
+	products = [];
+
 	$('.order__row').each(function(index){
-		let type = $(this).find('[name="type"]').val(),
-			thickness = $(this).find('[name="thickness"]').val(),
-			size = $(this).find('[name="size"]').val(),
-			color = $(this).find('[name="color"]').val(),
-			brand = $(this).find('[name="brand"]').val();
+		product = {};
+		let $this = $(this),
+			type = $this.find('[name="type"]').val(),
+			thickness = $this.find('[name="thickness"]').val(),
+			size = $this.find('[name="size"]').val(),
+			color = $this.find('[name="color"]').val(),
+			brand = $this.find('[name="brand"]').val();
 
 		if (type!='' || thickness!='' || size !='' || color !='' || brand !='') {
-			product = {};
 			product.type = type;
 			product.thickness = thickness;
 			product.size = size;
@@ -559,10 +561,28 @@ function makeorders(){
 	});
 }
 
+function makeaccessories(){
+	let accessory = {};
+	$('.order_accessories__body .row').each(function(){
+		let $this = $(this),
+			cnt = $this.find('.form-control').val(),
+			title = $this.find('label').text();
+
+		if (cnt > 0 ){
+			accessory = {};
+			accessory.title = title;
+			accessory.cnt = cnt;
+			accessories.push(accessory);
+		};
+	});
+}
+
 $(document).on('click', '.json' , function(e){
 	e.preventDefault();
 	makeorders();
+	makeaccessories();
 	console.log(products);
+	console.log(accessories);
 })
 </script>
 <button type="button" class="json block-center" style="margin: 0 auto; display: block">json</button>
