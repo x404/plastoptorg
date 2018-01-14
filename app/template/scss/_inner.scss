@@ -452,9 +452,11 @@
 						}
 					}
 					label{
-						color: #666;
 						@extend .italic;
+						color: #666;
+						cursor: pointer;
 						margin-left: 10px;
+						width: 80%;
 					}
 				}
 			}
