@@ -246,14 +246,37 @@ $(document).ready(function(){
 
 	$('#order-form').validate({
 		submitHandler: function(form){
-			var strSubmit=$(form).serialize();
-			$(form).find('fieldset').hide();
+	// makeorders();
+	// makeaccessories();
+	// console.log(products);
+	// console.log(accessories);
+
+// console.log(strSubmit);
+			var products = { Products: makeorders()},
+				additional = {Accessories: makeaccessories()},
+				person = {},
+				obj = {},
+				fd = new FormData;
+				
+				(document.getElementById('ordername').value != '') ? person.name = document.getElementById('ordername').value : '';
+				(document.getElementById('orderemail').value != '') ? person.email = document.getElementById('orderemail').value : '';
+				(document.getElementById('ordertel').value != '') ? person.tel = document.getElementById('ordertel').value : '';
+				(document.getElementById('ordermsg').value != '') ? person.msg = document.getElementById('ordermsg').value : '';
+
+				obj = Object.assign({}, products, additional, person);
+
+
+			var strSubmit = JSON.stringify(obj);
+
+			// var strSubmit=$(form).serialize();
+
+			// console.log(strSubmit);
+			// $(form).find('fieldset').hide();
 			// $(form).append('<div class="sending">Идет отправка ...</div>');
 			$.ajax({
 				type: "POST",
-				url: $(form).attr('action'),
-				dataType : 'json',
-				data: strSubmit,
+				url: '/order.ajax.php',
+				data: "orders=" + strSubmit,
 				success: function(){
 					// $(form).html(thankcallback);
 					console.log(strSubmit);
@@ -267,6 +290,7 @@ $(document).ready(function(){
 				}
 			})
 			.fail(function(error){
+				$(form).find('fieldset').show();
 				alert(errorTxt);
 			});
 		}
