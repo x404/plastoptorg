@@ -5,7 +5,9 @@
 			background: url(../images/divider_3.png) no-repeat right top;
 		}
 	}
+}
 
+.catalog{
 	&__list{
 		.flexbox{
 			flex-wrap: wrap;

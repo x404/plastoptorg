@@ -137,7 +137,7 @@ input::-moz-focus-inner {
 
 .italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .reviews__item, .feedback__form .row input.form-control,
 .order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .inner main em,
-.inner .text em, .order_accessories__body .col .row label, .faq__title, .accessories__title {
+.inner .text em, .order_accessories__body .col .row label, .faq__title, .catalog__title {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .articles__link, .feedback__form .row input.form-control,
@@ -258,7 +258,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIBoldItalic";
   font-weight: normal; }
 
-.flexcenter, .products__title, .articles__link, .pagination a, .pagination span, .accessories__title {
+.flexcenter, .products__title, .articles__link, .pagination a, .pagination span, .catalog__title {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -2000,16 +2000,16 @@ form .thank {
   .accessories__text:before {
     background: url(../images/divider_3.png) no-repeat right top; }
 
-.accessories__list .flexbox {
+.catalog__list .flexbox {
   flex-wrap: wrap; }
 
-.accessories__col {
+.catalog__col {
   width: 33.3%; }
 
-.accessories__cell {
+.catalog__cell {
   width: 368px; }
 
-.accessories__title {
+.catalog__title {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
@@ -2031,7 +2031,8 @@ form .thank {
   margin-top: 40px; }
 
 .tooltip {
-  margin-top: -22px; }
+  margin-top: -22px;
+  z-index: 11; }
   .tooltip-inner {
     padding-right: 8px; }
   .tooltip img {
@@ -2070,6 +2071,39 @@ form .thank {
       transform: rotate(180deg); }
   .tooltip__accessories img {
     border-color: #808080; }
+
+.pricelist-table.effect {
+  padding-top: 840px; }
+  .pricelist-table.effect:before {
+    background: url(../images/divider_3.png) no-repeat right top; }
+  .pricelist-table.effect .title {
+    margin-bottom: 45px; }
+
+.catalog__list {
+  margin-top: 55px; }
+
+.paraminfo.effect {
+  padding-top: 690px; }
+  .paraminfo.effect:before {
+    background: url(../images/divider_6.png) no-repeat left top; }
+
+.catalog .title {
+  color: #000; }
+
+.paraminfo .title {
+  color: #000;
+  margin-bottom: 35px; }
+
+.paraminfo .nav-tabs {
+  margin-bottom: 30px; }
+  .paraminfo .nav-tabs li {
+    margin: 0 9px; }
+
+.paraminfo .tab-content {
+  color: #4c4c4c;
+  line-height: 1.5; }
+  .paraminfo .tab-content p {
+    margin: 15px 0; }
 
 .fade {
   opacity: 0;

@@ -295,6 +295,14 @@ $(document).ready(function(){
 		$('#addreview .title').text($(e.relatedTarget).data('title'))
 	});
 
+
+	$('a[data-toggle="tooltip"]').tooltip({
+		placement: 'left',
+		html : true,
+		title: function(){
+			return '<img src="' + $(this).find('img').attr('src') + '" />'
+		}
+	});
 });
 
 // =заглушка для IE

@@ -1,0 +1,50 @@
+.pricelist-table.effect{
+	padding-top: 840px;
+	&:before{
+		background: url(../images/divider_3.png) no-repeat right top;
+	}
+
+	.title{
+		margin-bottom: 45px;
+	}
+}
+
+.catalog__list{
+	margin-top: 55px;
+}
+
+.paraminfo.effect{
+	padding-top: 690px;
+	&:before{
+		background: url(../images/divider_6.png) no-repeat left top;
+	}
+
+}
+
+.catalog{
+	.title{
+		color: $color1;
+	}
+}
+
+.paraminfo{
+	.title{
+		color: $color1;
+		margin-bottom: 35px;
+	}
+
+	.nav-tabs{
+		margin-bottom: 30px;
+		li{
+			margin: 0 9px;
+		}
+	}
+
+	.tab-content{
+		color: $color5;
+		line-height: 1.5;
+		p{
+			margin: 15px 0;
+		}
+	}
+}
