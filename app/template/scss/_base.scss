@@ -188,6 +188,11 @@ input::-moz-focus-inner{
 	@include flexbox;
 }
 
+.acenter{
+	align-items: center;
+	flex-flow: column;
+}
+
 .text-center{
 	text-align: center;
 }

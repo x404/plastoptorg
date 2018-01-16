@@ -2,13 +2,14 @@
 	.flexbox{
 		flex-wrap: wrap;
 	}
+
 	&__cell{
 		background: url(../images/brand-bg.png) no-repeat left top;
-		height: 265px;
-		width: 25%;
-		text-align: center;
-		display: flex;
 		align-items: center;
+		display: flex;
+		height: 265px;
+		text-align: center;
+		width: 25%;
 		a{
 			display: flex;
 			justify-content: center;
@@ -23,6 +24,9 @@
 			&__cell{
 				margin-top: 70px;
 			}
+			&-right{
+
+			}
 		}
 		main{
 			margin: 40px 0 0; 
@@ -32,3 +36,88 @@
 		}
 	}
 }
+
+.brand{
+	&-page{
+		main{
+			p{
+				margin: 30px 0;
+			}
+		}
+		.tab-content{
+			color: #4c4c4c;
+			p{
+				margin: 18px 0;
+			}
+		}
+	}
+
+	&__pricelist{
+		.title{
+			font-size: 30px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+	}
+
+	&-nav{
+		justify-content: center;
+		margin-top: 43px;
+		margin-bottom: 48px;
+		li{
+			margin: 0 9px;
+			.btn{
+				min-width: 215px;
+				font-size: 17px;
+				padding-top: 8px;
+				height: 40px;
+			}
+		}
+	}
+
+
+	&__cell{
+		background: url(../images/brand-bg.png) no-repeat left top;
+		height: 265px;
+		display: flex;	
+		align-items: center;
+		position: relative;
+		width: 256px;
+	}
+	&__inner{
+		text-align: center;
+		width: 229px;
+	}
+
+	&__el{
+		background: url(../images/el.png) no-repeat;
+		position: absolute;
+		height: 77px;
+		width: 67px;
+		right: 62px;
+		bottom: 10px;
+	}
+
+	&__link{
+		display: flex;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		@include transition-param;
+		svg{
+			margin-left: 4px;
+		}
+		&:hover{
+			opacity: .5;
+		}
+	}
+	&__logo{
+		flex-shrink: 0;
+		margin-left: 30px;
+		margin-top: 60px;
+		width: 300px;
+	}
+}
+
