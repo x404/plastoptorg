@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	'use strict';
 
-
 	$.fn.ForceNumericOnly =
 	function(){
 		return this.each(function()	{
@@ -18,6 +17,22 @@ $(document).ready(function(){
 			});
 		});
 	};
+
+
+	// scroll page
+	$('a[data-scroll][href*=\\#]:not([href=\\#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top-150
+				}, 1000);
+			
+				return false;
+			}
+		}
+	});
 
 
 	$('.order_accessories__body .form-control').ForceNumericOnly()

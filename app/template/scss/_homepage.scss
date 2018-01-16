@@ -39,8 +39,18 @@
 	padding-left: 30px;
 	text-align: center;
 	width: 515px;
+	position: relative;
+	z-index: 999;
 	.svg{
+		@include transition-param;
+		opacity: .5;
 		margin-top: 25px;
+	}
+	a{
+		text-decoration: none;
+		&:hover .svg{
+			opacity: 1;
+		}
 	}
 }
 
@@ -52,25 +62,28 @@
 ---------------------------*/
 .intro{
 	margin-top: -250px;
-	padding-top: 750px;
-	// margin-bottom: 100px;
-	position: relative;
 	overflow: hidden;
+	padding-top: 750px;
+	position: relative;
 	&:before{
 		background: url(../images/divider_1.png) no-repeat right top;
 	}
 	.btn{
 		display: inline-block;
 		$h: 40px;
-		height: $h;
-		font-family: "SegoeUIBoldItalic";
 		border-radius: $h;
+		font-family: "SegoeUIBoldItalic";
+		height: $h;
 		line-height: 38px;
 		margin-right: 14px;
 		min-width: 128px;
 		padding-left: 22px;
 		padding-right: 22px;
+		padding-top: 0;
 		text-transform: none;
+		&.active{
+			background-color: $color4;
+		}
 	}
 
 	&__body{
@@ -79,8 +92,10 @@
 
 	&__nav{
 		margin-top: 20px;
+		justify-content: flex-start !important;
 		li{
 			display: inline-block;
+
 		}
 	}
 

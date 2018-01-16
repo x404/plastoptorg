@@ -106,10 +106,12 @@
 		<!-- =timer -->
 		<div class="container">
 			<div class="timer flexbox">
-				<div class="timer__text">
-					<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
-					<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
-					<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>
+				<div class="timer__text" style="background-image: url(/images/timer-bg-text.png)">
+					<a href="#" title="">
+						<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
+						<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
+						<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>					
+					</a>
 				</div>
 				<div class="timer__digit">
 					<div id="clock"></div>
@@ -117,7 +119,6 @@
 						$(function(){
 							$('#clock').countdown('2018/10/10', function(event) {
 								var $this = $(this).html(event.strftime(''
-									+ '<span>%D</span> '
 									+ '<span>%H</span> '
 									+ '<span>%M</span> '
 									+ '<span>%S</span>'));
@@ -141,9 +142,13 @@
 							<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
 							<div class="carousel">
 								<div class="owl-carousel" id="foo1">
-									<div><img src="/tmp/p01.png" alt=""></div>
+									<div>
+										<a href="#" title="">
+											<img src="/tmp/p01.png" alt="" />
+										</a>
+									</div>
 									<div><img src="/tmp/p02.png" alt=""></div>
-									<div><img src="/tmp/p03.png" alt=""></div>
+									<div><img src="/images/production/p03.png" alt=""></div>
 									<div><img src="/tmp/p04.png" alt=""></div>
 									<div><img src="/tmp/p05.png" alt=""></div>
 									<div><img src="/tmp/p06.png" alt=""></div>
@@ -231,27 +236,29 @@
 	<!-- =advantages-->
 	<div class="container">
 		<div class="advantages">
-			<p>ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ</p>
-			<div class="svg">
-				<svg width="27" height="27">
-					<polygon points="2,2 24,2 13,24" fill="#fff" stroke="red" stroke-width="3" />
-				</svg>
-			</div>
+			<a href="#intro" title="" data-scroll>
+				<p>ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ</p>
+				<div class="svg">
+					<svg width="27" height="27">
+						<polygon points="2,2 24,2 13,24" fill="#fff" fill-opacity="0" stroke="red" stroke-width="3" />
+					</svg>
+				</div>
+			</a>
 		</div>
 	</div>
 	<!-- =/advantages-->
 
 
 	<!-- =intro -->
-	<article class="intro effect bganimated effect-bgslidefromright" id="intro" >
+	<article class="intro effect bganimated effect-bgslidefromright" >
 		<div class="container">
-			<div class="intro__body">
+			<div class="intro__body" id="intro">
 				<header>
 					<h1 class="title">ПЛАСТОПТОРГ</h1>
 				</header>
 				<ul class="nav nav-tabs intro__nav" role="tablist">
-					<li role="presentation" class="active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab" class="btn btn-grey">о нас</a></li>
-					<li role="presentation"><a href="#advantages" aria-controls="advantages" role="tab" data-toggle="tab" class="btn btn-orange">преимущества</a></li>
+					<li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab" class="btn btn-grey btn-hoverorange active">о нас</a></li>
+					<li role="presentation"><a href="#advantages" aria-controls="advantages" role="tab" data-toggle="tab" class="btn btn-grey btn-hoverorange">преимущества</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -261,7 +268,7 @@
 						<p>Мы являемся авторизированным представителем завода «ЮГ-ОЙЛ-ПЛАСТ» - лидера Российского рынка полимеров.  Он считается самым крупным заводом по изготовлению сотового и монолитного поликарбоната в России, а по миру занимает 4ю позицию. Продукция поступает централизованно на наши складские помещения в Москве и далее расходится по диллерам, оптовым базам и частникам по всей России.</p>
 
 						<div class="text-right">
-							<a href="#" class="btn btn-more">подробнее</a>						
+							<a href="#" class="btn btn-grey btn-hoverorange">подробнее</a>						
 						</div>
 
 					</div>
@@ -360,7 +367,7 @@
 			</div>
 			
 			<div class="text-right">
-				<a href="#" class="btn btn-more btn-orange">еще больше полезной информации</a>
+				<a href="#" class="btn btn-grey btn-hoverorange">еще больше полезной информации</a>
 			</div>
 		</div>
 	</section>
@@ -399,7 +406,7 @@
 				</div>
 			</div>
 
-			<a href="#" class="btn btn-more btn-grey" title="">больше торговых марок</a>
+			<a href="#" class="btn btn-more btn-grey btn-hoverorange" title="">больше торговых марок</a>
 		</div>
 	</section>
 	<!-- =/brands -->
@@ -410,7 +417,7 @@
 		<div class="container">
 			<header class="flexbox">
 				<h1 class="title">О НАС ГОВОРЯТ</h1>
-				<button type="button" class="btn btn-lightgrey btn-hoverorange" data-toggle="modal" data-target="#addreview" data-title="ФОРМА ОТЗЫВА">оставить отзыв</button>
+				<button type="button" class="btn btn-grey btn-hoverorange" data-toggle="modal" data-target="#addreview" data-title="ФОРМА ОТЗЫВА">оставить отзыв</button>
 			</header>
 			<article class="reviews__item">
 				<div class="reviews__title">Владимир : <time datetime="2014-04-21T11:00:00">04.12.2017</time></div>
@@ -424,7 +431,7 @@
 				<div class="reviews__title">Людмила : <time datetime="2014-04-21T11:00:00">04.12.2017</time></div>
 				<div class="reviews__text">Несмотря на то, что навес из поликарбоната заказала зимой, компания Пластопторг все равно взялась за монтаж. Хочу сказать большое спасибо и что ребята отлично справились! Доставили через 2 дня после заказа. Все выполнено на 5+! Профессиональная работа, а перед входом в дом теперь еще чище! ОТЛИЧНО.</div>
 			</article>
-			<a href="#" class="btn btn-grey btn-more">все отзывы</a>
+			<a href="#" class="btn btn-grey btn-hoverorange btn-more">все отзывы</a>
 		</div>
 	</section>
 	<!-- =/reviews -->
@@ -488,13 +495,13 @@
 						<label for="name" class="visually-hidden">ваше имя</label>
 						<input name="name" id="name" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
 						<label for="email" class="visually-hidden">ваш e-mail</label>
-						<input name="email" id="email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+						<input name="email" id="email" type="email" value="" class="form-control email" placeholder="ваш e-mail">
 						<label for="tel" class="visually-hidden">ваш номер телефона</label>
 						<input name="tel" id="tel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
 					</div>
 					<div class="row">
 						<label for="msg" class="visually-hidden">текст вашего сообщения</label>
-						<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+						<textarea name="msg" id="msg" cols="30" rows="10" placeholder="текст вашего сообщения ..."></textarea>
 						<div class="file-upload">
 							<label for="uploaded-file">
 								<input type="file" name="file" id="uploaded-file" onchange="getFileName(this);" />
@@ -551,21 +558,23 @@
 				</div>
 			</div>
 			<div class="footer__logo">
-				<img src="/template/images/plastoptorg.png" alt="" />	
+				<a href="/" title="">
+					<img src="/template/images/plastoptorg.png" alt="" />	
+				</a>
 			</div>
 			<div class="footer__social">
 				<div class="footer__social_inner">
 					<p>НАС МОЖНО НАЙТИ ТУТ</p>
 					<div class="icons flexbox">
-						<a href="#" title=""><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
-						<a href="#" title=""><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
-						<a href="#" title=""><img src="/template/images/icons/fb.png" alt="facebook" /></a>
-						<a href="#" title=""><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
-						<a href="#" title=""><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
-						<a href="#" title=""><img src="/template/images/icons/in.png" alt="" /></a>
-						<a href="#" title=""><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
-						<a href="#" title=""><img src="/template/images/icons/smile.png" alt="" /></a>
-						<a href="#" title=""><img src="/template/images/icons/rss.png" alt="rss" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/fb.png" alt="facebook" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/in.png" alt="" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/smile.png" alt="" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/rss.png" alt="rss" /></a>
 					</div>
 				</div>
 			</div>
@@ -578,7 +587,7 @@
 				определяемой положениями Статьи 437 "Гражданского кодекса РФ"
 			</div>
 			<div class="kreotif text-right">
-				создание сайта <a href="https://kreotif.com" target="_blank" title="">Digital Agency Kreotif</a> <br>
+				<a href="https://kreotif.com" target="_blank" title="">создание сайта</a> Digital Agency Kreotif <br>
 				информация о сайте
 			</div>
 		</div>

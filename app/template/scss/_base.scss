@@ -132,7 +132,6 @@ input::-moz-focus-inner{
 }
 
 /*** standart classes *****/
-p{}
 a{color:#020000}
 h1{font-size:6rem; @extend .bi;}
 h2{font-size:2.4rem}
@@ -227,7 +226,6 @@ input::-moz-focus-inner{
 
 	&-more{
 		$h: 40px;
-		background-color: $color3;
 		border-radius: $h;
 		font-family: "SegoeUIBoldItalic";
 		height: $h;
@@ -285,6 +283,51 @@ input::-moz-focus-inner{
 .hide{
 	display: none;
 }
+
+.nav-tabs{
+	display: flex;
+	justify-content: flex-end;
+	li{
+		a{
+			@extend .bi;
+			color: $color2;
+			text-decoration: none;
+			padding-top: 6px;
+			&.active{
+				// background-color: red;
+			}
+		}
+	}
+}
+
+
+.collapse {
+	display: none;
+	&.show{
+		display: block;
+	}
+}
+
+
+.header-right{	
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	flex-flow: column;
+	margin-bottom: -8px;
+	text-align: right;
+	.btn{
+		margin-top: 18px;
+		@extend .bi;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.title{
+		color: $color7;
+		line-height: 1.1;
+	}
+}
+
 
 
 @mixin effect-bgslidefromright($x: 100%){
@@ -357,6 +400,41 @@ input::-moz-focus-inner{
 	}
 }
 
+
+
+
+.submit{
+	@extend .bi;
+	$colorg1 : #c3133a;
+	$colorg2 : #7b0619;
+	@include gradient-vertical($colorg1, $colorg2);
+	transition: all .3s;
+	border-radius: 32px;
+	border: none;
+	color: $color2;
+	cursor: pointer;
+	display: block;
+	font-size: 17px;
+	height: 32px;
+	margin: 0 auto;
+	padding-bottom: 4px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: lowercase;
+	width: 20rem;
+	&:hover{
+		@include gradient-vertical($colorg2, $colorg1);
+	}
+	&:disabled{
+		filter: saturate(.6) grayscale(.1) brightness(0.9);
+		cursor: default;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+
 /* =header
 ---------------------------*/
 .timer{
@@ -376,17 +454,24 @@ input::-moz-focus-inner{
 	}
 
 	&__text{
-		display: flex;
-		justify-content: space-around;
-		flex-flow: column;
 		@extend .bi;
-		background: url(../images/timer-bg-text.png) no-repeat left top;
+		background-position: left top;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-flow: column;
 		height: 158px;
+		justify-content: space-around;
 		padding: 10px 100px 10px 28px;
 		width: 661px;
+		a{
+			text-decoration: none;
+			color: currentColor;
+		}
 	}
 
 	&__digit{
+		display: flex;
+		align-items: center;
 		#clock{
 			display: flex;
 			justify-content: space-between;
@@ -526,13 +611,16 @@ nav{
 		}
 
 		.btn{
+			@extend .submit;
 			$h : 40px;
 			@extend .bold;
 			border-radius: $h;
 			font-weight: normal;
 			height: $h;
-			margin-top: 3.4rem;
+			margin-top: 40px;
 			padding: 8px 22px 10px;
+			text-transform: uppercase;
+			min-width: 210px;
 		}
 	}
 

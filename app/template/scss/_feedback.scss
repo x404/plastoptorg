@@ -144,38 +144,6 @@
 }
 
 
-.submit{
-	@extend .bi;
-	$colorg1 : #c3133a;
-	$colorg2 : #7b0619;
-	@include gradient-vertical($colorg1, $colorg2);
-	transition: all .3s;
-	border-radius: 32px;
-	border: none;
-	color: $color2;
-	cursor: pointer;
-	display: block;
-	font-size: 17px;
-	height: 32px;
-	margin: 0 auto;
-	padding-bottom: 4px;
-	text-align: center;
-	text-decoration: none;
-	text-transform: lowercase;
-	width: 20rem;
-	&:hover{
-		@include gradient-vertical($colorg2, $colorg1);
-	}
-	&:disabled{
-		filter: saturate(.6) grayscale(.1) brightness(0.9);
-		cursor: default;
-		&:hover{
-			opacity: 1;
-		}
-	}
-}
-
-
 .policy{
 	@extend .italic;
 	color: $color3;

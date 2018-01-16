@@ -131,11 +131,11 @@ input::-moz-focus-inner {
 .order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title, .catalog__title, .order_accessories__body .col .row label {
   font-family: "SegoeUIItalic"; }
 
-.bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .inner main h2,
+.bi, h1, .submit, .header .contacts .btn, .timer__text, #inline-order, .reviews .btn, .address .btn, .inner main h2,
 .inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .articles__link, .feedback__form .row input.form-control,
 .feedback__form .row textarea,
 .order__form .row input.form-control,
-.order__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
+.order__form .row textarea, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
 .order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control {
   font-family: "SegoeUIBoldItalic"; }
 
@@ -301,6 +301,38 @@ input::-moz-focus-inner {
   transform: translateX(-100%);
   transition: 1s transform ease-out, .5s opacity ease-out; }
 
+.submit, .header .contacts .btn {
+  background-image: -webkit-linear-gradient(top, #c3133a 0%, #7b0619 100%);
+  background-image: -o-linear-gradient(top, #c3133a 0%, #7b0619 100%);
+  background-image: linear-gradient(to bottom, #c3133a 0%, #7b0619 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC3133A', endColorstr='#FF7B0619', GradientType=0);
+  transition: all .3s;
+  border-radius: 32px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 17px;
+  height: 32px;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  width: 20rem; }
+  .submit:hover, .header .contacts .btn:hover {
+    background-image: -webkit-linear-gradient(top, #7b0619 0%, #c3133a 100%);
+    background-image: -o-linear-gradient(top, #7b0619 0%, #c3133a 100%);
+    background-image: linear-gradient(to bottom, #7b0619 0%, #c3133a 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7B0619', endColorstr='#FFC3133A', GradientType=0); }
+  .submit:disabled, .header .contacts .btn:disabled {
+    filter: saturate(0.6) grayscale(0.1) brightness(0.9);
+    cursor: default; }
+    .submit:disabled:hover, .header .contacts .btn:disabled:hover {
+      opacity: 1; }
+
 /* =header
 ---------------------------*/
 .timer .str1 {
@@ -420,8 +452,10 @@ nav {
       border-radius: 40px;
       font-weight: normal;
       height: 40px;
-      margin-top: 3.4rem;
-      padding: 8px 22px 10px; }
+      margin-top: 40px;
+      padding: 8px 22px 10px;
+      text-transform: uppercase;
+      min-width: 210px; }
   .header .cats {
     color: #fff;
     padding-bottom: 185px;
@@ -1493,8 +1527,10 @@ label.error {
     .feedback__form .row .error,
     .order__form .row .error {
       border: 1px solid red !important; }
-  .feedback__form .submit,
-  .order__form .submit {
+  .feedback__form .submit, .feedback__form .header .contacts .btn, .header .contacts .feedback__form .btn,
+  .order__form .submit,
+  .order__form .header .contacts .btn,
+  .header .contacts .order__form .btn {
     margin-top: 20px; }
   .feedback__form .file-upload,
   .order__form .file-upload {
@@ -1535,38 +1571,6 @@ label.error {
   .order__form .thank {
     height: 238px;
     padding-top: 105px; }
-
-.submit {
-  background-image: -webkit-linear-gradient(top, #c3133a 0%, #7b0619 100%);
-  background-image: -o-linear-gradient(top, #c3133a 0%, #7b0619 100%);
-  background-image: linear-gradient(to bottom, #c3133a 0%, #7b0619 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC3133A', endColorstr='#FF7B0619', GradientType=0);
-  transition: all .3s;
-  border-radius: 32px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-size: 17px;
-  height: 32px;
-  margin: 0 auto;
-  padding-bottom: 4px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: lowercase;
-  width: 20rem; }
-  .submit:hover {
-    background-image: -webkit-linear-gradient(top, #7b0619 0%, #c3133a 100%);
-    background-image: -o-linear-gradient(top, #7b0619 0%, #c3133a 100%);
-    background-image: linear-gradient(to bottom, #7b0619 0%, #c3133a 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7B0619', endColorstr='#FFC3133A', GradientType=0); }
-  .submit:disabled {
-    filter: saturate(0.6) grayscale(0.1) brightness(0.9);
-    cursor: default; }
-    .submit:disabled:hover {
-      opacity: 1; }
 
 .policy {
   color: #383838; }
@@ -1749,7 +1753,7 @@ form .thank {
       transition: line-height 0.5s ease; }
     #callback form .form-control:focus:-ms-input-placeholder {
       transition: line-height 0.5s ease; }
-  #callback form .submit {
+  #callback form .submit, #callback form .header .contacts .btn, .header .contacts #callback form .btn {
     margin-top: 32px; }
   #callback form .policy {
     margin-top: 1.5rem;
@@ -1761,8 +1765,10 @@ form .thank {
   #qorder .modal-dialog .close-modal,
   #addreview .modal-dialog .close-modal {
     top: -17px; }
-#qorder .submit,
-#addreview .submit {
+#qorder .submit, #qorder .header .contacts .btn, .header .contacts #qorder .btn,
+#addreview .submit,
+#addreview .header .contacts .btn,
+.header .contacts #addreview .btn {
   margin-top: 24px; }
 #qorder .feedback__form,
 #addreview .feedback__form {
@@ -1789,7 +1795,7 @@ form .thank {
     padding-bottom: .5rem;
     text-transform: uppercase; }
 
-.submit:disabled {
+.submit:disabled, .header .contacts .btn:disabled {
   cursor: default !important;
   background-color: #ccc !important; }
 

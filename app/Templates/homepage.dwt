@@ -106,10 +106,12 @@
 		<!-- =timer -->
 		<div class="container">
 			<div class="timer flexbox">
-				<div class="timer__text">
-					<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
-					<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
-					<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>
+				<div class="timer__text" style="background-image: url(/images/timer-bg-text.png)">
+					<a href="#" title="">
+						<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
+						<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
+						<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>					
+					</a>
 				</div>
 				<div class="timer__digit">
 					<div id="clock"></div>
@@ -117,7 +119,6 @@
 						$(function(){
 							$('#clock').countdown('2018/10/10', function(event) {
 								var $this = $(this).html(event.strftime(''
-									+ '<span>%D</span> '
 									+ '<span>%H</span> '
 									+ '<span>%M</span> '
 									+ '<span>%S</span>'));
@@ -141,9 +142,13 @@
 							<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
 							<div class="carousel">
 								<div class="owl-carousel" id="foo1">
-									<div><img src="/tmp/p01.png" alt=""></div>
+									<div>
+										<a href="#" title="">
+											<img src="/tmp/p01.png" alt="" />
+										</a>
+									</div>
 									<div><img src="/tmp/p02.png" alt=""></div>
-									<div><img src="/tmp/p03.png" alt=""></div>
+									<div><img src="/images/production/p03.png" alt=""></div>
 									<div><img src="/tmp/p04.png" alt=""></div>
 									<div><img src="/tmp/p05.png" alt=""></div>
 									<div><img src="/tmp/p06.png" alt=""></div>
@@ -266,21 +271,23 @@
 				</div>
 			</div>
 			<div class="footer__logo">
-				<img src="/template/images/plastoptorg.png" alt="" />	
+				<a href="/" title="">
+					<img src="/template/images/plastoptorg.png" alt="" />	
+				</a>
 			</div>
 			<div class="footer__social">
 				<div class="footer__social_inner">
 					<p>НАС МОЖНО НАЙТИ ТУТ</p>
 					<div class="icons flexbox">
-						<a href="#" title=""><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
-						<a href="#" title=""><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
-						<a href="#" title=""><img src="/template/images/icons/fb.png" alt="facebook" /></a>
-						<a href="#" title=""><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
-						<a href="#" title=""><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
-						<a href="#" title=""><img src="/template/images/icons/in.png" alt="" /></a>
-						<a href="#" title=""><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
-						<a href="#" title=""><img src="/template/images/icons/smile.png" alt="" /></a>
-						<a href="#" title=""><img src="/template/images/icons/rss.png" alt="rss" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/fb.png" alt="facebook" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/in.png" alt="" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/smile.png" alt="" /></a>
+						<a href="#" title="" target="_blank"><img src="/template/images/icons/rss.png" alt="rss" /></a>
 					</div>
 				</div>
 			</div>
@@ -293,7 +300,7 @@
 				определяемой положениями Статьи 437 "Гражданского кодекса РФ"
 			</div>
 			<div class="kreotif text-right">
-				создание сайта <a href="https://kreotif.com" target="_blank" title="">Digital Agency Kreotif</a> <br>
+				<a href="https://kreotif.com" target="_blank" title="">создание сайта</a> Digital Agency Kreotif <br>
 				информация о сайте
 			</div>
 		</div>

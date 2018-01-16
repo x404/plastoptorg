@@ -22,11 +22,6 @@
 			font-weight: normal;
 			@extend .bold;
 		}
-
-		h4{
-
-		}
-
 		strong{
 			@extend .bold;			
 		}
@@ -168,24 +163,7 @@
 ---------------------------*/
 
 
-.header-right{	
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
-	flex-flow: column;
-	margin-bottom: -8px;
-	text-align: right;
-	.btn{
-		margin-top: 18px;
-		@extend .bi;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.title{
-		color: $color7;
-		line-height: 1.1;
-	}
-}
+
 
 
 .main{
@@ -213,29 +191,7 @@
 }
 
 
-.nav-tabs{
-	display: flex;
-	justify-content: flex-end;
-	li{
-		a{
-			@extend .bi;
-			color: $color2;
-			text-decoration: none;
-			padding-top: 6px;
-			&.active{
-				background-color: red;
-			}
-		}
-	}
-}
 
-
-.collapse {
-	display: none;
-	&.show{
-		display: block;
-	}
-}
 
 
 
