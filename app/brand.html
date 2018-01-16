@@ -410,7 +410,7 @@
 
 			<!-- =tabs -->
 			<ul class="nav nav-tabs brand-nav container" role="tablist">
-				<li role="presentation"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" class="btn btn-grey btn-hoverred active">характеристики</a></li>
+				<li role="presentation"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" class="btn btn-lightgrey btn-hovergrey active">характеристики</a></li>
 				<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" class="btn btn-grey btn-hoverred submit">заказать</a></li>
 			</ul>
 
@@ -427,7 +427,7 @@
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="tab2">
-					<div id="order">
+					<div class="order" id="order">
 						<form class="form-policy" id="order-form" method="post" action="#">
 							<div class="order__params">
 								<div class="container">
@@ -628,13 +628,13 @@
 											<label for="ordername" class="visually-hidden">ваше имя</label>
 											<input name="name" id="ordername" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
 											<label for="orderemail" class="visually-hidden">ваш e-mail</label>
-											<input name="email" id="orderemail" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+											<input name="email" id="orderemail" type="email" value="" class="form-control email" placeholder="ваш e-mail">
 											<label for="ordertel" class="visually-hidden">ваш номер телефона</label>
 											<input name="tel" id="ordertel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
 										</div>
 										<div class="row">
 											<label for="ordermsg" class="visually-hidden">текст вашего сообщения</label>
-											<textarea name="msg" id="ordermsg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+											<textarea name="msg" id="ordermsg" cols="30" rows="10" placeholder="текст вашего сообщения ..."></textarea>
 											<div class="file-upload">
 												<label for="orderfile">
 													<input type="file" name="file" id="orderfile" onchange="getFileName(this);" />

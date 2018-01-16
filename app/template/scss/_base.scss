@@ -258,6 +258,12 @@ input::-moz-focus-inner{
 	&-hoverorange{
 		&:hover{
 			background-color: $color4;
+		}
+	}
+
+	&-hovergrey{
+		&:hover{
+			background-color: $color3;
 		}		
 	}
 }

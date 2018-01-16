@@ -131,21 +131,21 @@ input::-moz-focus-inner {
 .bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .products__title, .address__panel h5, .inner main h3, .inner main h4,
 .inner .text h3,
 .inner .text h4, .inner main strong,
-.inner .text strong, .neck .btn, .insert .box, .order .title, .order__row .plus,
-.order__row .minus, .feedback .title, .modal-dialog .title, .address .address__info h5 {
+.inner .text strong, .neck .btn, .insert .box, .feedback .title, .modal-dialog .title, .address .address__info h5, .order .title, .order__row .plus,
+.order__row .minus {
   font-family: "SegoeUIBold"; }
 
 .italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__text, .inner main em,
-.inner .text em, .order_accessories__body .col .row label, .reviews__item, .feedback__form .row input.form-control,
-.order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title, .catalog__title {
+.inner .text em, .reviews__item, .feedback__form .row input.form-control,
+.order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title, .catalog__title, .order_accessories__body .col .row label {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .timer__text, #inline-order, .reviews .btn, .address .btn, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .order__row .selectric .label, .order__row .selectric-items ul,
-.order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control, .articles__link, .feedback__form .row input.form-control,
+.inner .text h2, .neck .title, .breadcrumbs, .header-right .btn, .nav-tabs li a, .pagination ul, .articles__link, .feedback__form .row input.form-control,
 .feedback__form .row textarea,
 .order__form .row input.form-control,
-.order__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .pricelist th {
+.order__form .row textarea, .submit, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
+.order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -172,9 +172,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.tdn, .header .contacts a, .order__top a, .feedback .vcard .email, .policy a, .address .address__info a {
+.tdn, .header .contacts a, .feedback .vcard .email, .policy a, .address .address__info a, .order__top a {
   text-decoration: none; }
-  .tdn:hover, .header .contacts a:hover, .order__top a:hover, .feedback .vcard .email:hover, .policy a:hover, .address .address__info a:hover {
+  .tdn:hover, .header .contacts a:hover, .feedback .vcard .email:hover, .policy a:hover, .address .address__info a:hover, .order__top a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -256,6 +256,8 @@ input::-moz-focus-inner {
     background: red; }
   .btn-hoverorange:hover {
     background-color: #f26e26; }
+  .btn-hovergrey:hover {
+    background-color: #383838; }
 
 .title {
   font-size: 60px;
@@ -1223,123 +1225,6 @@ label.error {
   border: 1px solid #dee2e6;
   padding: 5px 10px; }
 
-.order .title {
-  font-size: 24px;
-  padding-top: 50px; }
-
-.order__form {
-  background-color: #f2f2f2;
-  max-width: 100%;
-  padding-bottom: 30px; }
-
-.order__top p {
-  margin: 10px 0; }
-
-.order__top a {
-  color: #ff3333; }
-
-.order__params {
-  background: #f2f2f2;
-  margin-top: 35px;
-  padding-top: 8px;
-  padding-bottom: 25px; }
-
-.order .manage {
-  width: 105px; }
-
-.order__row {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .order__row select {
-    width: 198px; }
-  .order__row .selectric {
-    background: #808080;
-    border: none;
-    border-radius: 40px;
-    width: 210px; }
-    .order__row .selectric .label {
-      color: #fff;
-      font-size: 17px;
-      height: 32px;
-      line-height: 30px;
-      padding-left: 17px; }
-    .order__row .selectric .button {
-      background: url(../images/select-arrow.png) no-repeat 40% 10px;
-      border-radius: 0 40px 40px 0; }
-      .order__row .selectric .button:after {
-        display: none; }
-    .order__row .selectric-items {
-      background: #808080;
-      border: none;
-      top: 14px;
-      padding-top: 18px; }
-  .order__row .selectric-items ul,
-  .order__row .selectric-items li {
-    font-size: 15px;
-    color: #fff; }
-  .order__row .selectric-items li {
-    padding-left: 25px; }
-  .order__row .plus,
-  .order__row .minus {
-    background-color: #808080;
-    border-radius: 20px;
-    color: #fff;
-    display: inline-block;
-    font-size: 30px;
-    height: 33px;
-    line-height: 28px;
-    text-align: center;
-    text-decoration: none;
-    width: 46px; }
-  .order__row .minus {
-    margin-left: 8px; }
-
-.order_accessories {
-  padding: 15px 0; }
-  .order_accessories__title {
-    color: #808080;
-    font-size: 17px;
-    padding-right: 145px;
-    text-align: right; }
-  .order_accessories__body {
-    padding-top: 15px; }
-    .order_accessories__body .col {
-      flex-basis: 33.3%;
-      padding-right: 35px; }
-      .order_accessories__body .col .row {
-        display: flex;
-        align-items: center;
-        margin-top: 16px; }
-        .order_accessories__body .col .row .form-control {
-          border-radius: 20px;
-          border: 1px solid;
-          color: #b2b2b2;
-          height: 32px;
-          margin-top: 0;
-          text-align: center;
-          width: 46px; }
-          .order_accessories__body .col .row .form-control.in {
-            color: #c86b28;
-            border-color: #b2b2b2; }
-            .order_accessories__body .col .row .form-control.in + label {
-              color: #000; }
-        .order_accessories__body .col .row label {
-          color: #666;
-          cursor: pointer;
-          margin-left: 10px;
-          width: 80%; }
-  .order_accessories .btn {
-    margin-left: 20px;
-    margin-right: 20px;
-    line-height: 38px; }
-
-.order .file-upload {
-  background-position: left -106px; }
-  .order .file-upload:hover {
-    background-position: left -159px; }
-
 .articles .flexbox {
   flex-wrap: wrap;
   margin-bottom: 45px;
@@ -1432,6 +1317,8 @@ label.error {
       font-size: 17px;
       padding-top: 8px;
       height: 40px; }
+  .brand-nav .btn-hovergrey.active {
+    background-color: #383838; }
 
 .brand__cell {
   background: url(../images/brand-bg.png) no-repeat left top;
@@ -2173,6 +2060,123 @@ form .thank {
   line-height: 1.5; }
   .paraminfo .tab-content p {
     margin: 15px 0; }
+
+.order .title {
+  font-size: 24px;
+  padding-top: 50px; }
+
+.order__form {
+  background-color: #f2f2f2;
+  max-width: 100% !important;
+  padding-bottom: 30px; }
+
+.order__top p {
+  margin: 10px 0; }
+
+.order__top a {
+  color: #ff3333; }
+
+.order__params {
+  background: #f2f2f2;
+  margin-top: 35px;
+  padding-top: 8px;
+  padding-bottom: 25px; }
+
+.order .manage {
+  width: 105px; }
+
+.order__row {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .order__row select {
+    width: 198px; }
+  .order__row .selectric {
+    background: #808080;
+    border: none;
+    border-radius: 40px;
+    width: 210px; }
+    .order__row .selectric .label {
+      color: #fff;
+      font-size: 17px;
+      height: 32px;
+      line-height: 30px;
+      padding-left: 17px; }
+    .order__row .selectric .button {
+      background: url(../images/select-arrow.png) no-repeat 40% 10px;
+      border-radius: 0 40px 40px 0; }
+      .order__row .selectric .button:after {
+        display: none; }
+    .order__row .selectric-items {
+      background: #808080;
+      border: none;
+      top: 14px;
+      padding-top: 18px; }
+  .order__row .selectric-items ul,
+  .order__row .selectric-items li {
+    font-size: 15px;
+    color: #fff; }
+  .order__row .selectric-items li {
+    padding-left: 25px; }
+  .order__row .plus,
+  .order__row .minus {
+    background-color: #808080;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    height: 33px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    width: 46px; }
+  .order__row .minus {
+    margin-left: 8px; }
+
+.order_accessories {
+  padding: 15px 0; }
+  .order_accessories__title {
+    color: #808080;
+    font-size: 17px;
+    padding-right: 145px;
+    text-align: right; }
+  .order_accessories__body {
+    padding-top: 15px; }
+    .order_accessories__body .col {
+      flex-basis: 33.3%;
+      padding-right: 35px; }
+      .order_accessories__body .col .row {
+        display: flex;
+        align-items: center;
+        margin-top: 16px; }
+        .order_accessories__body .col .row .form-control {
+          border-radius: 20px;
+          border: 1px solid;
+          color: #b2b2b2;
+          height: 32px;
+          margin-top: 0;
+          text-align: center;
+          width: 46px; }
+          .order_accessories__body .col .row .form-control.in {
+            color: #c86b28;
+            border-color: #b2b2b2; }
+            .order_accessories__body .col .row .form-control.in + label {
+              color: #000; }
+        .order_accessories__body .col .row label {
+          color: #666;
+          cursor: pointer;
+          margin-left: 10px;
+          width: 80%; }
+  .order_accessories .btn {
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 38px; }
+
+.order .file-upload {
+  background-position: left -106px; }
+  .order .file-upload:hover {
+    background-position: left -159px; }
 
 .fade {
   opacity: 0;
