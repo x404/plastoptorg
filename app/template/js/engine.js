@@ -425,7 +425,7 @@ $(function(){
 
 
 $(function() {
-    var $el = $('.parallax-background1');
+    var $el = $('.parallax-background');
     $(window).on('scroll', function () {
         var scroll = $(document).scrollTop();
         $el.css({
