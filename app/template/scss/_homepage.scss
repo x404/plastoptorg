@@ -164,6 +164,30 @@
 		display: block;
 		position: relative;
 
+		&:before,
+		&:after{
+			@extend .before;
+			z-index: -1;
+		}
+
+		&:before{
+			background: url(../images/shape-bg1.png) no-repeat left top;
+			height: 83px;
+			left: 58px;
+			top: 0;
+			width: 72px;
+		}
+
+		&:after{
+			background: url(../images/shape-bg2.png) no-repeat left top;
+			height: 178px;
+			right: 0;
+			bottom: 0;
+			width: 157px;
+		}
+
+
+
 		img{
 			@include transition-param(filter);
 			filter: grayscale(1);

@@ -182,7 +182,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .effect:before, .header .cats li .cat__title:before, .header .cats .popup__inner:before, .header .cats .popup:before, .header .cats .popup:after, .footer__logo:after, #inline-order:after, .inner main ul li:before,
+.before, .effect:before, .header .cats li .cat__title:before, .header .cats .popup__inner:before, .header .cats .popup:before, .header .cats .popup:after, .footer__logo:after, #inline-order:after, .products__link:before, .products__link:after, .inner main ul li:before,
 .inner .text ul li:before, .inner main .owl-carousel a:after,
 .inner .text .owl-carousel a:after, .articles__link:before, .sertificats .item a:after {
   content: "";
@@ -1022,6 +1022,20 @@ label.error {
   .products__link {
     display: block;
     position: relative; }
+    .products__link:before, .products__link:after {
+      z-index: -1; }
+    .products__link:before {
+      background: url(../images/shape-bg1.png) no-repeat left top;
+      height: 83px;
+      left: 58px;
+      top: 0;
+      width: 72px; }
+    .products__link:after {
+      background: url(../images/shape-bg2.png) no-repeat left top;
+      height: 178px;
+      right: 0;
+      bottom: 0;
+      width: 157px; }
     .products__link img {
       -webkit-transition: filter 0.2s ease-out;
       transition: filter 0.2s ease-out;
