@@ -46,8 +46,9 @@
 	}
 
 	&.bs-tooltip-bottom{
-		left: -45px !important;
-		top: 30px !important;
+		// for homepage disabled
+		// left: -45px !important;
+		// top: 30px !important;
 		.arrow{
 			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQ4UKiLrw8jKAAAAd0lEQVQI12P8zwADjXEMDPWLYDxGmESjBsMZBgYGk/obED4TVJiTYSUDNwM3w6pGThQJhn4GPQYGBgYGXYZ+JKMawxlWMCBARP1KBgbG/wyNygxnGfiRJD4xGNXfZWZkY9jBoMiADNgZbA4uYHboYwhkQAeSDPwA1aYXzLkxYlUAAAAASUVORK5CYII=") no-repeat center top;
 			height: 8px;

@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$('.order_accessories__body .form-control').ForceNumericOnly()
 
 	// карусель
-	$('#foo1').owlCarousel({
+	$('#foocat1').owlCarousel({
 		loop:false,
 		nav:true,
 		dots: false,
@@ -64,6 +64,60 @@ $(document).ready(function(){
 			}
 		}
 	});
+	$('#foocat2').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:7,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			900:{
+				items:2,
+				stagePadding: 0
+			},
+			992:{
+				items:1
+			},
+			1250:{
+				items:2
+			},
+			1550:{
+				items:7
+			}
+		}
+	});
+	$('#foocat3').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:7,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			900:{
+				items:2,
+				stagePadding: 0
+			},
+			992:{
+				items:1
+			},
+			1250:{
+				items:2
+			},
+			1550:{
+				items:7
+			}
+		}
+	});
+
+
 
 	$('#foo2').owlCarousel({
 		loop:false,
@@ -317,6 +371,12 @@ $(document).ready(function(){
 		title: function(){
 			return '<img src="' + $(this).find('img').attr('src') + '" />'
 		}
+	});
+
+	$('a[data-toggle="cattooltip"]').tooltip({
+		placement: 'bottom',
+		html : true,
+		template: '<div class="tooltip bs-tooltip-bottom tooltip__cat" role="tooltip"><div class="tooltip-inner"></div></div>'
 	});
 });
 

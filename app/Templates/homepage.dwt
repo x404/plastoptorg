@@ -137,30 +137,166 @@
 			<div class="container">
 				<ul>
 					<li class="c01">
-						<p class="cat__title">Сотовый <br>поликарбонат</p>
+						<div class="cat__title">
+							<p>Сотовый <br>поликарбонат</p>
+						</div>
 						<div class="popup" style="opacity: 0">
-							<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
-							<div class="carousel">
-								<div class="owl-carousel" id="foo1">
-									<div>
-										<a href="#" title="">
-											<img src="/tmp/p01.png" alt="" />
-										</a>
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat1">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
 									</div>
-									<div><img src="/tmp/p02.png" alt=""></div>
-									<div><img src="/images/production/p03.png" alt=""></div>
-									<div><img src="/tmp/p04.png" alt=""></div>
-									<div><img src="/tmp/p05.png" alt=""></div>
-									<div><img src="/tmp/p06.png" alt=""></div>
-									<div><img src="/tmp/p07.png" alt=""></div>
-									<div><img src="/tmp/p04.png" alt=""></div>
 								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
 							</div>
-							<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
 						</div>
 					</li>
-					<li class="c02"><p class="cat__title">монолитный <br>поликарбонат</p></li>
-					<li class="c03"><p class="cat__title">комплектующие <br>для поликарбоната</p></li>
+					<li class="c02">
+						<p class="cat__title">монолитный <br>поликарбонат</p>
+						<div class="popup" style="opacity: 0">
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat2">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
+							</div>
+						</div>
+					</li>
+					<li class="c03">
+						<p class="cat__title">комплектующие <br>для поликарбоната</p>
+						<div class="popup" style="opacity: 0">
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat3">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
+							</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>

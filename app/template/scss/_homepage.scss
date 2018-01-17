@@ -31,6 +31,27 @@
 }
 
 
+.tooltip__cat{
+	@extend .bold;
+	font-size: 16px;
+	background-color: red;
+	border-radius: 25px;
+	bottom: 0;
+	display: block;
+	line-height: 38px;
+	height: 41px;
+	padding: 0 20px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 999 !important;
+	color: $color2;	
+	text-align: center;
+	text-transform: uppercase;
+
+	.tooltip-inner{
+		padding-right: 0;
+	}
+}
 /* =advantages
 ---------------------------*/
 .advantages{
@@ -215,6 +236,8 @@
 		@extend .bi;
 		margin: 0 8px;
 		padding: 0 17px;
+		line-height: 40px;
+		min-width: 215px;
 	}
 	&__panel{
 		$w: 275px;
