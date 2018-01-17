@@ -1,4 +1,22 @@
 .reviews{
+
+	padding-top: 530px;
+	.flexbox{
+		align-items: center;
+	}
+	.btn{
+		@extend .bi;
+		padding-left: 30px;
+		padding-right: 30px;
+		text-transform: none;
+		margin-left: 45px;
+		margin-top: 7px;
+	}
+	.flexbox{
+		margin-bottom: 60px;
+	}
+
+
 	&__item{
 		@extend .italic;
 		background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAARCAMAAAD0U0w/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEX////x8fGenZ9ZV1vV1dYwLjN1c3fx8fFZV1uCgYTV1db///+sq63j4+OenZ9nZWnHx8h1c3cwLjM9O0BLSU7///8I0MjiAAAAEnRSTlMAAAAAAAAAVPTIckacY6vmftekOjI4AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IBCBUTOtKC6M0AAACASURBVBjTbc/bDoMwDANQAysUwm1h//+ta6BQN8JPJ5JltcCVIY6TvBiQqKpxFu90jWo5Fud0reel1mSnLNe1iXMeT9mdy8Qmte2tRymySzFKbSquzg2Qizqgdvs86XwEGR0mLRvsT3g2dtoztwFfmmf3AXn+Z/PsLkDu2BfJwB/jGxKCFd+F5AAAAABJRU5ErkJggg==") no-repeat left 2px;
@@ -33,5 +51,11 @@
 		&:hover{
 			border-bottom: 1px dashed rgba(255, 0, 0, 1);
 		}
+	}
+}
+
+.reviews-page{
+	h1 + .btn{
+		margin-top: 25px;
 	}
 }

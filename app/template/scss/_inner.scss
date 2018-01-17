@@ -85,11 +85,11 @@
 					@extend .before;
 					background: url(../images/overlay-owl.png) no-repeat left top;
 					height: 133px;
-					width: 114px;
 					left: 0;
-					top: 0;
 					opacity: 0;
+					top: 0;
 					transition: opacity .3s;
+					width: 114px;
 				}
 				&:hover{
 					&:after{
@@ -111,7 +111,8 @@
 /* =neck
 ---------------------------*/
 .neck{
-	background: url(../images/neck-1.png) no-repeat left top;
+	background-repeat: no-repeat;
+	background-position: left top;
 	align-items: center;
 	display: flex;
 	height: 700px;
@@ -135,6 +136,12 @@
 		position: relative;
 		z-index: 3;		
 	}
+
+	&.neck-1{background-image: url(../images/neck-1.png)}
+	&.neck-2{background-image: url(../images/neck-2.png)}
+	&.neck-3{background-image: url(../images/neck-3.png)}
+	&.neck-4{background-image: url(../images/neck-4.png)}
+	&.neck-5{background-image: url(../images/neck-5.png)}
 }
 /* =/neck
 ---------------------------*/

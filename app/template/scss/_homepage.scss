@@ -264,28 +264,6 @@
 /* =/brands
 ---------------------------*/
 
-/* =reviews
----------------------------*/
-.reviews{
-	padding-top: 530px;
-	.flexbox{
-		align-items: center;
-	}
-	.btn{
-		@extend .bi;
-		padding-left: 30px;
-		padding-right: 30px;
-		text-transform: none;
-		margin-left: 45px;
-		margin-top: 7px;
-	}
-	.flexbox{
-		margin-bottom: 60px;
-	}
-}
-/* =/reviews
----------------------------*/
-
 
 
 /* =address
