@@ -53,7 +53,7 @@
 
 */
 /*** reset ***********/
-html, body, ul, ol, li, dl, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, img, label {
+html, body, ul, ol, li, dl, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, img, label, figure {
   margin: 0;
   padding: 0;
   border: 0; }
@@ -243,8 +243,6 @@ input::-moz-focus-inner {
     padding-left: 22px;
     padding-right: 22px;
     text-transform: none; }
-    .btn-more:hover {
-      background-color: #2b5a9b; }
   .btn-orange {
     background-color: #f26e26; }
   .btn-brown {
@@ -257,13 +255,15 @@ input::-moz-focus-inner {
     background-color: #f26e26; }
   .btn-hovergrey:hover {
     background-color: #383838; }
+  .btn-hoverblue:hover {
+    background-color: #2b5a9b; }
 
 .title {
   font-size: 60px;
   font-family: "SegoeUIBoldItalic";
   font-weight: normal; }
 
-.flexcenter, .products__title, .pagination a, .pagination span, .articles__link, .catalog__title {
+.flexcenter, .products__link .shape, .products__title, .pagination a, .pagination span, .articles__link, .catalog__title {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -1015,17 +1015,45 @@ label.error {
     padding-right: 20px; }
   .products .flexbox {
     flex-wrap: wrap; }
-  .products__col {
+  .products__width {
     width: 33.3%; }
   .products__cell {
     width: 368px; }
-  .products__head {
-    background-repeat: no-repeat; }
+  .products__link {
+    display: block;
+    position: relative; }
+    .products__link img {
+      -webkit-transition: filter 0.2s ease-out;
+      transition: filter 0.2s ease-out;
+      filter: grayscale(1); }
+    .products__link .shape {
+      background: url(../images/shape.png) no-repeat left top;
+      bottom: 13px;
+      display: block;
+      height: 110px;
+      position: absolute;
+      right: 93px;
+      width: 95px;
+      text-align: center;
+      display: flex; }
+      .products__link .shape svg {
+        margin-left: 10px;
+        opacity: .5;
+        -webkit-transition: opacity 0.2s ease-out;
+        transition: opacity 0.2s ease-out; }
+    .products__link:hover img {
+      filter: grayscale(0); }
+    .products__link:hover svg {
+      opacity: 1; }
   .products__title {
     color: #fff;
     font-size: 27px;
     font-weight: normal;
+    position: absolute;
     height: 378px;
+    z-index: 1;
+    top: 0;
+    left: 0;
     text-transform: uppercase;
     width: calc(100% - 42px);
     text-align: center; }

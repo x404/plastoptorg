@@ -1,5 +1,5 @@
 /*** reset ***********/
-html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
+html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label, figure{margin:0;padding:0;border:0}
 header, section, footer, aside, nav, article {display:block}
 ul{list-style:none}
 $color1:#000;
@@ -234,10 +234,10 @@ input::-moz-focus-inner{
 		padding-left: 22px;
 		padding-right: 22px;
 		text-transform: none;
-		&:hover{
-			background-color: $color14;
-		}
 	}
+
+
+
 	&-orange{
 		background-color: $color4;
 	}
@@ -263,6 +263,11 @@ input::-moz-focus-inner{
 		&:hover{
 			background-color: $color3;
 		}		
+	}
+	&-hoverblue{
+		&:hover{
+			background-color: $color14
+		}
 	}
 }
 

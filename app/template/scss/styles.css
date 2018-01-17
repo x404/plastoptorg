@@ -234,8 +234,8 @@ input::-moz-focus-inner {
     padding-left: 22px;
     padding-right: 22px;
     text-transform: none; }
-    .btn-more:hover {
-      background-color: #2b5a9b; }
+  .btn-blue {
+    background-color: #2b5a9b; }
   .btn-orange {
     background-color: #f26e26; }
   .btn-brown {

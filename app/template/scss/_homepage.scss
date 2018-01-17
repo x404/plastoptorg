@@ -153,23 +153,63 @@
 	.flexbox{
 		flex-wrap: wrap;
 	}
-	&__col{
+	&__width{
 		width: 33.3%;
 	}
 	&__cell{
 		width: 368px;
 	}
 
-	&__head{
-		background-repeat: no-repeat;
+	&__link{
+		display: block;
+		position: relative;
+
+		img{
+			@include transition-param(filter);
+			filter: grayscale(1);
+		}
+
+		.shape{
+			background: url(../images/shape.png) no-repeat left top;
+			bottom: 13px;
+			display: block;
+			height: 110px;
+			position: absolute;
+			right: 93px;
+			width: 95px;
+			text-align: center;
+			display: flex;
+			@extend .flexcenter;
+			svg{
+				margin-left: 10px;
+				opacity: .5;
+				@include transition-param;
+			}
+		}
+
+		&:hover{
+			img{
+				filter: grayscale(0)
+			}
+			svg{
+				opacity: 1;
+			}
+		}
 	}
+
+
+
 	&__title{
 		@extend .bold;
 		@extend .flexcenter;
 		color: $color2;
 		font-size: 27px;
 		font-weight: normal;
+		position: absolute;
 		height: 378px;
+		z-index: 1;
+		top: 0;
+		left: 0;
 		text-transform: uppercase;
 		width: calc(100% - 42px);
 		text-align: center;
