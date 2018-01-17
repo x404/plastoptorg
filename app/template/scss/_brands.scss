@@ -8,13 +8,49 @@
 		align-items: center;
 		display: flex;
 		height: 265px;
+		position: relative;
 		text-align: center;
 		width: 25%;
-		a{
-			display: flex;
-			justify-content: center;
-			width: 229px;
+	}
+
+	&__link{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@extend .flexcenter;
+
+
+		img{
 		}
+
+		.shape{
+			background: url(../images/el.png) no-repeat left top;
+			bottom: 10px;
+			display: flex;
+			height: 77px;
+			position: absolute;
+			right: 35px;
+			text-align: center;
+			width: 67px;
+			@extend .flexcenter;
+			svg{
+				margin-left: 10px;
+				opacity: .5;
+				@include transition-param;
+			}
+		}
+		&:hover{
+			svg{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__inner{
+			height: 100%;
+			width: 229px;
+			position: relative;
+			@extend .flexcenter;
 	}
 
 	&-page{

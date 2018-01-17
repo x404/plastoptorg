@@ -263,7 +263,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIBoldItalic";
   font-weight: normal; }
 
-.flexcenter, .products__link .shape, .products__title, .pagination a, .pagination span, .articles__link, .catalog__title {
+.flexcenter, .products__link .shape, .products__title, .pagination a, .pagination span, .articles__link, .brands__link, .brands__link .shape, .brands__inner, .catalog__title {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -1410,12 +1410,35 @@ label.error {
   align-items: center;
   display: flex;
   height: 265px;
+  position: relative;
   text-align: center;
   width: 25%; }
-  .brands__cell a {
+
+.brands__link {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .brands__link .shape {
+    background: url(../images/el.png) no-repeat left top;
+    bottom: 10px;
     display: flex;
-    justify-content: center;
-    width: 229px; }
+    height: 77px;
+    position: absolute;
+    right: 35px;
+    text-align: center;
+    width: 67px; }
+    .brands__link .shape svg {
+      margin-left: 10px;
+      opacity: .5;
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
+  .brands__link:hover svg {
+    opacity: 1; }
+
+.brands__inner {
+  height: 100%;
+  width: 229px;
+  position: relative; }
 
 .brands-page .brands__cell {
   margin-top: 70px; }
