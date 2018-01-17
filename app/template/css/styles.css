@@ -251,6 +251,8 @@ input::-moz-focus-inner {
     background-color: red; }
   .btn-hoverred:hover {
     background: red; }
+  .btn-hoverred.active {
+    background-color: red; }
   .btn-hoverorange:hover {
     background-color: #f26e26; }
   .btn-hovergrey:hover {
@@ -449,6 +451,9 @@ nav {
             color: #808080; }
             nav ul li ul li a:hover {
               color: #1c4070; }
+            nav ul li ul li a.scrollpage.active {
+              color: #1c4070;
+              border-bottom: 2px dashed; }
       nav ul li:hover > a {
         border-bottom: 2px dashed; }
       nav ul li:hover .subnav {

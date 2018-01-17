@@ -252,6 +252,9 @@ input::-moz-focus-inner{
 		&:hover{
 			background: red;
 		}
+		&.active{
+			background-color: red;
+		}
 	}
 	&-hoverorange{
 		&:hover{
@@ -537,12 +540,16 @@ nav{
 						&:hover{
 							color: $color16;
 						}
+						&.scrollpage.active{
+							color: $color16;
+							border-bottom: 2px dashed;
+						}
 					}
 				}
 			}
 			&:hover{
 				& > a{
-					border-bottom: 2px dashed;						
+					border-bottom: 2px dashed;
 				}
 				.subnav{
 					opacity: 1;
