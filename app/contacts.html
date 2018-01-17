@@ -171,7 +171,7 @@
 	<!-- InstanceBeginEditable name="EditRegion3" -->
 	
 	<!-- =neck -->
-	<div class="neck">
+	<div class="neck neck-2">
 		<div>
 			<p class="title">КОНТАКТЫ</p>
 			<div class="breadcrumbs">
@@ -210,42 +210,50 @@
 
 		<!-- =address -->
 		<section class="address address-page">
-			<div class="flexbox btn-groups">
-				<button type="button" class="btn btn-lightgrey btn-active" data-coord="55.738287, 37.747568">восточный офис - склад</button>
-				<button type="button" class="btn btn-lightgrey" data-coord="55.843884, 38.200813">северный склад</button>
-				<button type="button" class="btn btn-lightgrey" data-coord="55.927503, 37.986079">западный склад</button>
-				<button type="button" class="btn btn-lightgrey" data-coord="55.927503, 37.986079">южный склад</button>
+			<div class="flexbox btn-groups nav">
+				<a href="#panel1" role="button" class="btn btn-lightgrey btn-active" data-coord="55.738287, 37.747568" data-toggle="tab" aria-controls="panel1">восточный офис - склад</a>
+				<a href="#panel2" role="button" class="btn btn-lightgrey" data-coord="55.843884, 38.200813" data-toggle="tab" aria-controls="panel2">северный склад</a>
+				<a href="#panel3" role="button" class="btn btn-lightgrey" data-coord="55.927503, 37.986079" data-toggle="tab" aria-controls="panel3">западный склад</a>
+				<a href="#panel4" role="button" class="btn btn-lightgrey" data-coord="55.927503, 37.986079" data-toggle="tab" aria-controls="panel4">южный склад</a>
 			</div>
 			<div class="map-wrapper">
-				<div class="address__info">
-					<div class="flexbox">
-						<div class="cell">
-							<h5>Адреc</h5>
-							<p>109202 Москва, <br> ул. Басовская, 16с1</p>								
+				<div class="tab-content address__info">
+					<div role="tabpanel" class="tab-pane fade show active" id="panel1">
+						<div class="flexbox">
+							<div class="cell">
+								<h5>Адреc</h5>
+								<p>109202 Москва, <br> ул. Басовская, 16с1</p>								
+							</div>
+							<div class="cell">
+								<h5>Телефоны</h5>
+								<p>
+									+7 (499) 391-31-80 <br>
+									+7 (968) 030-47-72 <br>
+									+7 (968) 943-30-05
+								</p>								
+							</div>
+							<div class="cell">
+								<h5>E-mail</h5>
+								<p>
+									office@spk-plast.ru <br>
+									zakaz@spk-plast.ru
+								</p>								
+							</div>
+							<div class="cell">
+								<h5>Skype</h5>
+								<p><a href="skype:spk-plast">spk-plast</a></p>
+							</div>
+							<div class="cell">
+								<h5>ICQ</h5>
+								<p>685-523-747</p>
+							</div>
 						</div>
-						<div class="cell">
-							<h5>Телефоны</h5>
-							<p>
-								+7 (499) 391-31-80 <br>
-								+7 (968) 030-47-72 <br>
-								+7 (968) 943-30-05
-							</p>								
-						</div>
-						<div class="cell">
-							<h5>E-mail</h5>
-							<p>
-								office@spk-plast.ru <br>
-								zakaz@spk-plast.ru
-							</p>								
-						</div>
-						<div class="cell">
-							<h5>Skype</h5>
-							<p><a href="skype:spk-plast">spk-plast</a></p>
-						</div>
-						<div class="cell">
-							<h5>ICQ</h5>
-							<p>685-523-747</p>
-						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="panel2">
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="panel3">
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="panel4">
 					</div>
 				</div>
 				<div id="map"></div>
@@ -499,7 +507,6 @@ ymaps.ready(function () {
 function go_to(lat,lon){
 	map.setCenter([lat, lon], 16);
 }
-</script>
 </script>
 <!-- InstanceEndEditable -->
 </body>
