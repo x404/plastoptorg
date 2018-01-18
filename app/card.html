@@ -204,7 +204,12 @@
 			<div class="container">
 				<header class="header-right">
 					<h1 class="title">СОТОВЫЙ ПОЛИКАРБОНАТ</h1>
-					<select name="#" id=""></select>
+					<select name="url" id="url">
+						<option value="/prod/test.html">4 мм</option>
+						<option value="/prod/test.html">6 мм</option>
+						<option value="/prod/test.html" selected="selected">8 мм</option>
+						<option value="/prod/test.html">10 мм</option>
+					</select>
 				</header>
 
 				<main>
@@ -826,6 +831,18 @@
 <link rel="stylesheet" property="stylesheet" href="template/css/selectric.css">
 <script src="/template/js/jquery.selectric.min.js"></script>
 <script src="/template/js/order.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('#url').selectric();
+
+	$('#url').selectric().on('change', function() {
+		var url =$(this).val();
+		window.location.href = url;
+	});
+});
+
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

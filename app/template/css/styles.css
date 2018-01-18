@@ -141,7 +141,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .nav-tabs li a, .header-right .btn, .submit, .header .contacts .btn, .timer__text, #inline-order, .address .btn, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .card .table th, .reviews .btn, .feedback__form .row input.form-control,
+.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .card header .title + .selectric-wrapper .selectric .label, .card .table th, .reviews .btn, .feedback__form .row input.form-control,
 .feedback__form .row textarea,
 .order__form .row input.form-control,
 .order__form .row textarea, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
@@ -1515,6 +1515,31 @@ label.error {
   line-height: 36px;
   font-size: 17px;
   margin-right: 30px; }
+
+.card header {
+  flex-flow: row; }
+  .card header .title {
+    display: inline-block;
+    position: relative;
+    top: -7px; }
+  .card header .title + .selectric-wrapper {
+    display: inline-block;
+    margin-left: 5px; }
+    .card header .title + .selectric-wrapper .selectric {
+      border: none;
+      background: none; }
+      .card header .title + .selectric-wrapper .selectric .label {
+        color: red;
+        font-size: 60px;
+        background: none; }
+      .card header .title + .selectric-wrapper .selectric .button {
+        display: none; }
+      .card header .title + .selectric-wrapper .selectric .label {
+        height: auto;
+        line-height: 1.2;
+        border-bottom: 4px dashed;
+        position: relative;
+        text-transform: uppercase; }
 
 .card .nav-tabs {
   justify-content: center; }

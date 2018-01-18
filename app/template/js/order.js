@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	'use strict';
-	$('select').selectric({ forceRenderBelow: true });
+	$('.order select').selectric({ forceRenderBelow: true });
 });
 
 $(function () {
