@@ -389,6 +389,16 @@ $(document).ready(function(){
 	});
 
 
+	$('a[data-toggle="tooltipbottom"]').tooltip({
+		placement: 'bottom',
+		html : true,
+		title: function(){
+			return '<img src="' + $(this).find('img').attr('src') + '" />'
+		},
+		template: '<div class="tooltip bs-tooltip-bottom tooltip__card" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+	});
+
+
 	$('.toggle_orderbox').click(function(e){
 		e.preventDefault();
 		$(this).remove();

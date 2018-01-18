@@ -1,0 +1,55 @@
+.card{
+	.nav{
+		&-tabs{
+			justify-content: center;
+		}
+		.btn{
+			margin-left: 20px;
+			width: 213px;
+			padding-top: 0;
+			line-height: 38px;
+			height: 40px;
+		}
+		.submit{
+
+		}
+		.active{
+			background-color: #4d4d4d;
+		}
+	}
+	.tab-content{
+		color: #4c4c4c;
+		margin-top: 40px;
+		h3{
+			@extend .bold;
+			font-size: 14px;
+			font-weight: normal;
+		}
+		p{
+			margin: 8px 0;
+		}
+	}
+
+	.order{
+		&__top{
+			color: $color1;			
+		}
+		.title{
+			padding-top: 0;
+		}
+	}
+
+
+	.table{
+		color: $color1;
+		th{
+			font-weight: normal;
+			text-align: left;
+			@extend .bi;
+		}
+		a[data-toggle]{
+			display: inline-block;
+			img{vertical-align: top;}			
+		}
+	}
+}

@@ -301,9 +301,6 @@ input::-moz-focus-inner{
 			color: $color2;
 			text-decoration: none;
 			padding-top: 6px;
-			&.active{
-				// background-color: red;
-			}
 		}
 	}
 }
@@ -442,6 +439,17 @@ input::-moz-focus-inner{
 	}
 }
 
+
+strong{
+	@extend .bold;
+	em{
+		font-family: "SegoeUIBoldItalic" !important;
+	}
+}
+
+em{
+	@extend .italic
+}
 
 /* =header
 ---------------------------*/

@@ -128,20 +128,20 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .tooltip__cat, .products__title, .address__panel h5, .inner main h3, .inner main h4,
+.bold, strong, .timer__digit span, .header .contacts .btn, .fixed-header .contacts .tel, .fixed-header .contacts .btn, .footer__contacts h5, .footer__social_inner p, .subscribe p, .tooltip__cat, .products__title, .address__panel h5, .inner main h3, .inner main h4,
 .inner .text h3,
 .inner .text h4, .inner main strong,
-.inner .text strong, .neck .btn, .insert .box, .feedback .title, .modal-dialog .title, .address .address__info h5, .order .title, .order__row .plus,
+.inner .text strong, .neck .btn, .insert .box, .card .tab-content h3, .feedback .title, .modal-dialog .title, .address .address__info h5, .order .title, .order__row .plus,
 .order__row .minus {
   font-family: "SegoeUIBold"; }
 
-.italic, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__inner .shape, .products__text, .inner main em,
+.italic, em, .header .cats .popup p, .footer__bottom, .share, .subscribe input.form-control, .subscribe input[type="submit"], .products__inner .shape, .products__text, .inner main em,
 .inner .text em, .reviews__item, .feedback__form .row input.form-control,
 .order__form .row input.form-control, .policy, .close-modal, #callback form, #about .modal__content, .faq__title, .catalog__title, .catalog__list .products__title, .order_accessories__body .col .row label {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .nav-tabs li a, .header-right .btn, .submit, .header .contacts .btn, .timer__text, #inline-order, .address .btn, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .reviews .btn, .feedback__form .row input.form-control,
+.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .card .table th, .reviews .btn, .feedback__form .row input.form-control,
 .feedback__form .row textarea,
 .order__form .row input.form-control,
 .order__form .row textarea, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
@@ -372,6 +372,9 @@ input::-moz-focus-inner {
     cursor: default; }
     .submit:disabled:hover, .header .contacts .btn:disabled:hover {
       opacity: 1; }
+
+strong em {
+  font-family: "SegoeUIBoldItalic" !important; }
 
 /* =header
 ---------------------------*/
@@ -1513,6 +1516,44 @@ label.error {
   font-size: 17px;
   margin-right: 30px; }
 
+.card .nav-tabs {
+  justify-content: center; }
+
+.card .nav .btn {
+  margin-left: 20px;
+  width: 213px;
+  padding-top: 0;
+  line-height: 38px;
+  height: 40px; }
+
+.card .nav .active {
+  background-color: #4d4d4d; }
+
+.card .tab-content {
+  color: #4c4c4c;
+  margin-top: 40px; }
+  .card .tab-content h3 {
+    font-size: 14px;
+    font-weight: normal; }
+  .card .tab-content p {
+    margin: 8px 0; }
+
+.card .order__top {
+  color: #000; }
+
+.card .order .title {
+  padding-top: 0; }
+
+.card .table {
+  color: #000; }
+  .card .table th {
+    font-weight: normal;
+    text-align: left; }
+  .card .table a[data-toggle] {
+    display: inline-block; }
+    .card .table a[data-toggle] img {
+      vertical-align: top; }
+
 .brands .flexbox {
   flex-wrap: wrap; }
 
@@ -2265,6 +2306,11 @@ form .thank {
     right: 0;
     top: 0;
     width: 12px; }
+  .tooltip.bs-tooltip-bottom.tooltip__card {
+    top: 30px !important;
+    left: 5px !important; }
+    .tooltip.bs-tooltip-bottom.tooltip__card .arrow {
+      background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAMAAAD6Ou7DAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAXij0CdHSmFcj8PEGzM2RpfqnzAAAAAFiS0dEAIgFHUgAAAAHdElNRQfiARIUKwQ6GpRRAAAANklEQVQI1z3HxwEAIAzDQFNDx/tPS+deErAohU8bo19bR3p7RzjJ6cAtrI7pTI5AqbxaQefXB1wBAvZe1JZZAAAAAElFTkSuQmCC") no-repeat left top; }
   .tooltip.bs-tooltip-top {
     left: -45px !important;
     top: -4px !important; }
