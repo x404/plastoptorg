@@ -388,6 +388,13 @@ $(document).ready(function(){
 		template: '<div class="tooltip bs-tooltip-left tooltip__price" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
 	});
 
+
+	$('.toggle_orderbox').click(function(e){
+		e.preventDefault();
+		$(this).remove();
+		$('.orderbox').slideDown();
+	});
+
 });
 
 // =заглушка для IE

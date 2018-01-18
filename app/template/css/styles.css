@@ -1358,6 +1358,9 @@ label.error {
   border: 1px solid #dee2e6;
   padding: 5px 10px; }
 
+.orderbox {
+  display: none; }
+
 .articles .flexbox {
   flex-wrap: wrap;
   margin-bottom: 45px;
