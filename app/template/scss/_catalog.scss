@@ -10,7 +10,42 @@
 }
 
 .catalog__list{
-	margin-top: 55px;
+	margin-top: -40px;
+	.products{
+		&__inner{
+			margin-bottom: 5px;
+		}
+
+		&__width{
+			margin-top: 97px;
+		}
+		&__title{
+			@extend .italic;
+			background-color: rgba(0,0,0,.5);
+			color: $color2;
+			font-size: 18px;
+			height: 86px;
+			text-transform: none;
+			top: 50%;
+			margin-top: -43px;
+			width: calc(100% - 40px)
+		}
+		&__link{
+			&:hover{
+				.triangle{
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.triangle{
+		position: absolute;
+		right: 36px;
+		bottom: 36px;
+		opacity: .5;
+		@include transition-param;
+	}
 }
 
 .paraminfo.effect{
