@@ -365,19 +365,29 @@ $(document).ready(function(){
 	});
 
 
-	$('a[data-toggle="tooltip"]').tooltip({
-		placement: 'left',
-		html : true,
-		title: function(){
-			return '<img src="' + $(this).find('img').attr('src') + '" />'
-		}
-	});
+	// $('a[data-toggle="tooltip"]').tooltip({
+	// 	placement: 'left',
+	// 	html : true,
+	// 	title: function(){
+	// 		return '<img src="' + $(this).find('img').attr('src') + '" />'
+	// 	}
+	// });
 
 	$('a[data-toggle="cattooltip"]').tooltip({
 		placement: 'bottom',
 		html : true,
 		template: '<div class="tooltip bs-tooltip-bottom tooltip__cat" role="tooltip"><div class="tooltip-inner"></div></div>'
 	});
+
+	$('a[data-toggle="tooltipprice"]').tooltip({
+		placement: 'left',
+		html : true,
+		title: function(){
+			return '<img src="' + $(this).find('img').attr('src') + '" />'
+		},
+		template: '<div class="tooltip bs-tooltip-left tooltip__price" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+	});
+
 });
 
 // =заглушка для IE

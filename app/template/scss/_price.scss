@@ -34,7 +34,8 @@
 		position: absolute;
 	}
 
-	&.bs-tooltip-left{
+	&.bs-tooltip-left.tooltip__price{
+		top: 13px !important;
 		.arrow{
 			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAkQbMI/BXmAnRKPRe0vHNF1xLZwAAAAFiS0dEAIgFHUgAAAAHdElNRQfiAQ0XCS3VJrONAAAAMklEQVQI12NgZGKAAAFmFihDgJUNyhAQYOeAMgQ4uaAMAW4eNAYvF4piPqh2fqiBMCsAoDIC9nnaf5QAAAAASUVORK5CYII=") no-repeat left top;
 			height: 12px;

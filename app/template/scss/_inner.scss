@@ -159,11 +159,15 @@
 		display: flex;
 		li{
 			margin: 0 4px;
+			&:first-child a{
+				color: $color2;
+			}
 		}
 	}
 	a{
-		color: $color2;
+		color: $color1;
 		text-decoration: none;
+		@extend .tdn;
 	}
 }
 /* =/breadcrumbs
