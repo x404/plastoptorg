@@ -1417,6 +1417,57 @@ label.error {
 .orderbox {
   display: none; }
 
+.tooltip {
+  margin-top: -22px;
+  z-index: 11; }
+  .tooltip-inner {
+    padding-right: 8px; }
+  .tooltip img {
+    border: 3px solid #336b7a;
+    border-radius: 9px; }
+  .tooltip .arrow {
+    position: absolute; }
+  .tooltip.bs-tooltip-left.tooltip__price {
+    top: 13px !important; }
+    .tooltip.bs-tooltip-left.tooltip__price .arrow {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAkQbMI/BXmAnRKPRe0vHNF1xLZwAAAAFiS0dEAIgFHUgAAAAHdElNRQfiAQ0XCS3VJrONAAAAMklEQVQI12NgZGKAAAFmFihDgJUNyhAQYOeAMgQ4uaAMAW4eNAYvF4piPqh2fqiBMCsAoDIC9nnaf5QAAAAASUVORK5CYII=") no-repeat left top;
+      height: 12px;
+      margin-top: -20px;
+      right: 0;
+      top: 50%;
+      width: 8px; }
+  .tooltip.bs-tooltip-bottom .arrow {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQ4UKiLrw8jKAAAAd0lEQVQI12P8zwADjXEMDPWLYDxGmESjBsMZBgYGk/obED4TVJiTYSUDNwM3w6pGThQJhn4GPQYGBgYGXYZ+JKMawxlWMCBARP1KBgbG/wyNygxnGfiRJD4xGNXfZWZkY9jBoMiADNgZbA4uYHboYwhkQAeSDPwA1aYXzLkxYlUAAAAASUVORK5CYII=") no-repeat center top;
+    height: 8px;
+    margin-left: -6px;
+    margin-top: -8px;
+    right: 0;
+    top: 0;
+    width: 12px; }
+  .tooltip.bs-tooltip-bottom.tooltip__card {
+    top: 30px !important;
+    left: 5px !important; }
+    .tooltip.bs-tooltip-bottom.tooltip__card .arrow {
+      background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAMAAAD6Ou7DAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAXij0CdHSmFcj8PEGzM2RpfqnzAAAAAFiS0dEAIgFHUgAAAAHdElNRQfiARIUKwQ6GpRRAAAANklEQVQI1z3HxwEAIAzDQFNDx/tPS+deErAohU8bo19bR3p7RzjJ6cAtrI7pTI5AqbxaQefXB1wBAvZe1JZZAAAAAElFTkSuQmCC") no-repeat left top; }
+  .tooltip.bs-tooltip-top {
+    left: -45px !important;
+    top: -4px !important; }
+    .tooltip.bs-tooltip-top .arrow {
+      height: 8px;
+      width: 12px;
+      margin-left: -6px;
+      bottom: -4px;
+      right: 0;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQ4UKiLrw8jKAAAAd0lEQVQI12P8zwADjXEMDPWLYDxGmESjBsMZBgYGk/obED4TVJiTYSUDNwM3w6pGThQJhn4GPQYGBgYGXYZ+JKMawxlWMCBARP1KBgbG/wyNygxnGfiRJD4xGNXfZWZkY9jBoMiADNgZbA4uYHboYwhkQAeSDPwA1aYXzLkxYlUAAAAASUVORK5CYII=") no-repeat center top;
+      transform: rotate(180deg); }
+  .tooltip__accessories {
+    z-index: 999999; }
+    .tooltip__accessories img {
+      border-color: #808080; }
+    .tooltip__accessories.bs-tooltip-bottom {
+      left: -90px !important;
+      top: 25px !important; }
+
 .video-page .nav {
   margin-top: 10px; }
   .video-page .nav .btn {
@@ -2310,52 +2361,6 @@ form .thank {
 
 .pricelist .btn {
   margin-top: 40px; }
-
-.tooltip {
-  margin-top: -22px;
-  z-index: 11; }
-  .tooltip-inner {
-    padding-right: 8px; }
-  .tooltip img {
-    border: 3px solid #336b7a;
-    border-radius: 9px; }
-  .tooltip .arrow {
-    position: absolute; }
-  .tooltip.bs-tooltip-left.tooltip__price {
-    top: 13px !important; }
-    .tooltip.bs-tooltip-left.tooltip__price .arrow {
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAkQbMI/BXmAnRKPRe0vHNF1xLZwAAAAFiS0dEAIgFHUgAAAAHdElNRQfiAQ0XCS3VJrONAAAAMklEQVQI12NgZGKAAAFmFihDgJUNyhAQYOeAMgQ4uaAMAW4eNAYvF4piPqh2fqiBMCsAoDIC9nnaf5QAAAAASUVORK5CYII=") no-repeat left top;
-      height: 12px;
-      margin-top: -20px;
-      right: 0;
-      top: 50%;
-      width: 8px; }
-  .tooltip.bs-tooltip-bottom .arrow {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQ4UKiLrw8jKAAAAd0lEQVQI12P8zwADjXEMDPWLYDxGmESjBsMZBgYGk/obED4TVJiTYSUDNwM3w6pGThQJhn4GPQYGBgYGXYZ+JKMawxlWMCBARP1KBgbG/wyNygxnGfiRJD4xGNXfZWZkY9jBoMiADNgZbA4uYHboYwhkQAeSDPwA1aYXzLkxYlUAAAAASUVORK5CYII=") no-repeat center top;
-    height: 8px;
-    margin-left: -6px;
-    margin-top: -8px;
-    right: 0;
-    top: 0;
-    width: 12px; }
-  .tooltip.bs-tooltip-bottom.tooltip__card {
-    top: 30px !important;
-    left: 5px !important; }
-    .tooltip.bs-tooltip-bottom.tooltip__card .arrow {
-      background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAMAAAD6Ou7DAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8za3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3oza3r///8Cdf4+AAAAEHRSTlMAXij0CdHSmFcj8PEGzM2RpfqnzAAAAAFiS0dEAIgFHUgAAAAHdElNRQfiARIUKwQ6GpRRAAAANklEQVQI1z3HxwEAIAzDQFNDx/tPS+deErAohU8bo19bR3p7RzjJ6cAtrI7pTI5AqbxaQefXB1wBAvZe1JZZAAAAAElFTkSuQmCC") no-repeat left top; }
-  .tooltip.bs-tooltip-top {
-    left: -45px !important;
-    top: -4px !important; }
-    .tooltip.bs-tooltip-top .arrow {
-      height: 8px;
-      width: 12px;
-      margin-left: -6px;
-      bottom: -4px;
-      right: 0;
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAQAAABn7dZ6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQ4UKiLrw8jKAAAAd0lEQVQI12P8zwADjXEMDPWLYDxGmESjBsMZBgYGk/obED4TVJiTYSUDNwM3w6pGThQJhn4GPQYGBgYGXYZ+JKMawxlWMCBARP1KBgbG/wyNygxnGfiRJD4xGNXfZWZkY9jBoMiADNgZbA4uYHboYwhkQAeSDPwA1aYXzLkxYlUAAAAASUVORK5CYII=") no-repeat center top;
-      transform: rotate(180deg); }
-  .tooltip__accessories img {
-    border-color: #808080; }
 
 .pricelist-table.effect {
   padding-top: 840px; }

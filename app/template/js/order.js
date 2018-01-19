@@ -2,10 +2,6 @@ $(document).ready(function(){
 	'use strict';
 	$('.order select').selectric({ forceRenderBelow: true });
 	$('#qorder select').selectric({ forceRenderBelow: true });
-
-	// $('#order select[name="type"]').selectric().on('change', function() {
-	
-
 });
 
 function options(arr){
@@ -80,7 +76,7 @@ $(document).on('change, input', '.order_accessories .form-control' , function(){
 
 $(document).on('click', '.toggle_accesories' , function(e){
 	e.preventDefault();
-	$('.order_accessories__body').slideDown()
+	$(this).closest('.order_accessories').find('.order_accessories__body').slideDown()
 });
 
 
