@@ -1,3 +1,6 @@
+.manage{
+	width: 105px;
+}
 .order{
 	.title{
 		font-size: 24px;
@@ -25,9 +28,6 @@
 		padding-bottom: 25px;
 	}
 
-	.manage{
-		width: 105px;
-	}
 
 	&__row{
 		$bgcolor: #808080;

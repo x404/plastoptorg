@@ -1,9 +1,7 @@
 $(document).ready(function(){
 	'use strict';
 	$('.order select').selectric({ forceRenderBelow: true });
-
-
-
+	$('#qorder select').selectric({ forceRenderBelow: true });
 
 	// $('#order select[name="type"]').selectric().on('change', function() {
 	
@@ -19,13 +17,12 @@ function options(arr){
 };
 
 function appendOption(name, option, row){
-	console.log($(row));
 	$(row).find('select[name="'+ name +'"] option:not(:first)').remove(); 
 	$(row).find('select[name="'+ name +'"]').append(option).selectric();
 };
 
 
-$(document).on('change', '#order select[name="type"]' , function(e){
+$(document).on('change', 'select[name="type"]' , function(e){
 	let $this = $(this),
 		currenttype =$this.val(),
 		type = '',
@@ -142,11 +139,14 @@ $(document).on('click', '.manage .minus' , function(e){
 var products = [],
 	accessories = [];
 
-function makeorders(id){
+function makeorders(form){
 	let product = {};
 	products = [];
 
-	$(id).find('.order__row').each(function(index){
+console.log(form);
+console.log($(form).find('.order__row'));
+
+	$(form).find('.order__row').each(function(index){
 		product = {};
 		let $this = $(this),
 			type = $this.find('[name="type"]').val(),
@@ -167,11 +167,11 @@ function makeorders(id){
 	return products;
 }
 
-function makeaccessories(id){
+function makeaccessories(form){
 	let accessory = {},
 		accessories = [];
 
-	$(id).find('.order_accessories__body .row').each(function(){
+	$(form).find('.order_accessories__body .row').each(function(){
 		let $this = $(this),
 			cnt = $this.find('.form-control').val(),
 			title = $this.find('label').text();

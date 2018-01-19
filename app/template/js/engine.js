@@ -333,20 +333,29 @@ $(document).ready(function(){
 	});
 
 
-	$('#order-form').validate({
+	$.fn.orderValidate = function(){
+		return this.validate({
 		submitHandler: function(form){
 
-			var products = { Products: makeorders('#order')},
-				additional = {Accessories: makeaccessories('#order')},
+			var products = { Products: makeorders(form)},
+				additional = {Accessories: makeaccessories(form)},
 				person = {},
 				obj = {},
 				fd = new FormData,
 				strSubmit = '';
 
-			(document.getElementById('ordername').value != '') ? person.name = document.getElementById('ordername').value : '';
-			(document.getElementById('orderemail').value != '') ? person.email = document.getElementById('orderemail').value : '';
-			(document.getElementById('ordertel').value != '') ? person.tel = document.getElementById('ordertel').value : '';
-			(document.getElementById('ordermsg').value != '') ? person.msg = document.getElementById('ordermsg').value : '';
+
+				($(form).find('.name').val() != '') ? person.name = $(form).find('.name').val(): '';
+				($(form).find('.email').val() != '') ? person.email = $(form).find('.email').val(): '';
+				($(form).find('.tel').val() != '') ? person.tel = $(form).find('.tel').val(): '';
+				($(form).find('.msg').val() != '') ? person.msg = $(form).find('.msg').val(): '';
+
+
+
+			// (document.getElementById('ordername').value != '') ? person.name = document.getElementById('ordername').value : '';
+			// (document.getElementById('orderemail').value != '') ? person.email = document.getElementById('orderemail').value : '';
+			// (document.getElementById('ordertel').value != '') ? person.tel = document.getElementById('ordertel').value : '';
+			// (document.getElementById('ordermsg').value != '') ? person.msg = document.getElementById('ordermsg').value : '';
 
 			obj = Object.assign({}, products, additional, person);
 
@@ -377,8 +386,11 @@ $(document).ready(function(){
 				alert(errorTxt);
 			});
 		}
-	});
+	})
+	};
 
+	$('#order-form').orderValidate();
+	$('#qorder-form').orderValidate();
 	
 
 	// modal

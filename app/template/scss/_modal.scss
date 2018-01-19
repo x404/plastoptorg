@@ -218,19 +218,6 @@ form{
 }
 
 
-// #addreview,
-// #qorder
-// {
-// 	.modal-dialog{
-// 		margin-left: 0;
-// 		margin-right: 0;
-// 		margin-top: 98px;
-// 		padding: 40px 0 0;
-// 		width: 100%;
-
-// 	}
-// }
-
 #about{
 	.modal__content{
 		.title{
@@ -250,4 +237,19 @@ form{
 .submit:disabled{
 	cursor: default !important;
 	background-color: #ccc !important;
+}
+
+
+
+#qorder{
+	padding-right: 0 !important;
+	.top{
+		p:not(.title){
+			color: #363636;			
+		}
+	}
+
+	.form-policy{
+		margin-top: 14px;
+	}
 }

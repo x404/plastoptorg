@@ -2157,6 +2157,13 @@ form .thank {
   cursor: default !important;
   background-color: #ccc !important; }
 
+#qorder {
+  padding-right: 0 !important; }
+  #qorder .top p:not(.title) {
+    color: #363636; }
+  #qorder .form-policy {
+    margin-top: 14px; }
+
 .about_advantages {
   color: #4c4c4c;
   padding-top: 790px;
@@ -2405,6 +2412,9 @@ form .thank {
   .paraminfo .tab-content p {
     margin: 15px 0; }
 
+.manage {
+  width: 105px; }
+
 .order .title {
   font-size: 24px;
   padding-top: 50px; }
@@ -2425,9 +2435,6 @@ form .thank {
   margin-top: 35px;
   padding-top: 8px;
   padding-bottom: 25px; }
-
-.order .manage {
-  width: 105px; }
 
 .order__row {
   margin-top: 16px;

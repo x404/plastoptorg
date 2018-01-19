@@ -589,15 +589,15 @@
 									<fieldset>
 										<div class="row">
 											<label for="ordername" class="visually-hidden">ваше имя</label>
-											<input name="name" id="ordername" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
+											<input name="name" id="ordername" type="text" value="" class="name form-control required" placeholder="как вас зовут ? *">
 											<label for="orderemail" class="visually-hidden">ваш e-mail</label>
 											<input name="email" id="orderemail" type="email" value="" class="form-control email" placeholder="ваш e-mail">
 											<label for="ordertel" class="visually-hidden">ваш номер телефона</label>
-											<input name="tel" id="ordertel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+											<input name="tel" id="ordertel" type="tel" value="" class="tel form-control required" placeholder="ваш номер телефона *">
 										</div>
 										<div class="row">
 											<label for="ordermsg" class="visually-hidden">текст вашего сообщения</label>
-											<textarea name="msg" id="ordermsg" cols="30" rows="10" placeholder="текст вашего сообщения ..."></textarea>
+											<textarea name="msg" id="ordermsg" cols="30" rows="10" class="msg" placeholder="текст вашего сообщения ..."></textarea>
 											<div class="file-upload">
 												<label for="orderfile">
 													<input type="file" name="file" id="orderfile" onchange="getFileName(this);" />
