@@ -345,21 +345,14 @@ $(document).ready(function(){
 				strSubmit = '';
 
 
-				($(form).find('.name').val() != '') ? person.name = $(form).find('.name').val(): '';
-				($(form).find('.email').val() != '') ? person.email = $(form).find('.email').val(): '';
-				($(form).find('.tel').val() != '') ? person.tel = $(form).find('.tel').val(): '';
-				($(form).find('.msg').val() != '') ? person.msg = $(form).find('.msg').val(): '';
-
-
-
-			// (document.getElementById('ordername').value != '') ? person.name = document.getElementById('ordername').value : '';
-			// (document.getElementById('orderemail').value != '') ? person.email = document.getElementById('orderemail').value : '';
-			// (document.getElementById('ordertel').value != '') ? person.tel = document.getElementById('ordertel').value : '';
-			// (document.getElementById('ordermsg').value != '') ? person.msg = document.getElementById('ordermsg').value : '';
+			($(form).find('.name').val() != '') ? person.name = $(form).find('.name').val(): '';
+			($(form).find('.email').val() != '') ? person.email = $(form).find('.email').val(): '';
+			($(form).find('.tel').val() != '') ? person.tel = $(form).find('.tel').val(): '';
+			($(form).find('.msg').val() != '') ? person.msg = $(form).find('.msg').val(): '';
 
 			obj = Object.assign({}, products, additional, person);
 
-			fd.append('file', $('#orderfile').prop('files')[0]);
+			fd.append('file', $(form).find('.orderfile').prop('files')[0]);
 			fd.append('strorder', JSON.stringify(obj) );
 
 			$(form).find('fieldset').hide();
@@ -372,6 +365,10 @@ $(document).ready(function(){
 				data: fd,
 				success: function(){
 					$(form).html(thankcallback);
+					console.log($(form).attr('id'));
+					if ($(form).attr('id') == 'qorder-form'){
+						startClock('qorder');
+					}
 				},
 				error: function(){
 					alert(errorTxt);
@@ -399,15 +396,6 @@ $(document).ready(function(){
 	});
 
 
-
-
-	// $('a[data-toggle="tooltip"]').tooltip({
-	// 	placement: 'left',
-	// 	html : true,
-	// 	title: function(){
-	// 		return '<img src="' + $(this).find('img').attr('src') + '" />'
-	// 	}
-	// });
 
 	$('a[data-toggle="cattooltip"]').tooltip({
 		placement: 'bottom',

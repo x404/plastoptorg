@@ -143,9 +143,6 @@ function makeorders(form){
 	let product = {};
 	products = [];
 
-console.log(form);
-console.log($(form).find('.order__row'));
-
 	$(form).find('.order__row').each(function(index){
 		product = {};
 		let $this = $(this),
