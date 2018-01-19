@@ -1,3 +1,22 @@
+// данные в селектах
+var dbdata = getdb();
+
+function getdb(){
+	var result;
+	$.ajax({
+		type:'GET',
+		url:'db.json',
+		dataType:'json',
+		async:false,
+		success:function(data){
+			result = data;
+		}
+	});
+	return result;
+}
+
+
+
 $(document).ready(function(){
 	'use strict';
 
@@ -6,7 +25,7 @@ $(document).ready(function(){
 		return this.each(function()	{
 			$(this).keydown(function(e){
 				var key = e.charCode || e.keyCode || 0;
-				// Разр ешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
+				// Разрешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
 				return (
 					key == 8 ||
 					key == 9 ||
@@ -366,8 +385,6 @@ $(document).ready(function(){
 	$('#addreview').on('show.bs.modal', function (e) {
 		$('#addreview .title').text($(e.relatedTarget).data('title'))
 	});
-
-
 
 
 

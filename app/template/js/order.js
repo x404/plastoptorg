@@ -1,6 +1,59 @@
 $(document).ready(function(){
 	'use strict';
 	$('.order select').selectric({ forceRenderBelow: true });
+
+
+	function options(arr){
+		let output = '';
+		arr.forEach(function(item, i, arr) {
+			output += '<option value="' + item + '">' + item + '</option>';
+		});
+		return output;
+	};
+
+	function appendOption(name, option){
+		$('#order select[name="'+ name +'"] option:not(:first)').remove(); 
+		$('#order select[name="'+ name +'"]').append(option).selectric();
+	};
+
+
+
+	$('#order select[name="type"]').selectric().on('change', function() {
+	
+	console.log(dbdata);
+		let currenttype =$(this).val(),
+			type = '',
+			thickness = '',
+			size = '',
+			color = '',
+			brand = '';
+
+
+			switch(currenttype){
+				case 'монолитный':
+					type = 'mono';
+					break;
+				case 'сотовый':
+					type = 'sot';
+					break;
+				default:
+					break;
+			};
+
+			// формируем новые опции
+			thickness = options(dbdata[type].thickness);
+			size = options(dbdata[type].size);
+			color = options(dbdata[type].color);
+			brand = options(dbdata[type].brand);
+			
+			// добавляем новые опции в select
+			appendOption('thickness', thickness);
+			appendOption('size', size);
+			appendOption('color', color);
+			appendOption('brand', brand);
+
+		});
+
 });
 
 $(function () {
