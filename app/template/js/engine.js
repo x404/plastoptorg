@@ -360,10 +360,16 @@ $(document).ready(function(){
 		}
 	});
 
+	
+
 	// modal
 	$('#addreview').on('show.bs.modal', function (e) {
 		$('#addreview .title').text($(e.relatedTarget).data('title'))
 	});
+
+
+
+
 
 
 	// $('a[data-toggle="tooltip"]').tooltip({
