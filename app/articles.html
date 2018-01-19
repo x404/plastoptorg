@@ -401,23 +401,203 @@
 <!-- =modal qorder -->
 <div class="modal fade" id="qorder" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog" role="document">
-		<p class="title">ФОРМА ON-LINE ЗАКАЗА</p>
+		<div class="text-center top">
+			<p class="title">ФОРМА ON-LINE ЗАКАЗА</p>
+			<p>Заполните форму, выбрав : вид, толщину, размеры, цвет и торговую марку. При необходимости выберите комплектующие.</p>
+			<p>Представьтесь и напишите ваше сообщение. Мы обязательно ответим как можно скорее.</p>
+		</div>
 		<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть"><img src="/template/images/popup-close.png" alt="Закрыть" /></button>
-		<form class=" form-policy">
+
+		<form class="form-policy" id="qorder-form" action="#" method="post">
+			<div class="order__params">
+				<div class="container">
+					<div class="order__row">
+						<div class="param1">
+							<select name="type" class="required">
+								<option value="">тип</option>
+								<option value="монолитный">монолитный</option>
+								<option value="сотовый">сотовый</option>
+							</select>
+						</div>
+						<div class="param2">
+							<select name="thickness" class="required" disabled="">
+								<option value="">толщина</option>
+							</select>
+						</div>
+						<div class="param3">
+							<select name="size" class="required" disabled="">
+								<option value="">размер</option>
+
+							</select>
+						</div>
+						<div class="param4">
+							<select name="color" class="required" disabled="">
+								<option value="">цвет</option>
+							</select>
+						</div>
+						<div class="param5">
+							<select name="brand" class="required" disabled="">
+								<option value="">торговая марка</option>
+
+							</select>
+						</div>
+						<div class="manage">
+							<a href="#" role="button" class="plus">+</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order_accessories">
+				<div class="container">
+					<p class="order_accessories__title">возможно вы забыли про <a href="#" class="btn btn-brown toggle_accesories">комплектующие</a> для поликарбоната
+					</p>
+					<div class="order_accessories__body hide">
+						<div class="flexbox">
+							<div class="col">
+								<div class="row">
+									<input name="acc1" id="acc1" type="text" value="0" class="form-control" />
+									<label for="acc1" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль соединительный неразъемный <br>НР4 (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input name="acc2" id="acc2" type="text" value="0" class="form-control"  data-placement="bottom" data-tooltipsrc="/images/profile.jpg" />
+									<label for="acc2" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль коньковый <br>RP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc3" id="acc3" value="0" class="form-control" />
+									<label for="acc3" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль угловой <br>FR 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc4" id="acc4" value="0" class="form-control" />
+									<label for="acc4" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль пристенный <br>FP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc5" id="acc5" value="0" class="form-control" />
+									<label for="acc5" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль торцевой <br>П 4мм (2,1м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc6" id="acc6" value="0" class="form-control" />
+									<label for="acc6" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента герметизирующая <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc7" id="acc7" value="0" class="form-control" />
+									<label for="acc7" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента перфорированная <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc8" id="acc8" value="0" class="form-control" />
+									<label for="acc8" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Планка прижимная алюминиевая верхняя <br>(6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc9" id="acc9" value="0" class="form-control" />
+									<label for="acc9" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Алюминиевый нижний несущий профиль <br> (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc10" id="acc10" value="0" class="form-control" />
+									<label for="acc10" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Резина уплотнительная верхняя <br>(узкая) - шт.</label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="row">
+									<input name="acc11" id="acc11" type="text" value="0" class="form-control" />
+									<label for="acc11" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль соединительный неразъемный <br>НР4 (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input name="acc12" id="acc12" type="text" value="0" class="form-control" />
+									<label for="acc12" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль коньковый <br>RP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc13" id="acc13" value="0" class="form-control" />
+									<label for="acc13" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль угловой <br>FR 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc14" id="acc14" value="0" class="form-control" />
+									<label for="acc14" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль пристенный <br>FP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc15" id="acc15" value="0" class="form-control" />
+									<label for="acc15" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль торцевой <br>П 4мм (2,1м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc16" id="acc16" value="0" class="form-control" />
+									<label for="acc16" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента герметизирующая <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc17" id="acc17" value="0" class="form-control" />
+									<label for="acc17" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента перфорированная <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc18" id="acc18" value="0" class="form-control" />
+									<label for="acc18" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Планка прижимная алюминиевая верхняя <br>(6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc19" id="acc19" value="0" class="form-control" />
+									<label for="acc19" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Алюминиевый нижний несущий профиль <br> (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc20" id="acc20" value="0" class="form-control" />
+									<label for="acc20" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Резина уплотнительная верхняя <br>(узкая) - шт.</label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="row">
+									<input name="acc21" id="acc21" type="text" value="0" class="form-control" />
+									<label for="acc21" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль соединительный неразъемный <br>НР4 (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input name="acc22" id="acc22" type="text" value="0" class="form-control" />
+									<label for="acc22" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль коньковый <br>RP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc23" id="acc23" value="0" class="form-control" />
+									<label for="acc23" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль угловой <br>FR 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc24" id="acc24" value="0" class="form-control" />
+									<label for="acc24" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль пристенный <br>FP 4-6мм (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc25" id="acc25" value="0" class="form-control" />
+									<label for="acc25" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Профиль торцевой <br>П 4мм (2,1м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc26" id="acc26" value="0" class="form-control" />
+									<label for="acc26" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента герметизирующая <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc27" id="acc27" value="0" class="form-control" />
+									<label for="acc27" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Лента перфорированная <br>25 мм (рулон 25м) - пог.метр.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc28" id="acc28" value="0" class="form-control" />
+									<label for="acc28" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Планка прижимная алюминиевая верхняя <br>(6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc29" id="acc29" value="0" class="form-control"  />
+									<label for="acc29" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Алюминиевый нижний несущий профиль <br> (6м) - шт.</label>
+								</div>
+								<div class="row">
+									<input type="text" name="acc30" id="acc30" value="0" class="form-control" />
+									<label for="acc30" data-toggle="tooltip" data-placement="bottom" data-tooltipsrc="/images/profile.jpg">Резина уплотнительная верхняя <br>(узкая) - шт.</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="feedback__form">
 				<div class="container">
 					<fieldset>
 						<div class="row">
 							<label for="qoname" class="visually-hidden">ваше имя</label>
-							<input name="name" id="qoname" type="text" value="" class="form-control required" placeholder="как вас зовут ? *">
+							<input name="name" id="qoname" type="text" value="" class="name form-control required" placeholder="как вас зовут ? *">
 							<label for="qoemail" class="visually-hidden">ваш e-mail</label>
-							<input name="email" id="qoemail" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+							<input name="email" id="qoemail" type="email" value="" class="form-control email" placeholder="ваш e-mail">
 							<label for="qotel" class="visually-hidden">ваш номер телефона</label>
-							<input name="tel" id="qotel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+							<input name="tel" id="qotel" type="tel" value="" class="form-control required tel" placeholder="ваш номер телефона *">
 						</div>
 						<div class="row">
 							<label for="qomsg" class="visually-hidden">текст вашего сообщения</label>
-							<textarea name="msg" id="qomsg" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="required"></textarea>
+							<textarea name="msg" id="qomsg" class="msg" cols="30" rows="10" placeholder="текст вашего сообщения ..."></textarea>
 							<div class="file-upload">
 								<label for="qofile">
 									<input type="file" name="file" id="qofile" onchange="getFileName(this);" />
@@ -489,6 +669,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <script src="/template/js/engine.js"></script>
+
+<link rel="stylesheet" property="stylesheet" href="template/css/selectric.css">
+<script src="/template/js/jquery.selectric.min.js"></script>
+<script src="/template/js/order.js"></script>
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
 
