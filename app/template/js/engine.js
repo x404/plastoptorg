@@ -1,3 +1,22 @@
+// данные в селектах
+var dbdata = getdb();
+
+function getdb(){
+	var result;
+	$.ajax({
+		type:'GET',
+		url:'db.json',
+		dataType:'json',
+		async:false,
+		success:function(data){
+			result = data;
+		}
+	});
+	return result;
+}
+
+
+
 $(document).ready(function(){
 	'use strict';
 
@@ -6,7 +25,7 @@ $(document).ready(function(){
 		return this.each(function()	{
 			$(this).keydown(function(e){
 				var key = e.charCode || e.keyCode || 0;
-				// Разр ешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
+				// Разрешаем backspace, tab, delete, стрелки, обычные цифры и цифры на дополнительной клавиатуре
 				return (
 					key == 8 ||
 					key == 9 ||
@@ -370,8 +389,6 @@ $(document).ready(function(){
 
 
 
-
-
 	// $('a[data-toggle="tooltip"]').tooltip({
 	// 	placement: 'left',
 	// 	html : true,
@@ -526,122 +543,3 @@ function startClock(sendform){
 	if (!timer)
 		timer = window.setInterval("showTime('" + sendform + "')",1000);
 }
-
-
-
-// =orders
-$(document).on('click', '.manage .plus' , function(e){
-	e.preventDefault();
-	var template = `
-		<div class="order__row">
-			<div class="param1">
-				<select name="type"" class="required">
-					<option value="">тип</option>
-					<option value="монолитный">монолитный</option>
-					<option value="сотовый">сотовый</option>
-				</select>
-			</div>
-			<div class="param2">
-				<select name="thickness" class="required">
-					<option value="">толщина</option>
-					<option value="2 мм">2 мм</option>
-					<option value="4 мм">4 мм</option>
-					<option value="6 мм">6 мм</option>
-					<option value="8 мм">8 мм</option>
-					<option value="10 мм">10 мм</option>
-					<option value="16 мм">16 мм</option>
-					<option value="20 мм">20 мм</option>
-					<option value="25 мм">25 мм</option>
-					<option value="32 мм">32 мм</option>
-				</select>
-			</div>
-			<div class="param3">
-				<select name="size" class="required">
-					<option value="">размер</option>
-					<option value="2,1 х 6 м">2,1 х 6 м</option>
-					<option value="2,1 х 12 м">2,1 х 12 м</option>
-				</select>
-			</div>
-			<div class="param4">
-				<select name="color" class="required">
-					<option value="">цвет</option>
-					<option value="зеленый">зеленый</option>
-					<option value="синий">синий</option>
-					<option value="красный">красный</option>
-					<option value="желтый">желтый</option>
-					<option value="черный">черный</option>
-				</select>
-			</div>
-			<div class="param5">
-				<select name="brand">
-					<option value="">торговая марка</option>
-					<option value="Sotalight">Sotalight</option>
-					<option value="DWK">DWK</option>
-					<option value="Trade">Trade</option>
-				</select>
-			</div>
-			<div class="manage">
-				<a href="#" role="button" class="plus">+</a>
-				<a href="#" role="button" class="minus">-</a>
-			</div>
-		</div>
-	`;
-	$('.order__params .container').append(template);
-	$('select').selectric('refresh');
-});
-
-
-$(document).on('click', '.manage .minus' , function(e){
-	e.preventDefault();
-	$(this).closest('.order__row').fadeOut('normal', function(){
-		this.remove();
-	});
-});
-
-var products = [],
-	accessories = [];
-
-function makeorders(id){
-	let product = {};
-	products = [];
-
-	$(id).find('.order__row').each(function(index){
-		product = {};
-		let $this = $(this),
-			type = $this.find('[name="type"]').val(),
-			thickness = $this.find('[name="thickness"]').val(),
-			size = $this.find('[name="size"]').val(),
-			color = $this.find('[name="color"]').val(),
-			brand = $this.find('[name="brand"]').val();
-
-		if (type!='' || thickness!='' || size !='' || color !='' || brand !='') {
-			product.type = type;
-			product.thickness = thickness;
-			product.size = size;
-			product.color = color;
-			product.brand = brand;
-			products.push(product);
-		}
-	});
-	return products;
-}
-
-function makeaccessories(id){
-	let accessory = {},
-		accessories = [];
-
-	$(id).find('.order_accessories__body .row').each(function(){
-		let $this = $(this),
-			cnt = $this.find('.form-control').val(),
-			title = $this.find('label').text();
-
-		if (cnt > 0 ){
-			accessory = {};
-			accessory.title = title;
-			accessory.cnt = cnt;
-			accessories.push(accessory);
-		};
-	});
-	return accessories;
-}
-// =/orders
