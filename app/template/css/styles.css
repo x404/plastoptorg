@@ -930,20 +930,20 @@ label.error {
     background: url(../images/divider_6.png) no-repeat right top; }
 
 .tooltip__cat {
-  font-size: 16px;
   background-color: red;
   border-radius: 25px;
   bottom: 0;
+  color: #fff;
   display: block;
-  line-height: 38px;
+  font-size: 16px;
   height: 41px;
+  line-height: 38px;
   padding: 0 20px;
   position: absolute;
-  white-space: nowrap;
-  z-index: 999 !important;
-  color: #fff;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 999 !important; }
   .tooltip__cat .tooltip-inner {
     padding-right: 0; }
 
@@ -953,10 +953,10 @@ label.error {
   font-family: "SegoeUIBoldItalic";
   font-size: 24px;
   padding-left: 30px;
+  position: relative;
   text-align: center;
   width: 515px;
-  position: relative;
-  z-index: 999; }
+  z-index: 99; }
   .advantages .svg {
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
@@ -1110,10 +1110,10 @@ label.error {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC0C0C0', endColorstr='#FF858585', GradientType=0);
   border-radius: 0 0 4px 4px;
-  top: calc(100% - 9px);
   padding-bottom: 6px;
   position: absolute;
   right: 1px;
+  top: calc(100% - 9px);
   width: 368px; }
   .products__colors:before {
     background: url(../images/color-popup.png) no-repeat left top;

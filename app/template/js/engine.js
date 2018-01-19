@@ -259,7 +259,7 @@ $(document).ready(function(){
 		}
 	});
 
-
+	// оставить отзыв
 	$('#addreview-form').validate({
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
@@ -286,6 +286,7 @@ $(document).ready(function(){
 	});
 
 
+	// форма обратной связи в подвале
 	$('#feedback-form').validate({
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();

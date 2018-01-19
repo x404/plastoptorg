@@ -33,20 +33,20 @@
 
 .tooltip__cat{
 	@extend .bold;
-	font-size: 16px;
 	background-color: red;
 	border-radius: 25px;
 	bottom: 0;
+	color: $color2;	
 	display: block;
-	line-height: 38px;
+	font-size: 16px;
 	height: 41px;
+	line-height: 38px;
 	padding: 0 20px;
 	position: absolute;
-	white-space: nowrap;
-	z-index: 999 !important;
-	color: $color2;	
 	text-align: center;
 	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 999 !important;
 
 	.tooltip-inner{
 		padding-right: 0;
@@ -58,10 +58,10 @@
 	font-family: "SegoeUIBoldItalic";
 	font-size: 24px;
 	padding-left: 30px;
+	position: relative;
 	text-align: center;
 	width: 515px;
-	position: relative;
-	z-index: 999;
+	z-index: 99;
 	.svg{
 		@include transition-param;
 		opacity: .5;
@@ -268,10 +268,10 @@
 		@include gradient-vertical(#c0c0c0, #858585);
 
 		border-radius: 0 0 4px 4px;
-		top: calc(100% - 9px);
 		padding-bottom: 6px;
 		position: absolute;
 		right: 1px;
+		top: calc(100% - 9px);
 		width: 368px;
 		.flexbox{
 			flex-wrap: wrap;
