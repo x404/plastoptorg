@@ -1,2 +1,147 @@
-@media (max-width: 1024px){
+@media (max-width: 1460px){
+	.header .cats .container{
+		width: 1200px;
+	}
+}
+
+@media (max-width: 1399px){
+	.products{
+		&__cell{
+			width: 90%;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__title{
+			font-size: 24px;
+			width: 100%;
+		}
+		&__link{
+			&:after{
+				right: -21px;
+			}
+		}
+
+		&__inner{
+			.shape{
+				bottom: -5px;
+				right: 35px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1366px){
+	.header .cats{
+		.container{
+			width: 1100px;
+		}
+		.cat__title{
+			font-size: 21px;
+		}
+	}
+}
+
+
+@media (max-width: 1220px){
+	.header .cats ul{
+		li{
+			flex-basis: 33.3%;
+		}
+	}
+}
+
+@media (max-width: 1199px){
+	.header .cats {
+		.container{
+			width: 100%;
+		}
+		li .cat__title{
+			padding-left: 100px;
+			&:before{
+				background-size: contain;
+				width: 90px;
+			}
+		}
+	}
+
+
+	.timer{
+		.str1{
+			font-size: 20px;
+		}
+		.str2{
+			font-size: 30px;
+		}
+		&__text{
+			background-size: contain;
+			height: auto;
+		}
+	}
+
+	.advantages{
+		display: none;
+	}
+
+
+	.products{
+		&__title{
+			height: 328px;
+		}
+	}
+
+	.homepage{
+		.reviews,
+		.brands{
+			margin-top: 0;
+		}
+	}
+
+	.brands{
+		&__cell{
+			width: 50%;
+			margin-bottom: 50px;
+		}
+	}
+
+	.intro .tab-content{
+		width: auto;
+	}
+}
+
+
+
+@media (max-width: 1040px){
+	.header{
+		.container{
+			width: 100%;
+		}
+
+		.timer{
+			align-items: center;
+			flex-flow: column;
+			margin-top: 20px;
+			&__text{
+				height: 158px;
+			}
+			&__digit{
+				margin-top: 25px;
+			}
+		}
+	}
+	nav{
+		ul{
+			li{
+				.subnav{
+					display: none;
+				}
+				&:hover{
+					.subnav{
+						display: block;
+					}
+				}
+			}
+		}	
+	}
 }

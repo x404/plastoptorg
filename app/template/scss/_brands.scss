@@ -4,7 +4,7 @@
 	}
 
 	&__cell{
-		background: url(../images/brand-bg.png) no-repeat left top;
+		
 		align-items: center;
 		display: flex;
 		height: 265px;
@@ -15,13 +15,10 @@
 
 	&__link{
 		position: relative;
-		width: 100%;
+		// width: 100%;
+		width: 229px;
 		height: 100%;
 		@extend .flexcenter;
-
-
-		img{
-		}
 
 		.shape{
 			background: url(../images/el.png) no-repeat left top;
@@ -47,8 +44,12 @@
 	}
 
 	&__inner{
+			background: url(../images/brand-bg.png) no-repeat left top;
+			display: block;
 			height: 100%;
-			width: 229px;
+			width: 255px;
+			margin-left: auto;
+			margin-right: auto;
 			position: relative;
 			@extend .flexcenter;
 	}

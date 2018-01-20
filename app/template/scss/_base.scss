@@ -998,6 +998,11 @@ footer{
 		}
 	}
 
+	&__logosocial{
+		display: flex;
+	}
+
+
 	&__logo{
 		align-items: center;
 		background: rgba(255,255,255,.8);
@@ -1166,6 +1171,7 @@ footer{
 	width: $w;
 	height: $h;
 	transition: filter .3s;
+	z-index: 9999;
 	span{
 		position: relative;
 		z-index: 2;
