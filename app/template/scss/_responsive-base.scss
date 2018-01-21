@@ -170,10 +170,184 @@
 }
 
 @media (max-width: 991px){
+	.title{
+		font-size: 50px;
+	}
+
+	.header .logo{
+		padding-top: 35px;
+		&__link{
+			width: 100%;
+		}
+	}
+
+	.fixed-header{
+		.container{
+			width: 100%;
+			margin: 0;
+			padding: 0 15px;  
+		}
+	}
 }
 
-@media (max-width: 767px){
+
+@media (max-width: 950px){
+	.subscribe{
+		right: 20px;
+		width: 450px;
+	}
 }
 
-@media (max-width: 545px){
+@media (max-width: 930px){
+	.header{
+		&__top{
+			display: block;
+		}
+		.logo{
+			margin-left: auto;
+			margin-right: auto;
+			width: 357px;
+		}
+	}
+
+	nav ul{
+		justify-content: center;
+	}
+}
+
+
+@media (max-width: 900px){
+	.fixed-header{
+		display: none !important;
+	}
+	.subscribe{
+		margin-left: auto;
+		margin-right: auto;
+		position: static;
+	}
+
+	.footer{
+		&__top{
+			display: block;
+		}
+		&__logo{
+			justify-content: center;
+			&:after{
+				right: 0;
+			}
+		}
+		&__contacts{
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+		}
+
+		&__logosocial{
+			display: block;
+		}
+
+		&__social{
+			margin-top: 50px;
+		}
+		&__social_inner .icons{
+			justify-content: center;
+			margin-left: 0;
+		}
+	}
+}
+
+
+@media (max-width: 820px){
+	.header .cats ul{
+		justify-content: center;
+		li{
+			margin-bottom: 10px;
+			width: 100%;
+		}
+	}
+}
+
+
+@media (max-width: 800px){
+	.header{
+		.logo{
+			width: 220px;
+			img{
+				width: 100%;
+			}
+		}
+		nav{
+			padding-top: 40px;
+		}
+
+		.contacts{
+			padding-top: 30px;
+		}
+	}
+}
+
+@media (max-width: 790px){
+	.address__panel{
+		margin-left: -330px;
+	}
+
+	.map-wrapper{
+		$h: 300px;
+		height: $h;
+		#map{
+			height: $h;
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.title{
+		font-size: 40px;
+	}
+	.footer{
+		&__top{
+			margin-bottom: 20px;
+		}
+		&__bottom{
+			display: block;
+			text-align: center;
+		}
+		&__copyright{
+
+		}
+
+		.kreotif{
+			color: $color3;
+			text-align: center !important;
+			margin-top: 20px;
+			padding-right: 0px;
+		}
+	}
+}
+
+
+@media (max-width: 400px){
+
+	.footer{
+		&__logo{
+			display: none;
+		}
+		&__social{
+			background: none;
+			height: auto;
+			margin-bottom: 20px;
+			&_inner{
+				background: none;
+				p{
+					margin-bottom: 10px;
+					position: static;
+					text-align: center;
+				}
+				.icons{
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+	}
 }

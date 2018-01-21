@@ -132,7 +132,10 @@ input::-moz-focus-inner{
 }
 
 /*** standart classes *****/
-a{color:#020000}
+a{
+	color:#020000;
+	text-decoration-skip: ink; 
+}
 h1{font-size:6rem; @extend .bi;}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
@@ -507,7 +510,7 @@ em{
 	}
 }
 
-nav{	
+nav{
 	font-family: "SegoeUIBoldItalic";
 	color: $color2;
 	text-transform: uppercase;
