@@ -173,9 +173,10 @@ $(document).ready(function(){
 	});
 
 
+
 	// mobile-menu
 	$('#navbar').each(function(){
-		var $this = $(this),
+		let $this = $(this),
 			$link = $('.navbar-toggle'),
 			$close = $('.close-menu'),
 
@@ -185,10 +186,9 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				h = $(document).height();
+				let h = $(window).height();
 				$('body').addClass('o-menu');
 				$('#navbar').height(h);
-
 			},
 			closeMenu = function(e){
 				e.preventDefault();
@@ -197,6 +197,14 @@ $(document).ready(function(){
 			};
 		init();
 	});	
+
+	$(window).resize(function(){
+		if ($('body').width() > 640) {
+			$('body').removeClass('o-menu');
+			$('#navbar').css('height', 'auto');
+		}
+	});
+
 
 
 
@@ -543,3 +551,12 @@ function startClock(sendform){
 	if (!timer)
 		timer = window.setInterval("showTime('" + sendform + "')",1000);
 }
+
+
+
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
+	e.preventDefault();
+	var $this = $(this);
+	$this.next('.subnav').slideToggle().prev().toggleClass('open');
+})

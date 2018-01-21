@@ -515,7 +515,7 @@ nav{
 	color: $color2;
 	text-transform: uppercase;
 
-	ul{
+	.nav-tabs{
 		display: flex;
 		li{
 			margin-left: 25px;
@@ -1174,7 +1174,7 @@ footer{
 	width: $w;
 	height: $h;
 	transition: filter .3s;
-	z-index: 9999;
+	z-index: 9990;
 	span{
 		position: relative;
 		z-index: 2;

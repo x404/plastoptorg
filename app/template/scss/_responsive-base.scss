@@ -326,8 +326,19 @@
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 767px){
+	.header{
+		.logo{
+			padding-top: 8px;
+		}
+		.contacts{
+			padding-top: 15px;
+		}
+	}
+}
 
+
+@media (max-width: 400px){
 	.footer{
 		&__logo{
 			display: none;

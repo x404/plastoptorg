@@ -1,5 +1,13 @@
-$color2: #fff; 
-$color5: green;
+/* =mobile-menu
+---------------------------*/
+.show-sm,
+.navbar-toggle,
+.close-menu{
+	display: none;
+}
+/* =/mobile-menu
+---------------------------*/
+
 
 
 /* =mobile-menu
@@ -14,15 +22,16 @@ $color5: green;
 
 
 
+
 @media (max-width: 767px){
 	.navbar-toggle{
-		background-color: $color5;
+		background-color: $color6;
 		border: none;
 		cursor: pointer;
 		display: block;
 		height: 70px;
 		left: 0;
-		position: absolute;
+		position: fixed;
 		text-align: center;
 		top: 0;
 		width: 70px;
@@ -37,14 +46,23 @@ $color5: green;
 		&:hover{
 			background-color: $color2;
 			.icon-bar{
-				background-color: $color5;
+				background-color: $color6;
 			}
 		}
 	}
 
+	.show-sm{
+		display: block;
 
+	}
 	.o-menu{
 		.header{
+			&__nav ul{
+				display: block;
+				padding-left: 15px;
+				padding-right: 0;
+				height: auto;
+			}
 		}
 		.close-menu{
 			display: block;
@@ -53,7 +71,107 @@ $color5: green;
 		#navbar{
 			display: block;
 			transform: translate(-15px, 0);
-			z-index: 9999;
+			text-transform: none;
+			z-index: 99999;
+			font-family: "SegoeUIRegular";
+			a{
+				font-family: "SegoeUIRegular";				
+			}
+			li{
+				margin-left: 0;
+			}
+
+			.subnav{
+				background: none;
+				margin-left: 0;
+				background: none;
+				display: none;
+				// display: block;
+				left: 0;
+				margin-top: -15px;
+				padding-top: 0;
+				padding-left: 20px;
+				position: static;
+				width: auto;
+				opacity: 1;
+				position: static;
+				ul{
+					background: none;
+				}
+				&:before{
+					display: none;
+				}
+				&-text{
+					display: none !important;
+				}
+
+				ul{
+					background: none;
+					font-size: 14px !important;
+					opacity: 1;
+					position: static; 
+					padding-left: 0;
+					li{
+						border-bottom: none;
+						a,
+						span{
+							padding: .5rem 0 .5rem 1.8rem;
+						}
+					}
+					& > li{
+						a,span{
+							padding: 0;
+						}
+					}
+				}
+
+
+			}
+
+			& > li.folder > a,
+			& > li.folder > span
+			{
+				&:after{
+					background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi+P//vw0QBwMxAzbMxMDA4ALEa4A4iQEbAKoSB+Lt/yEgBd0EGIMXiHdAFSVjUwDCfEC8C90kdEcJQa37A8T5QCyBzeUCQHwXalIfuiQTEHdBJecBsRGyJCMQ98N0YnMDTLIfahJcAQcQ9yJJYoRDEVSyF2oNhgIfIM7FJgnCAAEGAKmlN490MQwsAAAAAElFTkSuQmCC") no-repeat right top;
+					content: "";
+					height: 14px;
+					left: 50%;
+					position: absolute;
+					top: 22px !important;
+					width: 8px;					
+				}
+
+				&.open{
+					&:after{
+						@include rotation(90deg);
+					}
+				}
+			}
+
+
+			.show-sm{
+				@include font-size(1.5);
+				padding-left: 3rem;
+				a{
+					color: $color2;
+					display: block;
+					margin: 1.8rem 0;
+					text-decoration: none;
+					border-bottom: none !important;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.mainnav__list{
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			overflow: auto;	
 		}
 	}
 
@@ -65,62 +183,62 @@ $color5: green;
 		cursor: pointer;
 		padding: 0;
 		left: 215px;
-		background-color: $color5;
+		background-color: $color6;
 		border: none;
-		height: 70px;
-		position: absolute;
+		height: 58px;
+		position: fixed;
 		text-align: center;
 		top: 0;
-		width: 70px;
+		width: 58px;
 		z-index: 99;
+		img{
+			transition: transform .2s;			
+		}
+		&:hover img{
+			transform: rotate(90deg);
+		}
 	}
 
 
 	#navbar{
-		transition: all .2s ease-out;
-		background-color: $color5;
-		color: $color5;
+		background-color: $color6;
+		color: $color3;
 		display: block;
 		left: 0;
-		padding-top: 15px;
-		position: absolute;
+		margin-top: 0;
+		position: fixed;
 		top: 0;
+		bottom: 0;
+		right: 0;
 		transform: translate(-305px, 0);
+		transition: all .2s ease-out;
 		width: 230px;
+		text-align: left;
 		.container{
 			padding: 0;
 		}
-		ul.mainnav{
+		a:before{
+			display: none !important;
+		}
+		ul.nav-tabs{
 			background: none;
 			display: block;
 			font-size: 15px;
 			margin-top: 0;
 			padding-left: 15px;
-			ul{
-				position: static; 
-				opacity: 1;
-				background: none;
-				font-size: 14px !important;
-				li:after{
-					top: 12px;
-				}
-			}
-			& > li.folder > a,
-			& > li.folder > span
-			{
-				&:after{
-					top: 24px !important;
-				}
-			}
+			margin-left: 0;
+			text-align: left;
 			& > li.active > a{
 				text-decoration: underline;				
 			}
 			li{ // 1 level
 				border-bottom: 1px solid #fff;
 				a, span{
+					border-bottom: none !important;
 					color: $color2;
 					display: block;
 					height: auto;
+					margin-top: 0 !important;
 					line-height: normal;
 					padding: 18px 0 18px 10px;
 					text-decoration: none;
@@ -129,133 +247,17 @@ $color5: green;
 						color: #fff;
 						text-decoration: underline;
 					}
+					&.active{
+						text-decoration: underline;
+					}
 				}
 				&.active,
 				&:hover{
 					a, span{
 						background: none;
+
 					}
-					border-bottom: 1px solid #fff;
 					color: #fff;
-				}
-
-				&.folder{
-					& > a,
-					& > span{
-						position: relative;
-						&:after{
-							background: url(../images/arrow.png) no-repeat left bottom;
-							content: "";
-							display: block;
-							height: 12px;
-							position: absolute;
-							right: 10px;
-							top: 9px;
-							width: 8px;
-						}
-					}
-					ul.show{
-						display: block;
-					}
-					&.open > a,
-					&.open > span{
-						&:after{
-							background-position: left top;
-							width: 12px;
-							height: 8px;
-						}						
-					}
-
-					.folder{ // 2 level
-						padding-left: .5rem;
-						padding-right: 0;
-						& > a,
-						& > span{
-							&:after{
-								display: none;
-							}
-						}
-						li{
-							ul{
-								li{
-									position: relative;
-									a:before{
-										content: "-";
-										z-index: 10;
-										position: absolute;
-										left: 4px;
-										top: 8px;
-									}
-								}
-								&.folder{
-									& > ul{
-										display: none !important;										
-									}
-								}
-							}
-						}
-					}
-				}
-
-				&.active{
-					a, span{
-						// text-decoration: underline;
-					}
-					a{
-						&:hover{
-							color : #fff;
-						}						
-					}
-
-					& > ul{
-						display: block;
-						.active .active a{
-							font-weight: bold;
-							text-decoration: underline;
-						}
-					}
-				}
-
-				ul{
-					display: none;
-					font-size: 12px;
-					width: auto !important;
-					border-top: none;
-					li{
-						border-bottom: none;
-						padding-left: 7px;
-						a, span{
-							padding: 10px 0 10px 10px;
-
-						}
-						&.active,
-						&:hover{
-							border-bottom: none;
-							color: $color5;
-						}
-
-						ul{ // 2level
-							padding-top: 0;
-							li{
-								padding-right: 0;
-								&:hover{
-									background: none;
-								}
-								&.folder.active > a{
-									text-decoration: underline;
-								}
-								ul{
-									li{
-										&.active{
-											a{
-												text-decoration: underline;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
 				}
 			}
 		}
