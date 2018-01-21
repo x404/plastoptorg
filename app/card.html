@@ -40,55 +40,69 @@
 		<div class="header__top flexbox">
 			<div class="logo">
 				<a href="/" class="logo__link">
-					<img src="/template/images/innerlogo.png" alt="Пластопторг" />
+					<img src="/template/images/logo.png" alt="" />
 				</a>
 			</div>
 			
 			<div class="nav-contacts">
-				<nav id="navbar">
-					<ul>
-						<li class="active"><span>главная</span></li>
-						<li>
-							<a href="#">компания</a>
-							<div class="subnav">
-								<ul>
-									<li><a href="about.html#about" title="" data-menu="about" class="scrollpage">О нас</a></li>
-									<li><a href="about.html#advantages" title="" data-menu="advantages" class="scrollpage">Преимущества</a></li>
-									<li><a href="about.html#sertificats" title="" data-menu="sertificats" class="scrollpage">Сертификаты</a></li>
-									<li><a href="reviews.html" title="">Отзывы</a></li>
-									<li><a href="faq.html" title="">Вопросы и ответы</a></li>
-									<li><a href="video.html" title="">Видео</a></li>
-									<li><a href="articles.html" title="">Полезная информация</a></li>
-								</ul>
+				<div class="header__nav">
+					<nav id="navbar" class="mainnav">
+						<div class="mainnav__list">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active"><span>Главная</span></li>
+								<li class="folder">
+									<a href="#">Компания</a>
+									<div class="subnav">
+										<ul>
+											<li><a href="/about.html#about" title="" class="scrollpage">О нас</a></li>
+											<li><a href="/about.html#advantages" title="" class="scrollpage">Преимущества</a></li>
+											<li><a href="/about.html#sertificats" title="" class="scrollpage">Сертификаты</a></li>
+											<li><a href="/reviews.html" title="">Отзывы</a></li>
+											<li><a href="/faq.html" title="">Вопросы и ответы</a></li>
+											<li><a href="/video.html" title="">Видео</a></li>
+											<li><a href="/articles.html" title="">Полезная информация</a></li>
+										</ul>
+									</div> 
+								</li>
+								<li class="folder">
+									<a href="#">Продукция</a>
+									<div class="subnav">
+										<ul>
+											<li><a href="/catalog-sot.html" title="">Сотовый поликарбонат</a></li>
+											<li><a href="#" title="">Монолитный поликарбонат</a></li>
+											<li><a href="/complects.html" title="">Комплектующие</a></li>
+											<li><a href="/brands.html" title="">Бренды</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="/pricelist.html">Прайс</a></li>
+								<li class="nav5 folder">
+									<a href="#">Важно</a>
+									<div class="subnav">
+										<ul>
+											<li><a href="#" title="">Оптовикам</a></li>
+											<li><a href="#" title="">Монтаж</a></li>
+											<li><a href="/delivery.html" title="">Доставка и оплата</a></li>
+											<li><a href="/back.html" title="">Возврат товара</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="/contacts.html">Контакты</a></li>
+							</ul>
+							<div class="show-sm">
+								<a href="tel:+74993913180">+7 (499) 391-31-80</a>
+								<a href="mailto:office@plastoptorg.ru">office@plastoptorg.ru</a>
 							</div>
-						</li>
-						<li>
-							<a href="#">продукция</a>
-							<div class="subnav">
-								<ul>
-									<li><a href="catalog-sot.html" title="">сотовый поликарбонат</a></li>
-									<li><a href="#" title="">монолитный поликарбонат</a></li>
-									<li><a href="complects.html" title="">комплектующие</a></li>
-									<li><a href="brands.html" title="">бренды</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="pricelist.html">прайс</a></li>
-						<li class="nav5">
-							<a href="#">важно</a>
-							<div class="subnav">
-								<ul>
-									<li><a href="#" title="">оптовикам</a></li>
-									<li><a href="#" title="">монтаж</a></li>
-									<li><a href="delivery.html" title="">доставка и оплата</a></li>
-									<li><a href="back.html" title="">возврат товара</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="contacts.html">контакты</a></li>
-					</ul>
-				</nav>
-				
+						</div>
+					</nav>
+					<button type="button" class="navbar-toggle">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<button type="button" class="close-menu"><img src="template/images/close.png" alt=""></button>
+				</div>
+
 				<div class="contacts text-center">
 					<p>
 						109202 Москва, ул. Басовская, 16с1
@@ -97,11 +111,212 @@
 						+7 (499) 391-31-80
 					</p>
 					<p><a href="mailto:office@plastoptorg.ru" title="">office@plastoptorg.ru</a></p>
+					<button type="button" class="btn btn-red" data-toggle="modal" data-target="#callback">ЗАКАЗАТЬ ЗВОНОК</button>
 				</div>
 			</div>
 		</div>
 		<!-- =/nav -->
+
+		<!-- =timer -->
+		<div class="container">
+			<div class="timer flexbox">
+				<div class="timer__text" style="background-image: url(/images/timer-bg-text.png)">
+					<a href="#" title="">
+						<p class="str1">ПОЛИКАРБОНАТ С УФ-ЗАЩИТОЙ</p>
+						<p class="str2">1.555 руб за  лист 2,1 х 6 м</p>
+						<p class="str3">ТАКИХ ЦЕН УЖЕ НЕ БУДЕТ !!!</p>					
+					</a>
+				</div>
+				<div class="timer__digit">
+					<div id="clock"></div>
+					<script type="text/javascript">
+						$(function(){
+							$('#clock').countdown('2018/10/10', function(event) {
+								var $this = $(this).html(event.strftime(''
+									+ '<span>%H</span> '
+									+ '<span>%M</span> '
+									+ '<span>%S</span>'));
+							});
+							// http://hilios.github.io/jQuery.countdown/documentation.html#event-object
+						})
+					</script>
+				</div>
+			</div>
+			
+		</div>
+		<!-- =/timer -->
+
+		<!-- =cats -->
+		<div class="cats">
+			<div class="container">
+				<ul>
+					<li class="c01">
+						<div class="cat__title">
+							<p>Сотовый <br>поликарбонат</p>
+						</div>
+						<div class="popup" style="opacity: 0">
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat1">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
+							</div>
+						</div>
+					</li>
+					<li class="c02">
+						<p class="cat__title">монолитный <br>поликарбонат</p>
+						<div class="popup" style="opacity: 0">
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat2">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
+							</div>
+						</div>
+					</li>
+					<li class="c03">
+						<p class="cat__title">комплектующие <br>для поликарбоната</p>
+						<div class="popup" style="opacity: 0">
+							<div class="popup__inner">
+								<p>Среди многочисленных типов продукции, выпускаемых компанией «СПК-Пласт», отдельно следует выделить сотовый поликарбонат от производителя. От других разновидностей пластика его отличает особая ячеистая структура, обеспечивающая уникальные механические и физические характеристики ... <a href="#" title="">перейти в каталог</a></p>
+								<div class="carousel">
+									<div class="owl-carousel" id="foocat3">
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p01.png" alt="" />
+											</a>
+										</div>
+										<div>
+											<a href="#" title="5 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p02.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="6 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p03.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="7 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p04.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="8 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p05.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="9 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p06.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="10 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/images/production/p07.png" alt="">
+											</a>
+										</div>
+										<div>
+											<a href="#" title="4 мм / 2R / 2,1х12мм" data-toggle="cattooltip">
+												<img src="/tmp/p04.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<input type="image" src="/template/images/popup-close.png" class="popup__close" alt="Закрыть" />
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- =/cats -->
 	</header>
+	<!-- =/header-->
 
 
 	<!-- =fixed-header -->
@@ -609,7 +824,7 @@
 			<p>Поделитесь с друзьями нашим проектом!</p>
 			<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,lj,viber,whatsapp,skype,telegram"></div>
 		</div>
-  </div>
+	</div>
 	<!-- =/share -->	
 </div>
 
@@ -617,6 +832,17 @@
 <!-- =footer -->
 <footer class="footer">
 	<div class="footer-container">
+		<div class="subscribe">
+			<p>ПОДПИШИТЕСЬ НА НАШИ НОВОСТИ</p>
+			<form action="#" method="post">
+				<fieldset>
+					<div class="flexbox">
+						<input type="email" class="form-control" value="" name="email" placeholder="ваш e-mail" />
+						<input type="submit" value="подписаться" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
 		<div class="footer__top">
 			<div class="footer__contacts">
 				<h5>АДРЕС</h5>
@@ -636,24 +862,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer__logo">
-				<a href="/" title="">
-					<img src="/template/images/plastoptorg.png" alt="" />	
-				</a>
-			</div>
-			<div class="footer__social">
-				<div class="footer__social_inner">
-					<p>НАС МОЖНО НАЙТИ ТУТ</p>
-					<div class="icons flexbox">
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/fb.png" alt="facebook" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/in.png" alt="" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/smile.png" alt="" /></a>
-						<a href="#" title="" target="_blank"><img src="/template/images/icons/rss.png" alt="rss" /></a>
+
+			<div class="footer__logosocial">
+				<div class="footer__logo">
+					<a href="/" title="">
+						<img src="/template/images/plastoptorg.png" alt="" />	
+					</a>
+				</div>
+				<div class="footer__social">
+					<div class="footer__social_inner">
+						<p>НАС МОЖНО НАЙТИ ТУТ</p>
+						<div class="icons flexbox">
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/odn.png" alt="Одноклассники" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/vk.png" alt="Вконтакте" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/fb.png" alt="facebook" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/tw.png" alt="Twitter" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/instagram.png" alt="instagram" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/in.png" alt="" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/gplus.png" alt="Google Plus" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/smile.png" alt="" /></a>
+							<a href="#" title="" target="_blank"><img src="/template/images/icons/rss.png" alt="rss" /></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -669,17 +898,6 @@
 				<a href="https://kreotif.com" target="_blank" title="">создание сайта</a> Digital Agency Kreotif <br>
 				информация о сайте
 			</div>
-		</div>
-		<div class="subscribe">
-			<p>ПОДПИШИТЕСЬ НА НАШИ НОВОСТИ</p>
-			<form action="#" method="post">
-				<fieldset>
-					<div class="flexbox">
-						<input type="email" class="form-control" value="" name="email" placeholder="ваш e-mail" />
-						<input type="submit" value="подписаться" />
-					</div>
-				</fieldset>
-			</form>
 		</div>
 	</div>
 </footer>
