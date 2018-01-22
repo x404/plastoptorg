@@ -145,6 +145,18 @@
 	.intro .tab-content{
 		width: auto;
 	}
+
+	.sertificats{
+		.item{
+			width: 23.5%;
+			img{
+				max-width: 100%;
+			}
+		}
+		.tab-pane .flexbox{
+			justify-content: space-between;
+		}
+	}
 }
 
 

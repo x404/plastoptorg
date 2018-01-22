@@ -35,6 +35,10 @@
 	.order__row .selectric{
 		width: 195px;
 	}
+
+	.neck{
+		background-position: -200px top;
+	}
 }
 
 
@@ -136,6 +140,10 @@
 	.order__row .selectric{
 		width: 162px;
 	}
+
+	.neck{
+		background-position: -385px top;
+	}
 }
 
 @media (max-width: 1160px){
@@ -189,10 +197,18 @@
 
 	.fixed-header{
 		.container{
-			width: 100%;
 			margin: 0;
 			padding: 0 15px;  
+			width: 100%;
 		}
+	}
+
+	h1{
+		font-size: 50px;
+	}
+
+	.main{
+		margin-top: 50px;
 	}
 }
 

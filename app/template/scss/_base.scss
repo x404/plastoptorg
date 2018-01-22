@@ -1114,7 +1114,7 @@ footer{
 
 
 .subscribe{
-	background: #66bb6a;
+	background: #00bd65;
 	left: 50%;
 	margin-left: -50px;
 	padding: 40px 70px 50px;
@@ -1144,7 +1144,7 @@ footer{
 		}
 		&[type="submit"]{
 			@extend .italic;
-			background: #43a047;
+			background: #00a13d;
 			border: none;
 			color: $color2;
 			cursor: pointer;

@@ -840,7 +840,7 @@ footer {
 /* =/share
 ---------------------------*/
 .subscribe {
-  background: #66bb6a;
+  background: #00bd65;
   left: 50%;
   margin-left: -50px;
   padding: 40px 70px 50px;
@@ -862,7 +862,7 @@ footer {
     margin-right: 15px;
     padding: 0 10px; }
   .subscribe input[type="submit"] {
-    background: #43a047;
+    background: #00a13d;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -2792,7 +2792,9 @@ tbody.collapse.show {
     .fixed-header .logo a img:first-child {
       width: 80px; }
   .order__row .selectric {
-    width: 195px; } }
+    width: 195px; }
+  .neck {
+    background-position: -200px top; } }
 
 @media (max-width: 1366px) {
   .header {
@@ -2842,7 +2844,9 @@ tbody.collapse.show {
   .footer-container {
     width: calc(100% - 20px); }
   .order__row .selectric {
-    width: 162px; } }
+    width: 162px; }
+  .neck {
+    background-position: -385px top; } }
 
 @media (max-width: 1160px) {
   .header .cats {
@@ -2872,9 +2876,13 @@ tbody.collapse.show {
     .header .logo__link {
       width: 100%; }
   .fixed-header .container {
-    width: 100%;
     margin: 0;
-    padding: 0 15px; } }
+    padding: 0 15px;
+    width: 100%; }
+  h1 {
+    font-size: 50px; }
+  .main {
+    margin-top: 50px; } }
 
 @media (max-width: 950px) {
   .subscribe {
@@ -3053,7 +3061,13 @@ tbody.collapse.show {
     width: 50%;
     margin-bottom: 50px; }
   .intro .tab-content {
-    width: auto; } }
+    width: auto; }
+  .sertificats .item {
+    width: 23.5%; }
+    .sertificats .item img {
+      max-width: 100%; }
+  .sertificats .tab-pane .flexbox {
+    justify-content: space-between; } }
 
 @media (max-width: 1160px) {
   .header .cats .popup {
