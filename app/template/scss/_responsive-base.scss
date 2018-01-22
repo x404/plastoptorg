@@ -357,6 +357,41 @@
 			padding-top: 15px;
 		}
 	}
+
+	.main{
+		text-align: justify;
+		h1{
+			font-size: 38px;
+			text-align: center;
+		}
+	}
+
+	.about_advantages h1{
+		margin-bottom: 20px;
+	}
+
+	footer{
+		padding-top: 40px;
+	}
+
+	.inner{
+		.header{
+			min-height: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.main__body{
+		margin-top: 0;
+	}
+
+	.header-right{
+		display: block;
+		text-align: center !important;
+		h1{
+			text-align: center !important;
+		}
+	}
 }
 
 
@@ -382,5 +417,11 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 320px){
+	.main h1{
+		font-size: 34px;
 	}
 }

@@ -24,6 +24,10 @@
 
 
 @media (max-width: 767px){
+	.o-menu .inner .header{
+		z-index: 99999;
+	}
+
 	.navbar-toggle{
 		background-color: $color6;
 		border: none;
