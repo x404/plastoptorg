@@ -2,6 +2,8 @@
 	background: url(../images/bg-3.jpg) no-repeat center top / contain;
 	.header{
 		min-height: 668px;
+		position: relative;
+		z-index: 5;
 		.logo{
 			padding-top: 35px;
 			position: relative;
@@ -121,6 +123,7 @@
 	position: absolute;
 	top: 60px;
 	width: 100%;
+	// z-index: 3;
 	.title{
 		@extend .bi;
 		font-size: 48px;
@@ -134,7 +137,7 @@
 	.breadcrumbs,
 	.btn{
 		position: relative;
-		z-index: 3;		
+		z-index: 10;		
 	}
 
 	&.neck-1{background-image: url(../images/neck-1.png)}

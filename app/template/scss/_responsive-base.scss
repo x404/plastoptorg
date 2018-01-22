@@ -31,6 +31,10 @@
 			width: 80px;
 		}
 	}
+
+	.order__row .selectric{
+		width: 195px;
+	}
 }
 
 
@@ -74,9 +78,6 @@
 
 
 @media (max-width: 1199px){
-
-
-
 	.fixed-header{
 		.logo a{
 			width: 150px;
@@ -115,7 +116,7 @@
 
 
 	footer{
-		background-size: containe;
+		background-size: contain;
 		height: auto;
 	}
 	.footer{
@@ -129,6 +130,11 @@
 		&-container{
 			width: calc(100% - 20px);
 		}
+	}
+
+
+	.order__row .selectric{
+		width: 162px;
 	}
 }
 

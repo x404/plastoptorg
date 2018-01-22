@@ -73,10 +73,13 @@ $(document).ready(function(){
 				stagePadding: 0
 			},
 			992:{
-				items:1
+				items:4
 			},
 			1250:{
-				items:2
+				items:5
+			},
+			1366: {
+				items: 6
 			},
 			1550:{
 				items:7
@@ -99,10 +102,13 @@ $(document).ready(function(){
 				stagePadding: 0
 			},
 			992:{
-				items:1
+				items:4
 			},
 			1250:{
-				items:2
+				items:5
+			},
+			1366: {
+				items: 6
 			},
 			1550:{
 				items:7
@@ -125,10 +131,13 @@ $(document).ready(function(){
 				stagePadding: 0
 			},
 			992:{
-				items:1
+				items:4
 			},
 			1250:{
-				items:2
+				items:5
+			},
+			1366: {
+				items: 6
 			},
 			1550:{
 				items:7
