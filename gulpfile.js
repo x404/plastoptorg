@@ -235,6 +235,8 @@ gulp.task('check-for-favicon-update', function(done) {
 gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
+		'app/template/css/animation.css',
+		'app/template/css/selectric.css',
 		'app/template/css/styles.min.css',
 		'app/template/css/owl.carousel.css'
 	])
@@ -248,6 +250,11 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest('dist/tmp'));
 	var buildFonts = gulp.src(config.sourceDir + '/fonts/**/*').pipe(gulp.dest('dist/template/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest('dist/outdatedbrowser'));
+	var buildIMG = gulp.src('app/images/**/*').pipe(gulp.dest('dist/images'));
+	var buildDwt = gulp.src('app/Templates/**/*').pipe(gulp.dest('dist/Templates'));
+
+	var buildPHP1 = gulp.src('app/*.php').pipe(gulp.dest('dist'));
+	var buildJson = gulp.src('app/db.json').pipe(gulp.dest('dist'));
 
 });
 

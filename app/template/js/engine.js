@@ -205,9 +205,9 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				let h = $(window).height();
+				// let h = $(window).height();
 				$('body').addClass('o-menu');
-				$('#navbar').height(h);
+				// $('#navbar').height(h);
 			},
 			closeMenu = function(e){
 				e.preventDefault();

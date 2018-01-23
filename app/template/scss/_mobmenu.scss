@@ -24,8 +24,21 @@
 
 
 @media (max-width: 767px){
-	.o-menu .inner .header{
-		z-index: 99999;
+	.o-menu{
+		.inner .header{
+			z-index: 99999;
+		}
+
+		nav .nav-tabs li ul{
+			box-shadow: none;
+		}
+		.header nav{
+			padding-top: 0;
+		}
+
+		#navbar{
+			height: 100%;
+		}
 	}
 
 	.navbar-toggle{

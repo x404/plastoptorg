@@ -2597,6 +2597,12 @@ tbody.collapse.show {
 @media (max-width: 767px) {
   .o-menu .inner .header {
     z-index: 99999; }
+  .o-menu nav .nav-tabs li ul {
+    box-shadow: none; }
+  .o-menu .header nav {
+    padding-top: 0; }
+  .o-menu #navbar {
+    height: 100%; }
   .navbar-toggle {
     background-color: #ba2a2a;
     border: none;
@@ -3054,7 +3060,9 @@ tbody.collapse.show {
     .homepage .header .contacts {
       color: #000; }
       .homepage .header .contacts a {
-        color: #000; } }
+        color: #000; }
+    .homepage .header .logo {
+      width: 175px; } }
 
 @media (max-width: 400px) {
   .footer__logo {
