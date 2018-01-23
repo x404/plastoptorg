@@ -214,17 +214,111 @@
 
 
 // ////////////////////
-.header{margin-bottom: 0;}
+	.header{margin-bottom: 0;}
 	.neck{
-		display: none;
+		background: none !important;
+		display: block;
+		height: auto;
+		position: static;
+		margin-top: 20px;
+		padding-left: 0;
+		text-align: center;
+		.btn{
+			display: none;
+		}
+
+		.title{
+			display: none;
+		}
 	}
+
+
+
+	.breadcrumbs{
+		padding-left: 0;
+		ul{
+			display: block;
+			text-align: center;
+			li{
+				display: inline-block;
+				&:first-child a{
+					color: $color1;
+				}
+			}
+		}
+	}
+
 
 	.main__body{
 		margin-top: 0;
 	}
 
-	.inner .header{
-		min-height: 0
+	.inner{
+		background: none;
+		.header{
+			min-height: 0;
+			color: $color1;
+			a{
+				color: $color1;	
+			}
+			&__top{
+				display: block;
+				.logo{
+					padding-top: 10px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				nav{
+					color: $color1;
+					padding-top: 20px;
+				}
+			}
+
+			.contacts{
+				padding-top: 25px;
+			}
+		}
+
+		main{
+			h1{
+				font-size: 40px;				
+			}
+		}
+		.main{
+			margin-top: 20px;
+		}
+	}
+
+
+
+	nav{
+		.nav-tabs{
+			justify-content: center;
+		}
+		ul{
+			justify-content: center;
+		}
+	}
+
+
+
+
+	.header-right{
+		display: block !important;
+		text-align: center !important;
+		h1,
+		.title{
+			text-align: center !important;
+		}
+	}
+
+	.text-right{
+		text-align: center !important;
+	}
+
+	nav .nav-tabs li ul{
+		box-shadow: 0px 0px 3px 0px black		
 	}
 }
 
@@ -246,10 +340,6 @@
 			margin-right: auto;
 			width: 357px;
 		}
-	}
-
-	nav ul{
-		justify-content: center;
 	}
 }
 
@@ -350,9 +440,6 @@
 			display: block;
 			text-align: center;
 		}
-		&__copyright{
-
-		}
 
 		.kreotif{
 			color: $color3;
@@ -401,11 +488,19 @@
 		margin-top: 0;
 	}
 
-	.header-right{
-		display: block;
-		text-align: center !important;
-		h1{
-			text-align: center !important;
+}
+
+
+@media (max-width: 600px){
+	.homepage{
+		background: none;
+		.header{
+			.contacts{
+				color: $color1;
+				a{
+					color: $color1;
+				}
+			}
 		}
 	}
 }
@@ -435,6 +530,30 @@
 		}
 	}
 }
+
+@media (max-width: 350px){
+	.inner .header .logo{
+		padding-top: 0;
+		margin-left: 80px;
+	}
+
+	#inline-order{
+		opacity: .8;
+		top: 105px;
+	}
+}
+
+@media (max-width: 330px){
+	.inner .header{
+		.logo{
+			margin-left: 70px;
+		}
+		.contacts{
+			padding-top: 10px;
+		}
+	}
+}
+
 
 @media (max-width: 320px){
 	.main h1{

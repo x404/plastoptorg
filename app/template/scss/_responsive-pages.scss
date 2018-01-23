@@ -298,6 +298,16 @@
 			width: 100%;
 		}
 	}
+
+
+	.about_advantages{
+		margin-top: 0;
+		h1{
+			font-size: 40px;
+		}
+	}
+
+
 }
 
 
@@ -414,13 +424,15 @@
 		width: 90%;
 	}
 
-	.about_advantages{
-		margin-top: 0;
-	}
 
 	.sertificats h1,
 	.main main h1{
 		margin-bottom: 20px;
+	}
+
+	.neck{
+		padding-left: 0;
+		padding-top: 15px;
 	}
 }
 
