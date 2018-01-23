@@ -315,8 +315,12 @@
 		margin-left: -385px;
 	}
 
-	.feedback__form .row input.form-control{
-		width: 220px;
+	.feedback,
+	.order
+	{
+		&__form .row input.form-control{
+			width: 220px;
+		}
 	}
 
 	.brands{
@@ -515,28 +519,51 @@
 		padding-left: 0;
 		padding-top: 15px;
 	}
+
+	.brand-page{
+		.flexbox{
+			flex-direction: column;
+		}
+		main{
+			order: 1;
+		}
+		.brand__logo{
+			order: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.pricelist-table{
+		.container{
+			padding: 0;
+		}
+	}
 }
 
 
 
 @media (max-width: 750px){
-	.feedback__form .row{
-		display: block;
-		input.form-control,
-		textarea{
+	.feedback,
+	.order{
+		&__form .row{
 			display: block;
-			width: 100%;
-		}
+			input.form-control,
+			textarea{
+				display: block;
+				width: 100%;
+			}
 
-		#msg{
-			width: 100%;
-		}
-		textarea{
-			height: 100px;
-		}
+			#msg{
+				width: 100%;
+			}
+			textarea{
+				height: 100px;
+			}
 
-		.file-upload{
-			bottom: 4px;
+			.file-upload{
+				bottom: 0;
+			}
 		}
 	}
 
@@ -672,7 +699,6 @@
 			}
 		}
 	}
-
 }
 
 
@@ -736,6 +762,16 @@
 	.inner .text .owl-carousel,
 	.inner main .owl-carousel{
 		width: 300px;
+	}
+
+	.brand-nav{
+		display: block;
+		padding-left: 0;
+		margin: 18px 0;
+		text-align: center;
+		.btn{
+			margin-top: 10px;
+		}
 	}
 }
 
@@ -946,16 +982,27 @@
 		}
 	}
 
+	.order_accessories{
+		&__title{
+			font-size: 15px;
+		}
+		.btn{
+			width: auto;
+		}
+	}
 }
 
+
 @media (max-width: 330px){
-	.header .timer__digit{
-		transform: scale(.7)
+	.header{
+		.timer__digit{
+			transform: scale(.7)
+		}
+		.cats .cat__title{
+			font-size: 18px;
+		}
 	}
 
-	.header .cats .cat__title{
-		font-size: 18px;
-	}
 
 	.products .title{
 		margin-bottom: 20px;
@@ -974,5 +1021,14 @@
 
 	.faq__title{
 		text-align: left;
+	}
+
+	.brand{
+		&__logo{
+			width: 285px;
+		}
+		&-page main{
+			margin-top: 10px;
+		}
 	}
 }

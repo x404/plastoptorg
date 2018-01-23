@@ -2843,7 +2843,8 @@ tbody.collapse.show {
     padding-top: 50px !important; }
     .effect:before {
       display: none !important; }
-  .feedback__form .row input.form-control {
+  .feedback__form .row input.form-control,
+  .order__form .row input.form-control {
     width: 280px; }
   footer {
     background-size: contain;
@@ -3266,7 +3267,8 @@ tbody.collapse.show {
     margin-left: 0; }
   .address__panel {
     margin-left: -385px; }
-  .feedback__form .row input.form-control {
+  .feedback__form .row input.form-control,
+  .order__form .row input.form-control {
     width: 220px; }
   .brands .flexbox {
     margin-bottom: 0; }
@@ -3374,21 +3376,37 @@ tbody.collapse.show {
     margin-bottom: 20px; }
   .neck {
     padding-left: 0;
-    padding-top: 15px; } }
+    padding-top: 15px; }
+  .brand-page .flexbox {
+    flex-direction: column; }
+  .brand-page main {
+    order: 1; }
+  .brand-page .brand__logo {
+    order: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .pricelist-table .container {
+    padding: 0; } }
 
 @media (max-width: 750px) {
-  .feedback__form .row {
+  .feedback__form .row,
+  .order__form .row {
     display: block; }
     .feedback__form .row input.form-control,
-    .feedback__form .row textarea {
+    .feedback__form .row textarea,
+    .order__form .row input.form-control,
+    .order__form .row textarea {
       display: block;
       width: 100%; }
-    .feedback__form .row #msg {
+    .feedback__form .row #msg,
+    .order__form .row #msg {
       width: 100%; }
-    .feedback__form .row textarea {
+    .feedback__form .row textarea,
+    .order__form .row textarea {
       height: 100px; }
-    .feedback__form .row .file-upload {
-      bottom: 4px; }
+    .feedback__form .row .file-upload,
+    .order__form .row .file-upload {
+      bottom: 0; }
   .address-page .flexbox {
     display: block;
     text-align: center; }
@@ -3500,7 +3518,14 @@ tbody.collapse.show {
     padding-right: 120px; }
   .inner .text .owl-carousel,
   .inner main .owl-carousel {
-    width: 300px; } }
+    width: 300px; }
+  .brand-nav {
+    display: block;
+    padding-left: 0;
+    margin: 18px 0;
+    text-align: center; }
+    .brand-nav .btn {
+      margin-top: 10px; } }
 
 @media (max-width: 450px) {
   .title {
@@ -3607,7 +3632,11 @@ tbody.collapse.show {
   .catalog__list .products__width {
     width: 100%; }
   .catalog__list .products__cell {
-    width: 90%; } }
+    width: 90%; }
+  .order_accessories__title {
+    font-size: 15px; }
+  .order_accessories .btn {
+    width: auto; } }
 
 @media (max-width: 330px) {
   .header .timer__digit {
@@ -3623,4 +3652,8 @@ tbody.collapse.show {
   .reviews__text {
     line-height: 1.3; }
   .faq__title {
-    text-align: left; } }
+    text-align: left; }
+  .brand__logo {
+    width: 285px; }
+  .brand-page main {
+    margin-top: 10px; } }
