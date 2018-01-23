@@ -2944,8 +2944,16 @@ tbody.collapse.show {
       margin-top: 20px; }
   nav .nav-tabs {
     justify-content: center; }
+    nav .nav-tabs li ul {
+      box-shadow: 0px 0px 3px 0px black; }
   nav ul {
     justify-content: center; }
+  .table-responsive {
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
   .header-right {
     display: block !important;
     text-align: center !important; }
@@ -2953,9 +2961,7 @@ tbody.collapse.show {
     .header-right .title {
       text-align: center !important; }
   .text-right {
-    text-align: center !important; }
-  nav .nav-tabs li ul {
-    box-shadow: 0px 0px 3px 0px black; } }
+    text-align: center !important; } }
 
 @media (max-width: 950px) {
   .subscribe {
@@ -3185,7 +3191,13 @@ tbody.collapse.show {
 @media (max-width: 1160px) {
   .header .cats .popup {
     color: #fff;
-    width: 100%; } }
+    width: 100%; }
+  .insert .box {
+    height: auto;
+    background: none;
+    padding: 10px 0;
+    width: 95%;
+    text-align: center; } }
 
 @media (max-width: 1100px) {
   .inner .text .owl-carousel,
@@ -3254,7 +3266,18 @@ tbody.collapse.show {
   .about_advantages {
     margin-top: 0; }
     .about_advantages h1 {
-      font-size: 40px; } }
+      font-size: 40px; }
+  .address .address__info,
+  .address .btn-groups {
+    width: 100%; }
+  .address-page .flexbox {
+    justify-content: center; }
+  .pricelist .nav {
+    display: block;
+    margin-top: 20px; }
+    .pricelist .nav .btn {
+      min-width: 300px;
+      margin: 10px 0; } }
 
 @media (max-width: 950px) {
   .address .title {
@@ -3340,7 +3363,12 @@ tbody.collapse.show {
     .feedback__form .row textarea {
       height: 100px; }
     .feedback__form .row .file-upload {
-      bottom: 4px; } }
+      bottom: 4px; }
+  .address-page .flexbox {
+    display: block;
+    text-align: center; }
+    .address-page .flexbox .cell {
+      margin-bottom: 10px; } }
 
 @media (max-width: 700px) {
   .header .timer__text {
@@ -3518,7 +3546,15 @@ tbody.collapse.show {
   .effect {
     padding-top: 0 !important; }
   .text {
-    text-align: justify; } }
+    text-align: justify; }
+  .pricelist .nav li {
+    margin-left: 0;
+    margin-right: 0; }
+  .pricelist .nav .btn {
+    font-size: 16px;
+    margin: 5px 0;
+    min-width: 270px;
+    padding-top: 8px; } }
 
 @media (max-width: 330px) {
   .header .timer__digit {

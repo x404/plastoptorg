@@ -166,7 +166,15 @@
 			color: $color2;
 			width: 100%;
 		}
-	}	
+	}
+
+	.insert .box{
+		height: auto;
+		background: none;
+		padding: 10px 0;
+		width: 95%;
+		text-align: center;
+	}
 }
 
 
@@ -308,6 +316,24 @@
 	}
 
 
+	.address{
+		.address__info, 
+		.btn-groups{
+			width: 100%;
+		}
+		&-page .flexbox{
+			justify-content: center;
+		}
+	}
+
+	.pricelist .nav{
+		display: block;
+		margin-top: 20px;
+		.btn{
+			min-width: 300px;
+			margin: 10px 0;
+		}
+	}
 }
 
 
@@ -458,6 +484,14 @@
 			bottom: 4px;
 		}
 	}
+
+	.address-page .flexbox{
+		display: block;
+		text-align: center;
+		.cell{
+			margin-bottom: 10px;
+		}
+	}
 }
 
 
@@ -571,6 +605,8 @@
 			width: 300px;
 		}
 	}
+
+
 }
 
 
@@ -778,6 +814,19 @@
 
 	.text{
 		text-align: justify;
+	}
+
+	.pricelist .nav{
+		li{
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.btn{
+			font-size: 16px;
+			margin: 5px 0;
+			min-width: 270px;
+			padding-top: 8px;
+		}
 	}
 }
 
