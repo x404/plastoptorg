@@ -210,6 +210,22 @@
 	.main{
 		margin-top: 50px;
 	}
+
+
+
+// ////////////////////
+.header{margin-bottom: 0;}
+	.neck{
+		display: none;
+	}
+
+	.main__body{
+		margin-top: 0;
+	}
+
+	.inner .header{
+		min-height: 0
+	}
 }
 
 

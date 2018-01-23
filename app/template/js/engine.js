@@ -156,17 +156,27 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 20
+				stagePadding: 60
 			},
-			900:{
+			450:{
+				items:2,
+				stagePadding: 50
+			},
+			550:{
 				items:2,
 				stagePadding: 0
 			},
-			992:{
-				items:1
+			600:{
+				items:3
+			},
+			900:{
+				items:4
+			},
+			1100:{
+				items:5
 			},
 			1250:{
-				items:2
+				items:6
 			},
 			1550:{
 				items:7
