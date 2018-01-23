@@ -3134,7 +3134,17 @@ tbody.collapse.show {
     right: -21px; }
   .products__inner .shape {
     bottom: -5px;
-    right: 35px; } }
+    right: 35px; }
+  .catalog__list .products__title {
+    width: 100%; }
+  .catalog__list .products__colors {
+    top: calc(100% + 9px);
+    right: -57px; }
+    .catalog__list .products__colors .flexbox {
+      display: flex; }
+    .catalog__list .products__colors img {
+      width: 40px;
+      height: 40px; } }
 
 @media (max-width: 1366px) {
   .header .cats .container {
@@ -3277,7 +3287,15 @@ tbody.collapse.show {
     margin-top: 20px; }
     .pricelist .nav .btn {
       min-width: 300px;
-      margin: 10px 0; } }
+      margin: 10px 0; }
+  .catalog__list .products__width {
+    width: 50%; }
+  .paraminfo .nav-tabs {
+    display: block;
+    text-align: center; }
+    .paraminfo .nav-tabs .btn {
+      min-width: 290px;
+      margin-bottom: 10px; } }
 
 @media (max-width: 950px) {
   .address .title {
@@ -3432,7 +3450,11 @@ tbody.collapse.show {
   .order_accessories .btn {
     display: block;
     margin: 10px auto;
-    width: 300px; } }
+    width: 300px; }
+  .catalog__list .products__width {
+    width: 368px; }
+    .catalog__list .products__width .btn {
+      margin-top: 20px; } }
 
 @media (max-width: 590px) {
   .inner .text .owl-carousel,
@@ -3510,7 +3532,21 @@ tbody.collapse.show {
   .reviews__text {
     text-align: justify; }
   footer {
-    padding-top: 50px; } }
+    padding-top: 50px; }
+  .catalog__list .products__width {
+    width: 85%; }
+  .catalog__list .products__colors {
+    right: -30px;
+    top: calc(100% + 7px);
+    width: 280px; }
+    .catalog__list .products__colors:before {
+      background: url(../images/color-popup2.png) no-repeat left top;
+      background-size: contain;
+      left: 0;
+      width: 280px; }
+    .catalog__list .products__colors .flexbox {
+      justify-content: center;
+      width: 100%; } }
 
 @media (max-width: 375px) {
   .header .cats .cat__title {
@@ -3554,7 +3590,17 @@ tbody.collapse.show {
     font-size: 16px;
     margin: 5px 0;
     min-width: 270px;
-    padding-top: 8px; } }
+    padding-top: 8px; }
+  .paraminfo {
+    padding-top: 30px !important; }
+    .paraminfo .nav-tabs .btn {
+      font-size: 15px;
+      padding-top: 9px;
+      min-width: 260px; }
+  .catalog__list .products__width {
+    width: 100%; }
+  .catalog__list .products__cell {
+    width: 90%; } }
 
 @media (max-width: 330px) {
   .header .timer__digit {
