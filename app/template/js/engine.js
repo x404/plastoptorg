@@ -160,7 +160,7 @@ $(document).ready(function(){
 			},
 			450:{
 				items:2,
-				stagePadding: 50
+				stagePadding: 0
 			},
 			550:{
 				items:2,

@@ -363,12 +363,14 @@
 		}
 	}
 
-	.pricelist .nav{
-		display: block;
-		margin-top: 20px;
-		.btn{
-			min-width: 300px;
-			margin: 10px 0;
+	.pricelist{
+		.nav{
+			display: block;
+			margin-top: 20px;
+			.btn{
+				min-width: 300px;
+				margin: 10px 0;
+			}
 		}
 	}
 
@@ -722,6 +724,19 @@
 			width: 100% !important;
 		}
 	}
+
+
+	.card{
+		.nav{
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+			.btn{
+				min-width: 300px;
+				margin: 10px auto;
+			}
+		}
+	}
 }
 
 
@@ -761,7 +776,7 @@
 
 	.inner .text .owl-carousel,
 	.inner main .owl-carousel{
-		width: 300px;
+		width: 70%;
 	}
 
 	.brand-nav{
@@ -880,6 +895,11 @@
 			width: 100%;
 		}
 	}
+
+	.inner .text .owl-carousel,
+	.inner main .owl-carousel{
+		width: 300px;
+	}
 }
 
 
@@ -945,16 +965,19 @@
 		text-align: justify;
 	}
 
-	.pricelist .nav{
-		li{
-			margin-left: 0;
-			margin-right: 0;
-		}
-		.btn{
-			font-size: 16px;
-			margin: 5px 0;
-			min-width: 270px;
-			padding-top: 8px;
+	.pricelist,
+	.card{
+		.nav{
+			li{
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.btn{
+				font-size: 16px;
+				margin: 5px auto;
+				min-width: 270px;
+				padding-top: 8px;
+			}
 		}
 	}
 
@@ -988,6 +1011,15 @@
 		}
 		.btn{
 			width: auto;
+		}
+	}
+
+
+	.card{
+		.nav{
+			.btn{
+				padding-top: 0;
+			}
 		}
 	}
 }
@@ -1030,5 +1062,10 @@
 		&-page main{
 			margin-top: 10px;
 		}
+	}
+
+	.inner .text .owl-carousel,
+	.inner main .owl-carousel{
+		width: 280px;
 	}
 }

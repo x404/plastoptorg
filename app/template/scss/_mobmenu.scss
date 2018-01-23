@@ -52,7 +52,7 @@
 		text-align: center;
 		top: 0;
 		width: 70px;
-		z-index: 99;
+		z-index: 99999;
 		.icon-bar{
 			background-color: $color2;
 			display: block;
@@ -61,9 +61,10 @@
 			width: 30px;
 		}
 		&:hover{
-			background-color: $color2;
+			 background-color: #cc1818;
+
 			.icon-bar{
-				background-color: $color6;
+				background-color: $color2;
 			}
 		}
 	}

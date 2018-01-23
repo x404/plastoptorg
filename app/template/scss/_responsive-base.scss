@@ -104,7 +104,12 @@
 		&:before{
 			display: none !important;
 		}
+		.container{
+			position: static;
+		}
 	}
+
+
 
 
 	.feedback,
@@ -237,6 +242,7 @@
 
 	.breadcrumbs{
 		padding-left: 0;
+		position: static !important;
 		ul{
 			display: block;
 			text-align: center;

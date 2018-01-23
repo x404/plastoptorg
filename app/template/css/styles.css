@@ -2614,7 +2614,7 @@ tbody.collapse.show {
     text-align: center;
     top: 0;
     width: 70px;
-    z-index: 99; }
+    z-index: 99999; }
     .navbar-toggle .icon-bar {
       background-color: #fff;
       display: block;
@@ -2622,9 +2622,9 @@ tbody.collapse.show {
       margin: 8px auto;
       width: 30px; }
     .navbar-toggle:hover {
-      background-color: #fff; }
+      background-color: #cc1818; }
       .navbar-toggle:hover .icon-bar {
-        background-color: #ba2a2a; }
+        background-color: #fff; }
   .show-sm {
     display: block; }
   .o-menu .header__nav ul {
@@ -2843,6 +2843,8 @@ tbody.collapse.show {
     padding-top: 50px !important; }
     .effect:before {
       display: none !important; }
+    .effect .container {
+      position: static; }
   .feedback__form .row input.form-control,
   .order__form .row input.form-control {
     width: 280px; }
@@ -2911,7 +2913,8 @@ tbody.collapse.show {
     .neck .title {
       display: none; }
   .breadcrumbs {
-    padding-left: 0; }
+    padding-left: 0;
+    position: static !important; }
     .breadcrumbs ul {
       display: block;
       text-align: center; }
@@ -3493,7 +3496,14 @@ tbody.collapse.show {
     text-align: center; }
   .text iframe,
   main iframe {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .card .nav {
+    display: block;
+    margin-top: 20px;
+    text-align: center; }
+    .card .nav .btn {
+      min-width: 300px;
+      margin: 10px auto; } }
 
 @media (max-width: 530px) {
   .header {
@@ -3518,7 +3528,7 @@ tbody.collapse.show {
     padding-right: 120px; }
   .inner .text .owl-carousel,
   .inner main .owl-carousel {
-    width: 300px; }
+    width: 70%; }
   .brand-nav {
     display: block;
     padding-left: 0;
@@ -3578,7 +3588,10 @@ tbody.collapse.show {
       width: 280px; }
     .catalog__list .products__colors .flexbox {
       justify-content: center;
-      width: 100%; } }
+      width: 100%; }
+  .inner .text .owl-carousel,
+  .inner main .owl-carousel {
+    width: 300px; } }
 
 @media (max-width: 375px) {
   .header .cats .cat__title {
@@ -3615,12 +3628,14 @@ tbody.collapse.show {
     padding-top: 0 !important; }
   .text {
     text-align: justify; }
-  .pricelist .nav li {
+  .pricelist .nav li,
+  .card .nav li {
     margin-left: 0;
     margin-right: 0; }
-  .pricelist .nav .btn {
+  .pricelist .nav .btn,
+  .card .nav .btn {
     font-size: 16px;
-    margin: 5px 0;
+    margin: 5px auto;
     min-width: 270px;
     padding-top: 8px; }
   .paraminfo {
@@ -3636,7 +3651,9 @@ tbody.collapse.show {
   .order_accessories__title {
     font-size: 15px; }
   .order_accessories .btn {
-    width: auto; } }
+    width: auto; }
+  .card .nav .btn {
+    padding-top: 0; } }
 
 @media (max-width: 330px) {
   .header .timer__digit {
@@ -3656,4 +3673,7 @@ tbody.collapse.show {
   .brand__logo {
     width: 285px; }
   .brand-page main {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .inner .text .owl-carousel,
+  .inner main .owl-carousel {
+    width: 280px; } }
