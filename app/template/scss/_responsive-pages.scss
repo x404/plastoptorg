@@ -161,6 +161,16 @@
 			width: 50%;
 			margin-bottom: 50px;
 		}
+
+		&-page{
+			.flexbox{
+				margin-top: 0;
+			}
+			.brands__cell{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	.intro .tab-content{
@@ -178,6 +188,8 @@
 			justify-content: space-between;
 		}
 	}
+
+
 }
 
 
