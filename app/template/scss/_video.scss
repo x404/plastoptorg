@@ -61,28 +61,28 @@
 				&-bottom-small{
 					margin-bottom: 18px;
 				}
-				a{
-					// height: 365px;
-					
-				}
 				img{
 					height: 100%;
 				}
 			}
-			.col-{
-				&lg-3{
-					width: 25%;
-				}
-				&lg-6{
-					width: 50%;
-				}
-				&lg-1,
-				&lg-2{
-					margin-top: 18px;
-					display: flex;
-					flex-flow: column;
-				}
-			}
+		}
+	}
+}
+
+
+@media (min-width: 665px){
+	.col-{
+		&lg-3{
+			width: 25%;
+		}
+		&lg-6{
+			width: 50%;
+		}
+		&lg-1,
+		&lg-2{
+			margin-top: 18px;
+			display: flex;
+			flex-flow: column;
 		}
 	}
 }

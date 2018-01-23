@@ -273,11 +273,7 @@
 	.address__panel{
 		margin-left: -385px;
 	}
-}
 
-
-
-@media (max-width: 991px){
 	.feedback__form .row input.form-control{
 		width: 220px;
 	}
@@ -295,9 +291,14 @@
 	.articles header{
 		margin-bottom: 25px;
 	}
+
+	.video__list{
+		width: 100%;
+		.row .image img{
+			width: 100%;
+		}
+	}
 }
-
-
 
 
 @media (max-width: 950px){
@@ -515,6 +516,11 @@
 		.text-right{
 			text-align: center;
 		}
+	}
+
+	.video__list .row{
+		display: block;
+		text-align: center;
 	}
 }
 
