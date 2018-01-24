@@ -680,13 +680,13 @@
 var map;
 var myCollection;
 ymaps.ready(function () {
-    map = new ymaps.Map('map', {
-        center: [55.738287, 37.747568],
-        zoom: 16
-    });
+	map = new ymaps.Map('map', {
+		center: [55.738287, 37.747568],
+		zoom: 16
+	});
 
 	myCollection = new ymaps.GeoObjectCollection(null, {
-        preset: 'islands#redDotIcon'
+		preset: 'islands#redDotIcon'
 	});
 	myCollection.add(new ymaps.Placemark(
 		[55.738287, 37.747568],
@@ -695,6 +695,7 @@ ymaps.ready(function () {
 			balloonContent: ''
 		}
 	));
+	map.behaviors.disable('scrollZoom'); 
 
 	myCollection.add(new ymaps.Placemark(
 		[55.843884, 38.200813],
@@ -704,7 +705,15 @@ ymaps.ready(function () {
 		}
 	));
 	map.geoObjects.add(myCollection);
-})
+
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+});
 
 function go_to(lat,lon){
 	map.setCenter([lat, lon], 16);
