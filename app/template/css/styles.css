@@ -247,7 +247,7 @@ input::-moz-focus-inner {
   .btn-orange {
     background-color: #ff6e18; }
   .btn-brown {
-    background-color: #c86b28; }
+    background-color: #e26c1c; }
   .btn-active {
     background-color: red; }
   .btn-hoverred:hover {
@@ -1376,7 +1376,7 @@ label.error {
 /* =/pagination
 ---------------------------*/
 .insert {
-  background: url(../images/insert-bg.jpg) no-repeat center top/cover #d68c35;
+  background: url(../images/bg-2.jpg) no-repeat center top/cover #d68c35;
   margin: 45px 0;
   padding: 42px 0; }
   .insert .box {
@@ -2128,7 +2128,7 @@ label.error {
   overflow: scroll; }
 
 .close-modal {
-  background-color: #ba2a2a;
+  background-color: #d92525;
   border-radius: 16px;
   border: none;
   cursor: pointer;
@@ -2141,9 +2141,12 @@ label.error {
   z-index: 99; }
   .close-modal img {
     margin-top: 2px;
-    vertical-align: top; }
+    vertical-align: top;
+    transition: transform .2s; }
   .close-modal:hover span {
     text-decoration: underline; }
+  .close-modal:hover img {
+    transform: rotate(90deg); }
   .close-modal span {
     color: #ff6e18; }
 
@@ -2207,6 +2210,9 @@ form .thank {
   #qorder .feedback__form .file-upload,
   #addreview .feedback__form .file-upload {
     background: url(../images/upload.png) no-repeat left -53px; }
+    #qorder .feedback__form .file-upload:hover,
+    #addreview .feedback__form .file-upload:hover {
+      background-position: left -212px; }
 
 #addreview .form-policy {
   margin-top: 40px; }
@@ -2990,6 +2996,7 @@ tbody.collapse.show {
   .footer__top {
     display: block; }
   .footer__logo {
+    display: none;
     justify-content: center; }
     .footer__logo:after {
       right: 0; }
@@ -3000,10 +3007,16 @@ tbody.collapse.show {
   .footer__logosocial {
     display: block; }
   .footer__social {
+    background: none;
     margin-top: 50px; }
-  .footer__social_inner .icons {
-    justify-content: center;
-    margin-left: 0; } }
+  .footer__social_inner {
+    background: none;
+    text-align: center; }
+    .footer__social_inner p {
+      position: static; }
+    .footer__social_inner .icons {
+      justify-content: center;
+      margin-left: 0; } }
 
 @media (max-width: 820px) {
   .header .cats ul {
@@ -3314,7 +3327,11 @@ tbody.collapse.show {
     flex-wrap: wrap; }
     .address .flexbox .btn {
       margin-bottom: 10px;
-      min-width: 250px; } }
+      min-width: 250px; }
+  .card .nav-tabs {
+    flex-wrap: wrap; }
+    .card .nav-tabs .btn {
+      margin-bottom: 10px; } }
 
 @media (max-width: 820px) {
   .inner .text .owl-carousel,

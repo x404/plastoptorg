@@ -39,20 +39,27 @@ $(document).on('change', 'select[name="type"]' , function(e){
 				type = 'sot';
 				break;
 			default:
+				thickness = '';
+				size = '';
+				color = '';
+				brand = '';
+				row.find('select').attr('disabled', 'disabled');
 				break;
 		};
 
-		// формируем новые опции
-		thickness = options(dbdata[type].thickness);
-		size = options(dbdata[type].size);
-		color = options(dbdata[type].color);
-		brand = options(dbdata[type].brand);
-		
-		// добавляем новые опции в select
-		appendOption('thickness', thickness, row);
-		appendOption('size', size, row);
-		appendOption('color', color, row);
-		appendOption('brand', brand, row);
+
+		if (type != ''){
+			// формируем новые опции
+			thickness = options(dbdata[type].thickness);
+			size = options(dbdata[type].size);
+			color = options(dbdata[type].color);
+			brand = options(dbdata[type].brand);
+		}
+			// добавляем новые опции в select
+			appendOption('thickness', thickness, row);
+			appendOption('size', size, row);
+			appendOption('color', color, row);
+			appendOption('brand', brand, row);
 });
 
 
@@ -95,22 +102,22 @@ $(document).on('click', '.manage .plus' , function(e){
 				</select>
 			</div>
 			<div class="param2">
-				<select name="thickness" class="required" disabled="">
+				<select name="thickness" class="required" disabled="disabled">
 					<option value="">толщина</option>
 				</select>
 			</div>
 			<div class="param3">
-				<select name="size" class="required" disabled="">
+				<select name="size" class="required" disabled="disabled">
 					<option value="">размер</option>
 				</select>
 			</div>
 			<div class="param4">
-				<select name="color" class="required" disabled="">
+				<select name="color" class="required" disabled="disabled">
 					<option value="">цвет</option>
 				</select>
 			</div>
 			<div class="param5">
-				<select name="brand" disabled="">
+				<select name="brand" disabled="disabled">
 					<option value="">торговая марка</option>
 				</select>
 			</div>

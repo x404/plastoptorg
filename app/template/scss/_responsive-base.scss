@@ -370,6 +370,7 @@
 			display: block;
 		}
 		&__logo{
+			display: none;
 			justify-content: center;
 			&:after{
 				right: 0;
@@ -386,11 +387,19 @@
 		}
 
 		&__social{
+			background: none;
 			margin-top: 50px;
 		}
-		&__social_inner .icons{
-			justify-content: center;
-			margin-left: 0;
+		&__social_inner{
+			background: none;
+			text-align: center;
+			p{
+				position: static;
+			}
+			.icons{
+				justify-content: center;
+				margin-left: 0;
+			}
 		}
 	}
 }

@@ -118,7 +118,7 @@
 
 .close-modal{
 	@extend .italic;
-	background-color: #ba2a2a;
+	background-color: #d92525;
 	border-radius: 16px;
 	border: none;
 	cursor: pointer;
@@ -132,10 +132,14 @@
 	img{
 		margin-top: 2px;
 		vertical-align: top;
+		transition: transform .2s;
 	}
 	&:hover{
 		span{
 			text-decoration: underline;
+		}
+		img{
+			transform: rotate(90deg);
 		}
 	}
 	span{
@@ -203,6 +207,9 @@ form{
 		padding-bottom: 25px;
 		.file-upload{
 			background: url(../images/upload.png) no-repeat left -53px;
+			&:hover{
+				background-position: left -212px;
+			}
 		}
 	}
 }

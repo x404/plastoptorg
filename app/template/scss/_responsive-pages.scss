@@ -405,6 +405,13 @@
 			}
 		}
 	}
+
+	.card .nav-tabs{
+		flex-wrap: wrap;
+		.btn{
+			margin-bottom: 10px;
+		}
+	}
 }
 
 
