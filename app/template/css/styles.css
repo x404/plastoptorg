@@ -145,7 +145,7 @@ input::-moz-focus-inner {
 .feedback__form .row textarea,
 .order__form .row input.form-control,
 .order__form .row textarea, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
-.order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control {
+.order__row .selectric-items li, .order_accessories__title, .order_accessories__body .col .row .form-control, .page-error {
   font-family: "SegoeUIBoldItalic"; }
 
 .outerwrapper {
@@ -2583,6 +2583,33 @@ form .thank {
   .order .file-upload:hover {
     background-position: left -159px; }
 
+.page-error {
+  color: #808080;
+  font-size: 18px;
+  text-transform: uppercase; }
+  .page-error .title {
+    color: #303030;
+    padding-bottom: 50px;
+    text-align: right; }
+  .page-error img {
+    display: block;
+    margin: 70px auto; }
+  .page-error a:not(.btn) {
+    color: #d92526;
+    text-decoration: none;
+    border-bottom: 3px dashed transparent; }
+    .page-error a:not(.btn):hover {
+      border-bottom-color: #d92526; }
+  .page-error .nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto 45px;
+    text-transform: none;
+    width: 1000px; }
+    .page-error .nav .btn {
+      padding-top: 5px;
+      width: 300px; }
+
 .fade {
   opacity: 0;
   transition: opacity .15s linear; }
@@ -2928,6 +2955,13 @@ tbody.collapse.show {
     font-size: 50px; }
   .main {
     margin-top: 50px; }
+  #inline-order {
+    left: -22px;
+    transform: scale(0.6);
+    opacity: .5;
+    transition: opacity .3s; }
+    #inline-order:hover {
+      opacity: 1; }
   .header {
     margin-bottom: 0; }
   .neck {
@@ -3258,7 +3292,14 @@ tbody.collapse.show {
 @media (max-width: 1100px) {
   .inner .text .owl-carousel,
   .inner main .owl-carousel {
-    width: 95%; } }
+    width: 95%; }
+  .page-error img {
+    width: 100%; }
+  .page-error .nav {
+    display: block;
+    width: 100%; }
+    .page-error .nav li {
+      margin-bottom: 10px; } }
 
 @media (max-width: 1040px) {
   .header .container {
@@ -3271,6 +3312,8 @@ tbody.collapse.show {
       height: 158px; }
     .header .timer__digit {
       margin-top: 25px; }
+    .header .timer__label {
+      color: grey; }
   nav ul li .subnav {
     display: none; }
   nav ul li:hover .subnav {
@@ -3430,7 +3473,11 @@ tbody.collapse.show {
     margin-left: auto;
     margin-right: auto; }
   .pricelist-table .container {
-    padding: 0; } }
+    padding: 0; }
+  .page-error {
+    text-align: center; }
+    .page-error .title {
+      text-align: center !important; } }
 
 @media (max-width: 750px) {
   .feedback__form .row,
@@ -3592,10 +3639,7 @@ tbody.collapse.show {
     overflow: hidden;
     transform: scale(0.8); }
   .ya-share2 li {
-    margin-bottom: .5rem !important; }
-  #inline-order {
-    left: -12px;
-    transform: scale(0.7); } }
+    margin-bottom: .5rem !important; } }
 
 @media (max-width: 430px) {
   .sertificats .item {
@@ -3694,7 +3738,12 @@ tbody.collapse.show {
   .order_accessories .btn {
     width: auto; }
   .card .nav .btn {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .page-error .nav .btn {
+    font-size: 15px;
+    padding-top: 9px;
+    width: 90%;
+    white-space: nowrap; } }
 
 @media (max-width: 330px) {
   .header .timer__digit {

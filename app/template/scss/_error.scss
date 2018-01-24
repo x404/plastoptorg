@@ -1,0 +1,38 @@
+.page-error{
+	color: $color13;
+	font-size: 18px;
+	text-transform: uppercase;
+	@extend .bi;
+
+	.title{
+		color: #303030;
+		padding-bottom: 50px;
+		text-align: right;
+	}
+
+	img{
+		display: block;
+		margin: 70px auto; 
+	}
+	a:not(.btn){
+		$color: #d92526;
+		color: $color;
+		text-decoration: none;
+		border-bottom: 3px dashed rgba(0,0,0,0);
+		&:hover{
+			border-bottom-color: #d92526;
+		}
+	}
+
+	.nav{
+		display: flex;
+		justify-content: space-around;
+		margin: 20px auto 45px;
+		text-transform: none;
+		width: 1000px;
+		.btn{
+			padding-top: 5px;
+			width: 300px;
+		}
+	}
+}

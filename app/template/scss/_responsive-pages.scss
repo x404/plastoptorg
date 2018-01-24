@@ -216,6 +216,19 @@
 	.inner main .owl-carousel{
 		width: 95%;
 	}
+
+	.page-error{
+		img{
+			width: 100%;
+		}
+		.nav{
+			display: block;
+			width: 100%;
+			li{
+				margin-bottom: 10px;
+			}
+		}
+	}
 }
 
 
@@ -234,6 +247,9 @@
 			}
 			&__digit{
 				margin-top: 25px;
+			}
+			&__label{
+				color: grey
 			}
 		}
 	}
@@ -548,6 +564,14 @@
 			padding: 0;
 		}
 	}
+
+
+	.page-error{
+		text-align: center;
+		.title{
+			text-align: center !important;			
+		}
+	}
 }
 
 
@@ -826,11 +850,6 @@
 	.ya-share2 li{
 		margin-bottom: .5rem !important;
 	}
-
-	#inline-order{
-		left: -12px;
-		transform: scale(.7);
-	}
 }
 
 
@@ -1027,6 +1046,16 @@
 			.btn{
 				padding-top: 0;
 			}
+		}
+	}
+
+
+	.page-error{
+		.nav .btn{
+			font-size: 15px;
+			padding-top: 9px;
+			width: 90%;
+			white-space: nowrap;
 		}
 	}
 }
