@@ -141,7 +141,7 @@ input::-moz-focus-inner {
   font-family: "SegoeUIItalic"; }
 
 .bi, h1, .nav-tabs li a, .header-right .btn, .submit, .header .contacts .btn, .timer__text, #inline-order, .address .btn, .inner main h2,
-.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .card header .title + .selectric-wrapper .selectric .label, .card .table th, .reviews .btn, .feedback__form .row input.form-control,
+.inner .text h2, .neck .title, .breadcrumbs, .pagination ul, .articles__link, .articles .btn, .card header .title + .selectric-wrapper .selectric .label, .card .main__body .selectric-items, .card .table th, .reviews .btn, .feedback__form .row input.form-control,
 .feedback__form .row textarea,
 .order__form .row input.form-control,
 .order__form .row textarea, .modal-dialog .thank, #callback form .form-control, .pricelist th, .order__row .selectric .label, .order__row .selectric-items ul,
@@ -1600,11 +1600,28 @@ label.error {
       .card header .title + .selectric-wrapper .selectric .button {
         display: none; }
       .card header .title + .selectric-wrapper .selectric .label {
+        border-bottom: 4px dashed;
         height: auto;
         line-height: 1.2;
-        border-bottom: 4px dashed;
         position: relative;
         text-transform: uppercase; }
+
+.card .main__body .selectric-items {
+  margin-top: 10px;
+  background: #b4b4b4;
+  border-radius: 15px;
+  text-align: center; }
+  .card .main__body .selectric-items ul {
+    padding: 5px 10px; }
+  .card .main__body .selectric-items li {
+    color: #fff;
+    border-radius: 20px;
+    font-size: 17px;
+    padding: 6px 0;
+    margin: 2px 0;
+    transition: background .3s; }
+    .card .main__body .selectric-items li.selected, .card .main__body .selectric-items li:hover {
+      background: #818181; }
 
 .card .nav-tabs {
   justify-content: center; }
