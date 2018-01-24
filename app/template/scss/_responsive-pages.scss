@@ -292,19 +292,26 @@
 
 @media (max-width: 991px){
 	.header .cats{
-		ul{
-			flex-wrap: wrap;
-			li{
-				flex-basis: 50%;
-			}
-		}
-		.cat{
-			&__title{
-				margin-left: auto;
-				margin-right: auto;
-				width: 345px;
-			}
-		}
+		display: none;
+		padding-bottom: 0;
+		// ul{
+		// 	flex-wrap: wrap;
+		// 	li{
+		// 		flex-basis: 50%;
+		// 	}
+		// }
+		// .cat{
+		// 	&__title{
+		// 		margin-left: auto;
+		// 		margin-right: auto;
+		// 		width: 345px;
+		// 	}
+		// }
+	}
+
+	.intro{
+		margin-top: 0;
+		padding-top: 0 !important;
 	}
 
 	.products__title{
@@ -577,6 +584,10 @@
 
 
 @media (max-width: 750px){
+	.header .timer{
+		margin-top: 80px;
+	}
+
 	.feedback,
 	.order{
 		&__form .row{
@@ -824,6 +835,13 @@
 
 
 @media (max-width: 450px){
+	.header{
+		.timer__digit{
+			margin-top: 0;
+		}
+	}
+
+
 	.title{
 		font-size: 34px;
 	}
@@ -872,6 +890,13 @@
 
 
 @media (max-width: 400px){
+
+	.header{
+		.timer__digit{
+			margin-top: -25px;
+		}
+	}
+
 	.address{
 		.flexbox .btn{
 			width: 100%;

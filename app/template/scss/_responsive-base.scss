@@ -522,6 +522,14 @@
 }
 
 
+@media (max-width: 750px){
+	.header{
+		display: block;
+		min-height: 0;
+	}
+}
+
+
 @media (max-width: 600px){
 	.homepage{
 		background: none;
