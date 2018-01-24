@@ -154,7 +154,7 @@ gulp.task('generate-favicon', function(done) {
 	realFavicon.generateFavicon({
 		masterPicture: 'app/favicon.png',
 		dest: 'app/the_favicon',
-		iconsPath: '/',
+		iconsPath: '/the_favicon/',
 		design: {
 			ios: {
 				pictureAspect: 'noChange',
@@ -208,6 +208,7 @@ gulp.task('generate-favicon', function(done) {
 		done();
 	});
 });
+
 
 // Inject the favicon markups in your HTML pages. You should run
 // this task whenever you modify a page. You can keep this task
