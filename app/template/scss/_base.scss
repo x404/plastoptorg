@@ -491,6 +491,7 @@ em{
 	&__digit{
 		display: flex;
 		align-items: center;
+		flex-direction: column;
 		#clock{
 			display: flex;
 			justify-content: space-between;
@@ -506,6 +507,15 @@ em{
 			margin-left: 20px;
 			text-align: center;
 			width: 114px;
+		}
+	}
+
+	&__label{
+		display: flex;
+		span{
+			height: auto;
+			font-size: 18px;
+			background: none;
 		}
 	}
 }
