@@ -577,7 +577,7 @@ nav {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF000000', endColorstr='#FF5F5F5F', GradientType=0);
       cursor: default;
       font-size: 16px;
-      left: 220px;
+      left: 320px;
       min-height: 230px;
       padding: 20px 60px 0;
       position: absolute;
@@ -3243,15 +3243,19 @@ tbody.collapse.show {
 
 @media (max-width: 1800px) {
   .header .cats .popup {
-    left: 155px; } }
+    left: 255px; } }
 
 @media (max-width: 1680px) {
   .header .cats .popup {
-    left: 100px; } }
+    left: 200px; } }
+
+@media (max-width: 1580px) {
+  .header .cats .popup {
+    left: 180px; } }
 
 @media (max-width: 1500px) {
   .header .cats .popup {
-    left: 20px; } }
+    left: 120px; } }
 
 @media (max-width: 1460px) {
   .header .cats .container {
@@ -3291,6 +3295,12 @@ tbody.collapse.show {
     left: -115px; }
   .header .cats .popup {
     width: 1100px; } }
+
+@media (max-width: 1250px) {
+  .header .cats .popup {
+    width: 1000px; }
+    .header .cats .popup .carousel {
+      width: 850px; } }
 
 @media (max-width: 1220px) {
   .header .cats ul li {
@@ -3342,7 +3352,10 @@ tbody.collapse.show {
 @media (max-width: 1160px) {
   .header .cats .popup {
     color: #fff;
-    width: 100%; }
+    left: 40px;
+    width: 950px; }
+    .header .cats .popup .carousel {
+      width: 700px; }
   .insert .box {
     height: auto;
     background: none;
