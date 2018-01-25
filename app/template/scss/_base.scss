@@ -838,16 +838,10 @@ nav{
 	}
 
 	.nav-contacts{
-		// position: relative;
 		background: url(../images/menu-bg.png) no-repeat left top;
 		padding-left: 108px;
 		flex-shrink: 0;
 		width: 1033px;
-		&:before{
-			// @extend .before;
-			// height: 406px;			
-			// width: 1144px;
-		}
 	}
 }
 
