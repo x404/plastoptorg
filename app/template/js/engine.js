@@ -366,7 +366,6 @@ $(document).ready(function(){
 	$.fn.orderValidate = function(){
 		return this.validate({
 		submitHandler: function(form){
-
 			var products = { Products: makeorders(form)},
 				additional = {Accessories: makeaccessories(form)},
 				person = {},
@@ -384,7 +383,6 @@ $(document).ready(function(){
 
 			fd.append('file', $(form).find('.orderfile').prop('files')[0]);
 			fd.append('strorder', JSON.stringify(obj) );
-
 			$(form).find('fieldset').hide();
 			$(form).append('<div class="sending">Идет отправка ...</div>');
 			$.ajax({
