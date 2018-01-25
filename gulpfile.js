@@ -57,7 +57,7 @@ gulp.task('browser-sync', function(){
 gulp.task('js-libs', function(){
 	var countdown = gulp.src(config.libsDir + '/jquery.countdown/dist/jquery.countdown.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
 	var selectric = gulp.src(config.libsDir + '/jquery-selectric/public/jquery.selectric.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
-	var selectric = gulp.src(config.libsDir + '/node_modules/es6-object-assign/dist/object-assign-auto.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
+	var ieassing = gulp.src('node_modules/es6-object-assign/dist/object-assign-auto.min.js').pipe(gulp.dest(config.sourceDir + '/js/'));	
 });
 
 
