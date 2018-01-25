@@ -297,7 +297,8 @@ input::-moz-focus-inner{
 
 .nav-tabs{
 	display: flex;
-	justify-content: flex-end;
+	// justify-content: flex-end;
+	justify-content: center;
 	li{
 		a{
 			@extend .bi;
@@ -499,12 +500,13 @@ em{
 		span{
 			@extend .bold;
 			align-items: center;
-			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAACFCAQAAAAtQ2RXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQoWNBh1aG2eAAADJElEQVR42u3da0sUYRTA8f/mNdEupHQTIykUpEChi1IokhJauvaF+kTlaimhIUqhXUChEIzCLlgZGmWKpa4+vZgeEmvXXXd2ZvbM+b0T19nn/2KUWfCcCN7KowfoZdOtC5oUXhPxNPEyLRQDvxjlicTIajo5su3rrwwwKymylFuc/ue9DG+5y4qMyA4ayE/wvTiTDOZ6ZD1tlOzymlWGmcrVyEq6qUjxtQv0MZdrkSVEOZvW1Q2vibGaO5FtXEp4FyYT5ynDuRB5nnZKM/j5FYZ4EeTIY3Rz3IXrfKaP+SBGFhKlln0uXW2LGWKsByuyhSYKXbqWtc44o0GJrKWDAy4HWj8YZMbvyHKiVGYp0JojxqJfkfnc5Jxrd2EyW7zkHnHvI5topsiDQGuNMca9jDxDJ4c9DLS+McAbLyIPEeWUxw/b25veE+N7diNvUE+eT4HWJlPcz1bkBVrZ73Og9ZMRnrsdWUUX5X6X7bBIPx/ciiwjSrVvd2EyhlliZjnzyHYu7umxyStxnpmhTCJT+fAiCFYZNkk+QEkceZIujvp9+jR8od98TCeyiB5qAnkXJmN4Ra9ZSy2ylUYK/D7xHm0wYUZ2i6zjOmV+nzRDyzww04kiK+jhhN8ndMknes3CzsgCuqjz5LHJK1tM0282/kZe5Yqnj01eWeOxeQQRaujgoN+nyaIlBiPczrk/Feky+8QnQkTSr5qENFIKjZRCI6XQSCk0UgqNlEIjpdBIKTRSCo2UQiOl0EgpNFIKjZRCI6XQSCk0UgqNlEIjpdBIKTRSCo2UQiOl0EgpNFIKjZRCI6XQSCk0UgqNlEIjpQhJZCpjUHKbyWOeKor9PkcWLdEbkv9Od4RgzoBD/MQIS/zsD0v8FBdHCObxOMRPVrLEz8iyxE87c4Rgbp1D/ARCS/wsSUv8VFBHCOa7OsRP6rXEz1x2hGB6tkP8HHRL/ER7S/xuAkcItkw4xO8LscRvfrHE7/BxhGAbk0P8Xi2rgWspbEh7yORe3yAIkRCCXXeORFsL33FHytZCh/j9k1YjzX82iY4x4c4lgxdpd8LG/v/YlK3I330wFu2ZgVwEAAAAAElFTkSuQmCC") no-repeat left top;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAACFCAQAAAAtQ2RXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAQoWNBh1aG2eAAADJElEQVR42u3da0sUYRTA8f/mNdEupHQTIykUpEChi1IokhJauvaF+kTlaimhIUqhXUChEIzCLlgZGmWKpa4+vZgeEmvXXXd2ZvbM+b0T19nn/2KUWfCcCN7KowfoZdOtC5oUXhPxNPEyLRQDvxjlicTIajo5su3rrwwwKymylFuc/ue9DG+5y4qMyA4ayE/wvTiTDOZ6ZD1tlOzymlWGmcrVyEq6qUjxtQv0MZdrkSVEOZvW1Q2vibGaO5FtXEp4FyYT5ynDuRB5nnZKM/j5FYZ4EeTIY3Rz3IXrfKaP+SBGFhKlln0uXW2LGWKsByuyhSYKXbqWtc44o0GJrKWDAy4HWj8YZMbvyHKiVGYp0JojxqJfkfnc5Jxrd2EyW7zkHnHvI5topsiDQGuNMca9jDxDJ4c9DLS+McAbLyIPEeWUxw/b25veE+N7diNvUE+eT4HWJlPcz1bkBVrZ73Og9ZMRnrsdWUUX5X6X7bBIPx/ciiwjSrVvd2EyhlliZjnzyHYu7umxyStxnpmhTCJT+fAiCFYZNkk+QEkceZIujvp9+jR8od98TCeyiB5qAnkXJmN4Ra9ZSy2ylUYK/D7xHm0wYUZ2i6zjOmV+nzRDyzww04kiK+jhhN8ndMknes3CzsgCuqjz5LHJK1tM0282/kZe5Yqnj01eWeOxeQQRaujgoN+nyaIlBiPczrk/Feky+8QnQkTSr5qENFIKjZRCI6XQSCk0UgqNlEIjpdBIKTRSCo2UQiOl0EgpNFIKjZRCI6XQSCk0UgqNlEIjpdBIKTRSCo2UQiOl0EgpNFIKjZRCI6XQSCk0UgqNlEIjpQhJZCpjUHKbyWOeKor9PkcWLdEbkv9Od4RgzoBD/MQIS/zsD0v8FBdHCObxOMRPVrLEz8iyxE87c4Rgbp1D/ARCS/wsSUv8VFBHCOa7OsRP6rXEz1x2hGB6tkP8HHRL/ER7S/xuAkcItkw4xO8LscRvfrHE7/BxhGAbk0P8Xi2rgWspbEh7yORe3yAIkRCCXXeORFsL33FHytZCh/j9k1YjzX82iY4x4c4lgxdpd8LG/v/YlK3I330wFu2ZgVwEAAAAAElFTkSuQmCC") no-repeat left 7px;
 			display: flex;
 			font-size: 60px;
-			height: 133px;
+			height: 140px;
 			justify-content: center;
 			margin-left: 20px;
+			position: relative;
 			text-align: center;
 			width: 114px;
 		}
@@ -512,9 +514,11 @@ em{
 
 	&__label{
 		display: flex;
+		position: relative;
+		top: -31px;
 		span{
 			height: auto;
-			font-size: 18px;
+			font-size: 15px;
 			background: none;
 		}
 	}
@@ -608,19 +612,24 @@ nav{
 	flex-flow: column;
 	margin: 0 auto -110px;
 	min-height: 1132px;
-	width: 86%;
+	// width: 86%;
+	width: 100%;
 	.logo{
+		flex-grow: 1;
 		padding-top: 104px;
-		width: 56%;
+		// width: 45%;
+		text-align: right;
 		&__link{
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
+			// display: block;
+			// margin-left: auto;
+			// margin-right: auto;
 			text-align: center;
+			// float: right;
+
 			width: 357px;
 		}
 		img{
-			display: block;
+			// display: block;
 		}
 	}
 
@@ -825,6 +834,19 @@ nav{
 					transform: rotate(90deg);
 				}
 			}
+		}
+	}
+
+	.nav-contacts{
+		// position: relative;
+		background: url(../images/menu-bg.png) no-repeat left top;
+		padding-left: 108px;
+		flex-shrink: 0;
+		width: 1033px;
+		&:before{
+			// @extend .before;
+			// height: 406px;			
+			// width: 1144px;
 		}
 	}
 }

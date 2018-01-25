@@ -1,6 +1,10 @@
 @media (max-width: 1680px){
 	.header{
 		min-height: 1040px;
+		.logo{
+			left: 75px;
+			position: relative;
+		}
 	}
 }
 
@@ -12,9 +16,37 @@
 }
 
 
+@media (max-width: 1460px){
+	.header{
+		.logo{
+			position: absolute;
+		}
+		&__top{
+			justify-content: flex-end;
+		}
+	}
+}
+
+
 @media (max-width: 1450px){
 	.header{
-		min-height: 920px;
+		&__top{
+			overflow: hidden;
+		}
+		.nav-contacts{
+			width: 900px;
+			background-position: left -60px;
+		}
+
+		$pl: 135px;
+		.mainnav__list{
+			padding-left: $pl;
+		}
+		.contacts{
+			padding-left: $pl;
+			padding-top: 16px;
+			width: 100%;
+		}
 	}
 
 	.footer-container{
@@ -64,6 +96,11 @@
 
 
 
+@media (max-width: 1280px){
+
+}
+
+
 @media (max-width: 1265px){
 	.footer-container{
 		width: 1200px;
@@ -72,6 +109,9 @@
 	.subscribe{
 		margin-left: -155px;
 	}
+
+
+
 }
 
 @media (max-width: 1220px){
@@ -177,6 +217,12 @@
 		.logo{
 			width: 35%;
 		}
+		.container{
+			width: 100%;
+		}
+		.nav-contacts{
+			min-height: 365px;
+		}
 	}
 
 	.subscribe{
@@ -194,10 +240,13 @@
 		font-size: 50px;
 	}
 
-	.header .logo{
-		padding-top: 35px;
-		&__link{
-			width: 100%;
+	.header{
+		min-height: 0;
+		.logo{
+			padding-top: 130px;
+			&__link{
+				width: 100%;
+			}
 		}
 	}
 
@@ -346,6 +395,30 @@
 
 
 @media (max-width: 950px){
+	.header{
+		.nav-contacts{
+			background-position: center -65px;
+			padding-left: 0;
+			width: 100%;
+		}
+		.mainnav__list{
+			padding-left: 0;
+		}
+		.contacts{
+			padding-left: 0;
+		}
+		&__top{
+			.logo{
+				padding-top: 195px;
+				width: 26%;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+
 	.subscribe{
 		right: 20px;
 		width: 450px;
@@ -358,9 +431,9 @@
 			display: block;
 		}
 		.logo{
-			margin-left: auto;
-			margin-right: auto;
-			width: 357px;
+			// margin-left: auto;
+			// margin-right: auto;
+			// width: 357px;
 		}
 	}
 }
@@ -412,6 +485,13 @@
 				margin-left: 0;
 			}
 		}
+	}
+}
+
+
+@media (max-width: 880px){
+	.header__top .logo{
+		padding-top: 215px;
 	}
 }
 
@@ -485,10 +565,18 @@
 @media (max-width: 767px){
 	.header{
 		.logo{
+			margin-left: auto;
+			margin-right: auto;
+			position: static;
 			padding-top: 8px;
 		}
 		.contacts{
 			padding-top: 15px;
+		}
+
+		.nav-contacts{
+			min-height: 0;
+			background: none;
 		}
 	}
 
