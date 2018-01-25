@@ -1,3 +1,6 @@
+
+
+
 // данные в селектах
 var dbdata = getdb();
 
@@ -363,7 +366,6 @@ $(document).ready(function(){
 	$.fn.orderValidate = function(){
 		return this.validate({
 		submitHandler: function(form){
-
 			var products = { Products: makeorders(form)},
 				additional = {Accessories: makeaccessories(form)},
 				person = {},
@@ -381,7 +383,6 @@ $(document).ready(function(){
 
 			fd.append('file', $(form).find('.orderfile').prop('files')[0]);
 			fd.append('strorder', JSON.stringify(obj) );
-
 			$(form).find('fieldset').hide();
 			$(form).append('<div class="sending">Идет отправка ...</div>');
 			$.ajax({
@@ -457,32 +458,6 @@ $(document).ready(function(){
 	});
 
 });
-
-// =заглушка для IE
-//event listener: DOM ready
-function addLoadEvent(func) {
-	var oldonload = window.onload;
-	if (typeof window.onload != 'function') {
-		window.onload = func;
-	} else {
-		window.onload = function() {
-			if (oldonload) {
-				oldonload();
-			}
-			func();
-		}
-	}
-}
-//call plugin function after DOM ready
-addLoadEvent(function(){
-	outdatedBrowser({
-		bgColor: '#f25648',
-		color: '#ffffff',
-		lowerThan: 'transform',
-		languagePath: '/outdatedbrowser/lang/ru.html'
-	})
-});
-// =/заглушка для IE
 
 
 

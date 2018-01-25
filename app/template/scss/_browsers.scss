@@ -15,4 +15,22 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.header__top{
+		height: 555px;
+	}
+	footer{
+		height: auto;
+	}
+
+	.video-page .header-right{
+		margin-bottom: 35px;
+	}
+
+	.main__body main{
+		padding-top: 40px;
+	}
+
+	.header-right{
+		margin-bottom: 15px;
+	}
 }

@@ -1878,10 +1878,6 @@ label.error {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     justify-content: space-between;
     margin-top: 24px;
     position: relative; }
@@ -2850,6 +2846,18 @@ tbody.collapse.show {
 
 ::-ms-clear {
   display: none; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header__top {
+    height: 555px; }
+  footer {
+    height: auto; }
+  .video-page .header-right {
+    margin-bottom: 35px; }
+  .main__body main {
+    padding-top: 40px; }
+  .header-right {
+    margin-bottom: 15px; } }
 
 @media (max-width: 1680px) {
   .header {
