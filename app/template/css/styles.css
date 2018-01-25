@@ -377,6 +377,12 @@ input::-moz-focus-inner {
 strong em {
   font-family: "SegoeUIBoldItalic" !important; }
 
+em {
+  font-style: normal; }
+
+th {
+  font-weight: normal; }
+
 /* =header
 ---------------------------*/
 .timer .str1 {

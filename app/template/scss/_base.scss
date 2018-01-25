@@ -452,7 +452,13 @@ strong{
 }
 
 em{
-	@extend .italic
+	@extend .italic;
+	font-style: normal;
+}
+
+
+th{
+	font-weight: normal;
 }
 
 /* =header

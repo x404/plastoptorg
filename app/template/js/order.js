@@ -83,7 +83,7 @@ $(document).on('change, input', '.order_accessories .form-control' , function(){
 
 $(document).on('click', '.toggle_accesories' , function(e){
 	e.preventDefault();
-	$(this).closest('.order_accessories').find('.order_accessories__body').slideDown()
+	$(this).closest('.order_accessories').find('.order_accessories__body').slideToggle()
 });
 
 
