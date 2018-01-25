@@ -47,7 +47,7 @@
 		position: relative;
 		.row{
 			@include flexbox;
-			@include justify-content(space-between);
+			justify-content: space-between;
 			margin-top: 24px;
 			position: relative;
 
@@ -56,8 +56,8 @@
 			}
 			input.form-control,
 			textarea{
-				color: $color2;
 				@extend .bi;
+				color: $color2;
 				background-color: $color12;
 				border: 1px solid $color12;
 				font-size: 17px;
@@ -66,7 +66,6 @@
 				transition: all .3s;
 				&:disabled{
 					cursor: default;
-					// opacity: .7;
 					@include placeholder(#ccc);
 				}
 			}

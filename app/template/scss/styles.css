@@ -366,6 +366,12 @@ input::-moz-focus-inner {
 strong em {
   font-family: "SegoeUIBoldItalic" !important; }
 
+em {
+  font-style: normal; }
+
+th {
+  font-weight: normal; }
+
 /* =header
 ---------------------------*/
 .timer .str1 {
@@ -555,7 +561,7 @@ nav {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF000000', endColorstr='#FF5F5F5F', GradientType=0);
       cursor: default;
       font-size: 16px;
-      left: 220px;
+      left: 320px;
       min-height: 230px;
       padding: 20px 60px 0;
       position: absolute;
@@ -1806,10 +1812,6 @@ label.error {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     justify-content: space-between;
     margin-top: 24px;
     position: relative; }
@@ -2757,6 +2759,21 @@ tbody.collapse.show {
 ::-ms-clear {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .header__top {
+    height: 555px; }
+
+  footer {
+    height: auto; }
+
+  .video-page .header-right {
+    margin-bottom: 35px; }
+
+  .main__body main {
+    padding-top: 40px; }
+
+  .header-right {
+    margin-bottom: 15px; } }
 @media (max-width: 1680px) {
   .header {
     min-height: 1040px; }
@@ -3163,13 +3180,16 @@ tbody.collapse.show {
     font-size: 34px; } }
 @media (max-width: 1800px) {
   .header .cats .popup {
-    left: 155px; } }
+    left: 255px; } }
 @media (max-width: 1680px) {
   .header .cats .popup {
-    left: 100px; } }
+    left: 200px; } }
+@media (max-width: 1580px) {
+  .header .cats .popup {
+    left: 180px; } }
 @media (max-width: 1500px) {
   .header .cats .popup {
-    left: 20px; } }
+    left: 120px; } }
 @media (max-width: 1460px) {
   .header .cats .container {
     width: 1200px; } }
@@ -3209,6 +3229,11 @@ tbody.collapse.show {
 
   .header .cats .popup {
     width: 1100px; } }
+@media (max-width: 1250px) {
+  .header .cats .popup {
+    width: 1000px; }
+    .header .cats .popup .carousel {
+      width: 850px; } }
 @media (max-width: 1220px) {
   .header .cats ul li {
     flex-basis: 33.3%; }
@@ -3264,7 +3289,10 @@ tbody.collapse.show {
 @media (max-width: 1160px) {
   .header .cats .popup {
     color: #fff;
-    width: 100%; }
+    left: 40px;
+    width: 950px; }
+    .header .cats .popup .carousel {
+      width: 700px; }
 
   .insert .box {
     height: auto;

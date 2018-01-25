@@ -92,41 +92,7 @@ $(document).on('click', '.toggle_accesories' , function(e){
 // =orders
 $(document).on('click', '.manage .plus' , function(e){
 	e.preventDefault();
-	var template = `
-		<div class="order__row">
-			<div class="param1">
-				<select name="type" class="required">
-					<option value="">тип</option>
-					<option value="монолитный">монолитный</option>
-					<option value="сотовый">сотовый</option>
-				</select>
-			</div>
-			<div class="param2">
-				<select name="thickness" class="required" disabled="disabled">
-					<option value="">толщина</option>
-				</select>
-			</div>
-			<div class="param3">
-				<select name="size" class="required" disabled="disabled">
-					<option value="">размер</option>
-				</select>
-			</div>
-			<div class="param4">
-				<select name="color" class="required" disabled="disabled">
-					<option value="">цвет</option>
-				</select>
-			</div>
-			<div class="param5">
-				<select name="brand" disabled="disabled">
-					<option value="">торговая марка</option>
-				</select>
-			</div>
-			<div class="manage">
-				<a href="#" role="button" class="plus">+</a>
-				<a href="#" role="button" class="minus">-</a>
-			</div>
-		</div>
-	`;
+	var template = '<div class="order__row"> <div class="param1"> <select name="type" class="required"> <option value="">тип</option> <option value="монолитный">монолитный</option> <option value="сотовый">сотовый</option> </select> </div> <div class="param2"> <select name="thickness" class="required" disabled="disabled"> <option value="">толщина</option> </select> </div> <div class="param3"> <select name="size" class="required" disabled="disabled"> <option value="">размер</option> </select> </div> <div class="param4"> <select name="color" class="required" disabled="disabled"> <option value="">цвет</option> </select> </div> <div class="param5"> <select name="brand" disabled="disabled"> <option value="">торговая марка</option> </select> </div> <div class="manage"> <a href="#" role="button" class="plus">+</a> <a href="#" role="button" class="minus">-</a> </div> </div>';
 	$('.order__params .container').append(template);
 	$('select').selectric('refresh');
 });

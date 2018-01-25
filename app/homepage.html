@@ -21,6 +21,9 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Главная</title>
 <!-- InstanceEndEditable -->
+<link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
+<script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+<script src="/outdatedbrowser/detect.js"></script>
 <link rel="stylesheet" href="/template/css/styles.min.css" />
 <script src="/template/js/libs.min.js"></script>
 
@@ -137,11 +140,6 @@
 				</div>
 				<div class="timer__digit">
 					<div id="clock"></div>
-					<div class="timer__label">
-						<span>час</span>
-						<span>мин</span>
-						<span>сек</span>
-					</div>
 					<script type="text/javascript">
 						$(function(){
 							$('#clock').countdown('2018/10/10', function(event) {
@@ -150,9 +148,8 @@
 									+ '<span>%M</span> '
 									+ '<span>%S</span>'));
 							});
-
 							// http://hilios.github.io/jQuery.countdown/documentation.html#event-object
-						});
+						})
 					</script>
 				</div>
 			</div>
@@ -1146,8 +1143,6 @@
 
 
 <div id="outdated"></div>
-<link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
-<script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
 
 <script src="/template/js/owl.carousel.min.js"></script>
