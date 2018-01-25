@@ -1027,6 +1027,10 @@ footer{
 		p{
 			padding-top: 7px;
 		}
+		a{
+			text-decoration: none !important;
+			color: $color5 !important;
+		}
 		.column{
 			padding-top: 22px;
 			flex-basis: 50%;

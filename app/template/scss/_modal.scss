@@ -7,6 +7,9 @@
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
+  .inner{
+  	filter: blur(6px)
+  }
 }
 
 // Container that the modal scrolls within

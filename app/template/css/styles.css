@@ -760,6 +760,9 @@ footer {
     font-size: 14px; }
   .footer__contacts p {
     padding-top: 7px; }
+  .footer__contacts a {
+    text-decoration: none !important;
+    color: #4c4c4c !important; }
   .footer__contacts .column {
     padding-top: 22px;
     flex-basis: 50%; }
@@ -2082,6 +2085,8 @@ label.error {
 
 .modal-open {
   overflow: hidden; }
+  .modal-open .inner {
+    filter: blur(6px); }
 
 .modal {
   padding-right: 0 !important;
