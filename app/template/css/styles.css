@@ -3426,6 +3426,8 @@ tbody.collapse.show {
     .order__params .container,
     .order_accessories .container {
       width: auto; }
+  .order_accessories .flexbox {
+    flex-direction: row !important; }
   .order_accessories__title {
     padding-right: 0; }
   .manage {
@@ -3703,6 +3705,12 @@ tbody.collapse.show {
       min-width: 300px;
       margin: 10px auto; } }
 
+@media (max-width: 550px) {
+  #inline-order {
+    left: auto;
+    right: -20px;
+    top: -35px; } }
+
 @media (max-width: 530px) {
   .header {
     display: block;
@@ -3823,6 +3831,8 @@ tbody.collapse.show {
     width: 85%; }
   .header .cats ul li {
     flex-basis: 100%; }
+  .header-right .btn {
+    margin-left: 0; }
   .effect {
     padding-top: 0 !important; }
   .text {

@@ -557,7 +557,6 @@ $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(
 
 
 $(document).on('click', '.products__inner .shape-link', function(e){
-	// $('.products__colors').
 	e.preventDefault();
 	$(this).next('.products__colors').toggle()
 })

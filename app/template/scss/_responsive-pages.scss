@@ -295,6 +295,11 @@
 			width: auto;
 		}
 	}
+	.order_accessories{
+		.flexbox{
+			flex-direction: row !important
+		}
+	}
 	.order_accessories__title{
 		padding-right: 0;
 	}
@@ -801,6 +806,13 @@
 	}
 }
 
+@media (max-width: 550px){
+	#inline-order{
+		left: auto;
+		right: -20px;
+		top: -35px;
+	}
+}
 
 @media (max-width: 530px){
 	.header{
@@ -1026,6 +1038,10 @@
 
 	.header .cats ul li{
 		flex-basis: 100%;
+	}
+
+	.header-right .btn{
+		margin-left: 0;
 	}
 
 	.effect{
