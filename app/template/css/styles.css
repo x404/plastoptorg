@@ -2015,6 +2015,9 @@ label.error {
       right: 0;
       bottom: 0;
       width: 70px; }
+    .feedback__form .file-upload:hover,
+    .order__form .file-upload:hover {
+      background-position: left -270px; }
   .feedback__form .file-name,
   .order__form .file-name {
     text-align: right;
@@ -2248,10 +2251,10 @@ form .thank {
   padding-bottom: 25px; }
   #qorder .feedback__form .file-upload,
   #addreview .feedback__form .file-upload {
-    background: url(../images/upload.png) no-repeat left -53px; }
+    background: url(../images/upload.png) no-repeat left -54px; }
     #qorder .feedback__form .file-upload:hover,
     #addreview .feedback__form .file-upload:hover {
-      background-position: left -212px; }
+      background-position: left -216px; }
 
 #addreview .form-policy {
   margin-top: 40px; }
@@ -2595,9 +2598,9 @@ form .thank {
     line-height: 38px; }
 
 .order .file-upload {
-  background-position: left -106px; }
+  background-position: left -108px; }
   .order .file-upload:hover {
-    background-position: left -159px; }
+    background-position: left -162px; }
 
 .page-error {
   color: #808080;
