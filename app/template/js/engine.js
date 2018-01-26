@@ -554,3 +554,10 @@ $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(
 	var $this = $(this);
 	$this.next('.subnav').slideToggle().prev().toggleClass('open');
 })
+
+
+$(document).on('click', '.products__inner .shape-link', function(e){
+	// $('.products__colors').
+	e.preventDefault();
+	$(this).next('.products__colors').toggle()
+})

@@ -286,7 +286,9 @@
 	.order__row > div{
 		margin-right: 10px;
 	}
-	.order__params{
+
+	.order__params,
+	.order_accessories{
 		overflow-x: auto;  
 		width: 100%;
 		.container{
@@ -302,6 +304,19 @@
 	}
 }
 
+
+
+@media (max-width: 1024px){
+	.paraminfo{
+		.header-right{
+			display: block;
+		}
+		.title{
+			font-size: 40px;
+			text-align: center;
+		}
+	}
+}
 
 
 @media (max-width: 991px){
@@ -542,9 +557,14 @@
 	}
 
 
+	.sertificats h1{
+		font-size: 40px;
+	}
+	
 	.sertificats h1,
 	.main main h1{
 		margin-bottom: 20px;
+		text-align: center;
 	}
 
 	.neck{

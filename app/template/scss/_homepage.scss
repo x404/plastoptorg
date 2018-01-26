@@ -250,11 +250,13 @@
 	}
 
 	&__colors{
+		background: #a8a8a8;
+		@include gradient-vertical(#c0c0c0, #858585);
+		@include transition-param;
 		padding-left: 4px;
 		padding-top: 5px;
 		opacity: 0;
 		z-index: -1;
-		@include transition-param;
 		&:before{
 			@extend .before;
 			background: url(../images/color-popup.png) no-repeat left top;
@@ -263,9 +265,6 @@
 			left: 0;
 			top: -28px;
 		}		
-
-		background: #a8a8a8;
-		@include gradient-vertical(#c0c0c0, #858585);
 
 		border-radius: 0 0 4px 4px;
 		padding-bottom: 6px;
@@ -285,6 +284,7 @@
 	}
 	.shape-link:hover + .products__colors{
 		opacity: 1;
+		display: block !important;
 		z-index: 999;
 	}
 

@@ -13,6 +13,14 @@
 	.header{
 		min-height: 980px;
 	}
+
+	.breadcrumbs ul{
+		display: block;
+		width: 92%;
+		li{
+			display: inline-block;
+		}
+	}
 }
 
 
@@ -278,6 +286,9 @@
 	}
 
 
+	.breadcrumbs ul{
+		width: 100%;
+	}
 
 	#inline-order{
 		left: -22px;
@@ -455,6 +466,7 @@
 	}
 
 	.footer{
+		padding-top: 50px;
 		&__top{
 			display: block;
 		}
